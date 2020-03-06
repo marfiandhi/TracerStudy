@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "727837303378",
+    "firebase_url": "https://tracer-study-ad3ba.firebaseio.com",
+    "project_id": "tracer-study-ad3ba",
+    "storage_bucket": "tracer-study-ad3ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727837303378:android:707dc8c0f6da7f8ecfb58b",
+        "android_client_info": {
+          "package_name": "id.divascion.tracerstudy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727837303378-hhdg56nbdeqg8c9pefbc5lgg42mfr73r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.divascion.tracerstudy",
+            "certificate_hash": "46a6d5870755296f7be1920c7d088c1a2d92cee0"
+          }
+        },
+        {
+          "client_id": "727837303378-iifhfhk3t6c8uqi94eee68jmtslrdo3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArO7zaEQKWYefEt9Wu0zJKicPskOkq8S8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727837303378-iifhfhk3t6c8uqi94eee68jmtslrdo3b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

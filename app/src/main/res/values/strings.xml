@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Tracer Study</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Masuk atau daftar</string>
+    <string name="action_sign_in_short">Masuk</string>
+    <string name="welcome">"Selamat datang !"</string>
+    <string name="invalid_username">Email tidak valid</string>
+    <string name="login_failed">Gagal masuk</string>
+    <string name="prompt_phone">Phone</string>
+    <string name="prompt_login">Masuk</string>
+    <string name="prompt_alert_required">Tidak boleh kosong</string>
+    <string name="sign_up_failed">Gagal membuat akun</string>
+    <string name="invalid_username_password">Email atau password salah</string>
+    <string name="prompt_logout">Keluar</string>
+    <string name="prompt_study_data">Data Alumni</string>
+    <string name="prompt_quizioner_study">Kuisioner Alumni</string>
+    <string name="prompt_quiz_stakeholder">Kuisioner Stakeholder</string>
+    <string name="prompt_quizioner">Kuisioner</string>
+
+    <string-array name="list_quiz_alumni_subtitle">
+        <item>A. Data Pribadi</item>
+        <item>B. Riwayat Pendidikan</item>
+        <item>C. Riwayat Pekerjaan</item>
+        <item>D. Relevansi Pendidikan dengan Pekerjaan</item>
+        <item>E. Pengalaman Pembelajaran dan Masukan bagi Pendidikan di POLTEKBANG JAYAPURA</item>
+        <item>F. Indikator Kompetensi dan Daya Saing</item>
+    </string-array>
+    <string-array name="list_quiz_stakeholder_subtitle">
+        <item>A. Karakteristik Perusahaan/Instansi</item>
+        <item>B. Kriteria dan Prosedur Penerimaan Tenaga Kerja</item>
+        <item>C. Kinerja Alumni Politeknik Penerbangan Jayapura</item>
+        <item>D. Prospek Masa Mendatang</item>
+    </string-array>
+</resources>

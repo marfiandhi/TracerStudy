@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorBlueSpecial</item>
+        <item name="colorPrimaryDark">@color/colorBlue</item>
+        <item name="colorAccent">@color/colorLime</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorBrown</item>
+        <item name="colorPrimaryDark">@color/colorDarkBrown</item>
+        <item name="colorAccent">@color/colorAccentBlue</item>
+        <item name="android:editTextStyle">@style/EditText.Dark</item>
+        <item name="editTextStyle">@style/EditText.Dark</item>
+        <item name="android:buttonStyle">@style/Button.Dark</item>
+    </style>
+
+    <style name="EditText.Dark" parent="Widget.AppCompat.EditText">
+        <item name="backgroundTint">@color/colorUltraLightGrey</item>
+        <item name="android:textColorHint">@color/colorGrey</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Button.Dark" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@color/colorYellow</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="TextView.Content.Dark" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="TextView.Title.Dark" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorGrey</item>
+    </style>
+
+
+</resources>
