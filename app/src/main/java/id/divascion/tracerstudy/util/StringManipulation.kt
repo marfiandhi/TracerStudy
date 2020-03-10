@@ -91,4 +91,30 @@ class StringManipulation {
         }
         return extractString
     }
+
+
+    fun getDateToday(year: String, month: Int, date: Int): String {
+        val sMonth = when (month) {
+            1 -> "Jan"
+            2 -> "Feb"
+            3 -> "Mar"
+            4 -> "Apr"
+            5 -> "Mei"
+            6 -> "Jun"
+            7 -> "Jul"
+            8 -> "Agu"
+            9 -> "Sep"
+            10 -> "Okt"
+            11 -> "Nov"
+            12 -> "Des"
+            else -> ""
+        }
+
+        val sDate = if(date<10) {
+            "0$date"
+        } else {
+            "$date"
+        }
+        return "$sDate $sMonth $year"
+    }
 }

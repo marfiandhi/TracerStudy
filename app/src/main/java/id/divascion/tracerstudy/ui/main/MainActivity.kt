@@ -2,6 +2,7 @@ package id.divascion.tracerstudy.ui.main
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
@@ -25,6 +26,23 @@ class MainActivity : AppCompatActivity() {
     private var isStakeholder = false
     private var loading = false
     private var pause = false
+    private var count = 0
+
+    private val timer = object : CountDownTimer(2700, 1) {
+        private var run = true
+        override fun onTick(millisUntilFinished: Long) {
+            run = true
+        }
+
+        override fun onFinish() {
+            count = 0
+            run = false
+        }
+
+        fun isRun(): Boolean {
+            return run
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -144,7 +162,6 @@ class MainActivity : AppCompatActivity() {
     private fun toQuiz(role: String) {
         main_popup.visibility = View.GONE
         if(role=="alumni" || role=="stakeholder") {
-            toast(role)
             startActivity<QuizMenuActivity>("ROLE" to role)
         } else {
             Log.e("role", "Error $role")
@@ -159,7 +176,17 @@ class MainActivity : AppCompatActivity() {
                 popup_error.visibility = View.GONE
                 roleConfirm = false
             }
-            !roleConfirm && !loading -> super.onBackPressed()
+            !roleConfirm && !loading -> {
+                if(count<1) {
+                    toast("Tekan tombol kembali sekali lagi untuk keluar")
+                    timer.start()
+                    if(timer.isRun()) {
+                        count++
+                    }
+                } else {
+                    finishAffinity()
+                }
+            }
         }
     }
     private fun showLoading() {
