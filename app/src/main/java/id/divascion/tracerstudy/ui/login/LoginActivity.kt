@@ -35,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun updateUI(currentUser: FirebaseUser?) {
-        if(currentUser != null) {
+        if (currentUser != null) {
             startActivity(intentFor<MainActivity>("user" to currentUser))
             finish()
         }
@@ -50,18 +50,27 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         login_button.setOnClickListener {
             getFormInfo()
-            if(checkNullForm()) {
-                inputManager.hideSoftInputFromWindow(login_password.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
-                inputManager.hideSoftInputFromWindow(login_username.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
+            if (checkNullForm()) {
+                inputManager.hideSoftInputFromWindow(
+                    login_password.windowToken,
+                    InputMethodManager.HIDE_NOT_ALWAYS
+                )
+                inputManager.hideSoftInputFromWindow(
+                    login_username.windowToken,
+                    InputMethodManager.HIDE_NOT_ALWAYS
+                )
                 signIn()
             }
         }
-        login_password.setOnEditorActionListener(object: TextView.OnEditorActionListener{
+        login_password.setOnEditorActionListener(object : TextView.OnEditorActionListener {
             override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
-                if(actionId== EditorInfo.IME_ACTION_DONE) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
                     getFormInfo()
-                    if(checkNullForm()) {
-                        inputManager.hideSoftInputFromWindow(login_password.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
+                    if (checkNullForm()) {
+                        inputManager.hideSoftInputFromWindow(
+                            login_password.windowToken,
+                            InputMethodManager.HIDE_NOT_ALWAYS
+                        )
                         signIn()
                     }
                     return true
@@ -87,10 +96,11 @@ class LoginActivity : AppCompatActivity() {
                     } catch (e: FirebaseAuthInvalidCredentialsException) {
                         toast(getString(R.string.invalid_username_password))
                         updateUI(null)
-                    } catch(e: FirebaseAuthInvalidUserException) {
-                        if(task.exception!!.message!!.contains("no user record", true)) {
+                    } catch (e: FirebaseAuthInvalidUserException) {
+                        if (task.exception!!.message!!.contains("no user record", true)) {
                             alert {
-                                message = "Akun dengan email $email belum terdaftar. Ingin buat akun?\n\n" +
+                                message =
+                                    "Akun dengan email $email belum terdaftar. Ingin buat akun?\n\n" +
                                             "*Pastikan kembali EMAIL dan PASSWORD (minimal 8 karakter) yang ingin didaftarkan telah sesuai*\n\n" +
                                             "Password Anda saat ini ${password.length} karakter"
                                 isCancelable = false
@@ -98,7 +108,7 @@ class LoginActivity : AppCompatActivity() {
                                     it.cancel()
                                 }
                                 positiveButton("Buat akun") {
-                                    if(password.length<8) {
+                                    if (password.length < 8) {
                                         longToast("Password minimal 8 karakter")
                                         login_password.error = "Minimal 8 karakter"
                                     } else {
@@ -121,13 +131,13 @@ class LoginActivity : AppCompatActivity() {
         showLoading()
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { createTask ->
-                if(createTask.isSuccessful) {
+                if (createTask.isSuccessful) {
                     val user = auth.currentUser
                     val profileUpdates = UserProfileChangeRequest.Builder()
                         .setDisplayName("none")
                         .build()
                     var done = false
-                    while(!done) {
+                    while (!done) {
                         user?.updateProfile(profileUpdates)
                             ?.addOnCompleteListener { task ->
                                 if (task.isSuccessful) {
@@ -151,7 +161,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun checkNullForm(): Boolean {
         var valid = true
-        if(TextUtils.isEmpty(this.email)) {
+        if (TextUtils.isEmpty(this.email)) {
             login_username.error = getString(R.string.prompt_alert_required)
             valid = false
         } else {
@@ -160,46 +170,47 @@ class LoginActivity : AppCompatActivity() {
             var charDot = false
             var countAt = 0
             var dummy = '_'
-            for(index in email.indices) {
-                if((email[index]=='.' && dummy=='.') || email[index]=='`' || email[index]=='~'
-                    || email[index]=='!' || email[index]=='#' || email[index]=='$' || email[index]=='%'
-                    || email[index]=='^' || email[index]=='&' || email[index]=='*' || email[index]=='('
-                    || email[index]==')' || email[index]=='-' || email[index]=='_' || email[index]=='+'
-                    || email[index]=='=' || email[index]=='\\' || email[index]=='|' || email[index]==']'
-                    || email[index]=='}' || email[index]=='[' || email[index]=='{' || email[index]=='\''
-                    || email[index]=='"' || email[index]==';' || email[index]==':' || email[index]=='?'
-                    || email[index]=='/' || email[index]=='>' || email[index]==',' || email[index]=='<') {
+            for (index in email.indices) {
+                if ((email[index] == '.' && dummy == '.') || email[index] == '`' || email[index] == '~'
+                    || email[index] == '!' || email[index] == '#' || email[index] == '$' || email[index] == '%'
+                    || email[index] == '^' || email[index] == '&' || email[index] == '*' || email[index] == '('
+                    || email[index] == ')' || email[index] == '-' || email[index] == '_' || email[index] == '+'
+                    || email[index] == '=' || email[index] == '\\' || email[index] == '|' || email[index] == ']'
+                    || email[index] == '}' || email[index] == '[' || email[index] == '{' || email[index] == '\''
+                    || email[index] == '"' || email[index] == ';' || email[index] == ':' || email[index] == '?'
+                    || email[index] == '/' || email[index] == '>' || email[index] == ',' || email[index] == '<'
+                ) {
                     charAt = false
                     charDot = false
                     break
                 }
-                if(email[index]=='@') {
+                if (email[index] == '@') {
                     countAt++
-                    charAt = when(charAt) {
+                    charAt = when (charAt) {
                         true -> false
                         false -> true
                     }
                 }
-                if(countAt>1) {
+                if (countAt > 1) {
                     charAt = false
                     break
                 }
 
-                if(email[index]=='.' && charAt && countAt==1) {
+                if (email[index] == '.' && charAt && countAt == 1) {
                     charDot = true
-                } else if(email[index]=='.' && charAt && dummy=='.') {
+                } else if (email[index] == '.' && charAt && dummy == '.') {
                     charDot = false
                 }
                 dummy = email[index]
             }
-            if(charAt && charDot) {
+            if (charAt && charDot) {
                 login_username.error = null
             } else {
                 login_username.error = getString(R.string.invalid_username)
                 valid = false
             }
         }
-        if(TextUtils.isEmpty(password)) {
+        if (TextUtils.isEmpty(password)) {
             login_password.error = getString(R.string.prompt_alert_required)
             valid = false
         } else {
@@ -209,7 +220,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if(!loading) {
+        if (!loading) {
             super.onBackPressed()
         }
     }

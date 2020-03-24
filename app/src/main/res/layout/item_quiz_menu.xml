@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="4dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:layout_marginTop="4dp">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardElevation="4dp"
-        app:contentPadding="@dimen/activity_horizontal_margin"
+        app:cardBackgroundColor="@color/colorDarkForeground"
         app:cardCornerRadius="4dp"
-        app:cardBackgroundColor="@color/colorDarkForeground">
+        app:cardElevation="4dp"
+        app:contentPadding="@dimen/activity_horizontal_margin">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,25 +20,25 @@
 
             <ImageView
                 android:id="@+id/item_image_exclamation"
-                android:src="@drawable/ic_done"
-                android:layout_centerInParent="true"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_done"
                 android:tint="@color/colorWhiteTransparent" />
 
             <TextView
-                android:layout_centerInParent="true"
-                android:layout_toStartOf="@id/item_image_exclamation"
                 android:id="@+id/item_quiz_menu_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginEnd="8dp"
-                android:typeface="sans"
+                android:layout_toStartOf="@id/item_image_exclamation"
+                android:text="Teks Panjang"
                 android:textColor="@color/colorWhite"
-                android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="Teks Panjang"/>
+                android:textStyle="bold"
+                android:typeface="sans" />
 
         </RelativeLayout>
 

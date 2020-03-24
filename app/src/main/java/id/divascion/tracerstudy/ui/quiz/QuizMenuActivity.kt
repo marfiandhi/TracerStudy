@@ -1,7 +1,7 @@
 package id.divascion.tracerstudy.ui.quiz
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.MenuItem
@@ -25,7 +25,7 @@ class QuizMenuActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = getString(R.string.prompt_quizioner)
         role = intent.getStringExtra("ROLE")
-        when(role) {
+        when (role) {
             "alumni" -> {
                 titles = resources.getStringArray(R.array.list_quiz_alumni_subtitle)
             }
@@ -45,7 +45,7 @@ class QuizMenuActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        if(pause) {
+        if (pause) {
             loadDataAdapter()
             adapter.notifyDataSetChanged()
             quiz_menu_rv.layoutManager = LinearLayoutManager(this)
@@ -56,7 +56,7 @@ class QuizMenuActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when(item?.itemId) {
+        when (item?.itemId) {
             android.R.id.home -> finish()
         }
         return super.onOptionsItemSelected(item)
@@ -72,24 +72,25 @@ class QuizMenuActivity : AppCompatActivity() {
         val user = FirebaseAuth.getInstance().currentUser
         val list = SharedPreferenceManager().getListRole(this, role, user!!.uid) ?: ArrayList()
         try {
-            if(list.size > 0) {
+            if (list.size > 0) {
                 Log.e("List quiz", "Size is not 0")
             } else {
-                for(i in 0..5) {
+                for (i in 0..5) {
                     list.add("none")
                 }
             }
-        } catch(e: Exception) {
-            for(i in 0..5) {
+        } catch (e: Exception) {
+            for (i in 0..5) {
                 list.add("none")
             }
         }
-        adapter = QuizMenuAdapter(this, titles, list){ i: Int, s: String, l: String ->
+        adapter = QuizMenuAdapter(this, titles, list) { i: Int, s: String, l: String ->
             startActivity<QuizActivity>(
                 "QUIZ_NUMBER" to i,
                 "QUIZ_TITLE" to s,
                 "ROLE" to role,
-                "STATUS" to l)
+                "STATUS" to l
+            )
         }
     }
 }

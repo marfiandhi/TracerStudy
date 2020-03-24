@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDarkBackground"
+    tools:context=".ui.quiz.fragment.AlumniFourFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pertanyaan dengan tanda"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" * "
+                android:textColor="@color/colorLightRed"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wajib diisi."
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Apakah pendidikan yang Saudara dapat di Poltekbang Jayapura bermanfaat untuk pekerjaan Saudara?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_four_radio_group_useful"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_four_radio_useful_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_yes"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_four_radio_useful_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_no"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrey">
+
+                <EditText
+                    android:id="@+id/alumni_four_et_useful_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_reason"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="5"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Dari pengalaman Saudara bekerja, apa saran praktis Saudara untuk pendidikan di Poltekbang Jayapura dalam rangka meningkatkan kesesuaian antara pendidikan dengan lapangan pekerjaan?"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrey">
+
+                <EditText
+                    android:id="@+id/alumni_four_et_practical_advice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_advice"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="5"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Kompetensi apa yang Saudara dapatkan selama kuliah di Poltekbang Jayapura yang mendukung pekerjaan Saudara?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Jurusan selama kuliah*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_four_radio_group_major"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_four_radio_major_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D3 Nautika"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_four_radio_major_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D3 Teknika"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_four_radio_major_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D3 Elektro Pelayaran"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center|start"
+                android:text="Bidang Keahlian"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <LinearLayout
+                android:id="@+id/alumni_four_checked_box_group_expert_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/alumni_four_checked_box_one_expert_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Ilmu Pelayaran"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_four_checked_box_one_expert_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Sistem Navigasi Elektronik"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_four_checked_box_one_expert_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alumni_four_checked_box_group_expert_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/alumni_four_checked_box_two_expert_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Ilmu Pelayaran"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_four_checked_box_two_expert_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Sistem Navigasi Elektronik"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_four_checked_box_two_expert_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alumni_four_checked_box_group_expert_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/alumni_four_checked_box_three_expert_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Ilmu Pelayaran"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_four_checked_box_three_expert_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Sistem Navigasi Elektronik"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_four_checked_box_three_expert_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorGrey" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrey">
+
+                <EditText
+                    android:id="@+id/alumni_four_et_expert_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:hint="Kompetensi lainnya*"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Kompetensi apa yang dibutuhkan pekerjaan Saudara yang tidak Saudara dapatkan selama kuliah?"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrey">
+
+                <EditText
+                    android:id="@+id/alumni_four_et_required_compentece"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_competence"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="5"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/alumni_six_save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/prompt_save_continue" />
+
+    </LinearLayout>
+
+</ScrollView>

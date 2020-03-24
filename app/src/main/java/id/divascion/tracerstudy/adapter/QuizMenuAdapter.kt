@@ -10,11 +10,21 @@ import android.view.ViewGroup
 import id.divascion.tracerstudy.R
 import kotlinx.android.synthetic.main.item_quiz_menu.view.*
 
-class QuizMenuAdapter (private val context: Context, private val title: Array<String>, private val list: ArrayList<String>, private val listener: (Int, String, String)-> Unit)
-    : RecyclerView.Adapter<QuizMenuAdapter.ViewHolder>() {
+class QuizMenuAdapter(
+    private val context: Context,
+    private val title: Array<String>,
+    private val list: ArrayList<String>,
+    private val listener: (Int, String, String) -> Unit
+) : RecyclerView.Adapter<QuizMenuAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_quiz_menu, viewGroup, false))
+        return ViewHolder(
+            LayoutInflater.from(context).inflate(
+                R.layout.item_quiz_menu,
+                viewGroup,
+                false
+            )
+        )
     }
 
     override fun getItemCount(): Int {
@@ -25,16 +35,27 @@ class QuizMenuAdapter (private val context: Context, private val title: Array<St
         holder.bindItem(title[position], position, list[position], context, listener)
     }
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         @SuppressLint("DefaultLocale")
-        fun bindItem(item: String, position: Int, list: String, context: Context, listener: (Int, String, String) -> Unit){
-            if(list.equals("done", true)) {
-                itemView.item_image_exclamation.setColorFilter(ContextCompat.getColor(context, R.color.colorBlueSpecial), android.graphics.PorterDuff.Mode.SRC_IN)
+        fun bindItem(
+            item: String,
+            position: Int,
+            list: String,
+            context: Context,
+            listener: (Int, String, String) -> Unit
+        ) {
+            if (list.equals("done", true)) {
+                itemView.item_image_exclamation.setColorFilter(
+                    ContextCompat.getColor(
+                        context,
+                        R.color.colorBlueSpecial
+                    ), android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
             itemView.item_quiz_menu_text.text = item
 
-            itemView.setOnClickListener{
+            itemView.setOnClickListener {
                 listener(position, item, list.toLowerCase())
             }
         }

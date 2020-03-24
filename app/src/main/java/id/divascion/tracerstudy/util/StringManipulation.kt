@@ -5,13 +5,13 @@ class StringManipulation {
     fun money(x: Int): String {
         var text = ""
         val tmp = x.toString().toCharArray()
-        var dmy = tmp.size%3
-        if(dmy==0) {
+        var dmy = tmp.size % 3
+        if (dmy == 0) {
             dmy = 3
         }
-        for(i in tmp.indices) {
+        for (i in tmp.indices) {
             text += tmp[i]
-            if(i+1==dmy && i+1 < tmp.size) {
+            if (i + 1 == dmy && i + 1 < tmp.size) {
                 text += "."
                 dmy += 3
             }
@@ -23,11 +23,11 @@ class StringManipulation {
         var newUrl = ""
         val oldUrl = url.toCharArray()
         var extension = ""
-        for (i in oldUrl.size-1 downTo 0) {
+        for (i in oldUrl.size - 1 downTo 0) {
             extension = oldUrl[i] + extension
-            if(oldUrl[i]=='.') {
-                for(j in oldUrl.indices) {
-                    if(j<i) {
+            if (oldUrl[i] == '.') {
+                for (j in oldUrl.indices) {
+                    if (j < i) {
                         newUrl += oldUrl[j]
                     } else {
                         newUrl += "-150x150$extension"
@@ -44,11 +44,11 @@ class StringManipulation {
         var newUrl = ""
         val oldUrl = url.toCharArray()
         var extension = ""
-        for (i in oldUrl.size-1 downTo 0) {
+        for (i in oldUrl.size - 1 downTo 0) {
             extension = oldUrl[i] + extension
-            if(oldUrl[i]=='.') {
-                for(j in oldUrl.indices) {
-                    if(j<i) {
+            if (oldUrl[i] == '.') {
+                for (j in oldUrl.indices) {
+                    if (j < i) {
                         newUrl += oldUrl[j]
                     } else {
                         newUrl += "-300x300$extension"
@@ -66,10 +66,10 @@ class StringManipulation {
         var before = ""
         var listIterator = false
         var listSpace = false
-        for(i in list.indices) {
-            if(listIterator && listSpace) {
+        for (i in list.indices) {
+            if (listIterator && listSpace) {
                 extractString += list[i]
-            } else if(before.equals("A", true) || before.equals("B", true)
+            } else if (before.equals("A", true) || before.equals("B", true)
                 || before.equals("C", true) || before.equals("D", true)
                 || before.equals("E", true) || before.equals("F", true)
                 || before.equals("G", true) || before.equals("H", true)
@@ -82,9 +82,10 @@ class StringManipulation {
                 || before.equals("U", true) || before.equals("V", true)
                 || before.equals("W", true) || before.equals("X", true)
                 || before.equals("Y", true) || before.equals("Z", true)
-                && list[i]=='.' && !listIterator) {
+                && list[i] == '.' && !listIterator
+            ) {
                 listIterator = true
-            } else if(listIterator && !listSpace && list[i]==' ') {
+            } else if (listIterator && !listSpace && list[i] == ' ') {
                 listSpace = true
             }
             before = list[i].toString()
@@ -110,7 +111,7 @@ class StringManipulation {
             else -> ""
         }
 
-        val sDate = if(date<10) {
+        val sDate = if (date < 10) {
             "0$date"
         } else {
             "$date"

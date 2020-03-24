@@ -27,4 +27,4 @@ data class AlumniQuizOne(
     var addressMobilePhone: String = "",
     var email: String = "",
     var facebook: String? = null
-): Parcelable
+) : Parcelable

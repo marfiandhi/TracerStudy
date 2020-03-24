@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDarkBackground"
+    tools:context=".ui.quiz.fragment.AlumniFiveFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pertanyaan dengan tanda"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" * "
+                android:textColor="@color/colorLightRed"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wajib diisi."
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Saat belajar di Poltekbang Jayapura, menurut Saudara seberapa penting pengalaman pembelajaran berikut ini memberikan kontribusi dalam dunia kerja?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Pengalaman belajar di dalam kelas"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_class_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_class_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_class_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_class_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Pengalaman belajar di laboratorium"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_lab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_lab_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_lab_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_lab_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_lab_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Pengalaman belajar di masyarakat"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_community"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_community_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_community_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_community_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_community_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Pengalaman magang di perusahaan/instansi"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_intern"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_intern_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_intern_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_intern_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_intern_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Pengalaman belajar dalam organisasi Staf Resimen Ketarunaan"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_organ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_organ_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_organ_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_organ_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_organ_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Pengalaman belajar dalam pergaulan kampus"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_campus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_campus_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_campus_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_campus_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_campus_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Pengalaman belajar mandiri"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_independent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_independent_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_independent_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_independent_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_independent_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="English Day"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_english_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_english_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_english_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_english_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Kunjungan Pesawat"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_plane"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_plane_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_plane_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_plane_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_plane_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Kerohanian"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_spirit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_spirit_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_spirit_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_spirit_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_spirit_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Kesamaptaan"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_luck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_luck_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_luck_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_luck_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_luck_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Tugas Jaga"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_five_radio_group_guard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_guard_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_guard_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_guard_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_five_radio_guard_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_important"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/alumni_five_save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/prompt_save_continue" />
+
+    </LinearLayout>
+
+</ScrollView>

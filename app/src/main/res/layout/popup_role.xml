@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:focusable="true"
-    android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlackTransparentLighter">
+    android:background="@color/colorBlackTransparentLighter"
+    android:clickable="true"
+    android:focusable="true">
 
     <View
         android:id="@+id/popup_view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        app:layout_anchor="@id/popup_card"/>
+        app:layout_anchor="@id/popup_card" />
 
     <RelativeLayout
         android:id="@+id/popup_card"
@@ -39,69 +37,69 @@
                 android:paddingBottom="8dp">
 
                 <TextView
-                    android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorGrey"
-                    android:text="Kelihatannya Anda belum menentukan role Anda untuk Kuisioner.\n\nPilih diantara 2 pilihan dibawah untuk memulai Kuis."/>
+                    android:layout_marginTop="10dp"
+                    android:text="Kelihatannya Anda belum menentukan role Anda untuk Kuisioner.\n\nPilih diantara 2 pilihan dibawah untuk memulai Kuis."
+                    android:textColor="@color/colorGrey" />
 
                 <TextView
                     android:id="@+id/popup_error"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:textColor="@color/colorRed"
-                    android:text=" Anda belum memilih apapun."
-                    android:textStyle="bold"
                     android:drawableStart="@drawable/ic_error_outline"
                     android:gravity="center"
-                    android:visibility="gone"/>
+                    android:text=" Anda belum memilih apapun."
+                    android:textColor="@color/colorRed"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
 
                 <RadioGroup
                     android:id="@+id/popup_radio_group"
-                    android:layout_marginTop="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
                     android:padding="4dp"
                     android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:paddingEnd="16dp">
 
                     <RadioButton
                         android:id="@+id/popup_radio_alumni"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="32dp"
-                        android:padding="8dp"
+                        android:layout_weight="1"
                         android:background="@drawable/radio_button_background"
                         android:button="@android:color/transparent"
-                        android:textColor="@color/colorWhite"
+                        android:padding="8dp"
+                        android:text="Alumni"
                         android:textAlignment="center"
-                        android:text="Alumni" />
+                        android:textColor="@color/colorWhite" />
 
                     <RadioButton
                         android:id="@+id/popup_radio_stakeholder"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
-                        android:padding="8dp"
+                        android:layout_weight="1"
                         android:background="@drawable/radio_button_background"
                         android:button="@android:color/transparent"
-                        android:textColor="@color/colorWhite"
+                        android:padding="8dp"
+                        android:text="Stakeholder"
                         android:textAlignment="center"
-                        android:text="Stakeholder" />
+                        android:textColor="@color/colorWhite" />
 
                 </RadioGroup>
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:gravity="end">
+                    android:gravity="end"
+                    android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/popup_cancel_button"
@@ -109,9 +107,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
-                        android:typeface="sans"
+                        android:text="Batal"
                         android:textStyle="bold"
-                        android:text="Batal"/>
+                        android:typeface="sans" />
 
                     <Button
                         android:id="@+id/popup_confirm_button"
@@ -119,9 +117,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:typeface="sans"
+                        android:text="Konfirmasi"
                         android:textStyle="bold"
-                        android:text="Konfirmasi"/>
+                        android:typeface="sans" />
 
                 </LinearLayout>
 
@@ -136,14 +134,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="Oops"
-        android:textColor="@color/colorOrange"
-        android:shadowRadius="2"
+        android:shadowColor="@color/colorBlack"
         android:shadowDx="2"
         android:shadowDy="2"
-        android:shadowColor="@color/colorBlack"
+        android:shadowRadius="2"
+        android:text="Oops"
+        android:textColor="@color/colorOrange"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_anchor="@id/popup_view"/>
+        app:layout_anchor="@id/popup_view" />
 
 </android.support.design.widget.CoordinatorLayout>

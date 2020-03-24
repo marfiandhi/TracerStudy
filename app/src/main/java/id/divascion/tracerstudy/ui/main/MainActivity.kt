@@ -1,8 +1,8 @@
 package id.divascion.tracerstudy.ui.main
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             toast("Data Alumni")
         }
         main_quiz_button.setOnClickListener {
-            if(role.isEmpty() || role == "none") {
+            if (role.isEmpty() || role == "none") {
                 main_popup.visibility = View.VISIBLE
                 main_logout_button.isEnabled = false
                 main_data_button.isClickable = false
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                     finishAffinity()
                     startActivity<LoginActivity>()
                 }
-                negativeButton("Tidak") {it.cancel()}
+                negativeButton("Tidak") { it.cancel() }
             }.show()
         }
         //TODO hapus nanti
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        if(pause) {
+        if (pause) {
             user = auth.currentUser!!
             role = user.displayName.toString()
             pause = false
@@ -107,15 +107,18 @@ class MainActivity : AppCompatActivity() {
         popup_confirm_button.setOnClickListener {
             isAlumni = popup_radio_alumni.isChecked
             isStakeholder = popup_radio_stakeholder.isChecked
-            if(!isAlumni && !isStakeholder) {
+            if (!isAlumni && !isStakeholder) {
                 popup_error.visibility = View.VISIBLE
             } else {
-                if(isAlumni) {
+                if (isAlumni) {
                     this.role = "alumni"
                 } else {
                     this.role = "stakeholder"
                 }
-                alert("Role Anda tidak dapat diubah lagi setelah mengonfirmasi. Lanjutkan?", "Peringatan"){
+                alert(
+                    "Role Anda tidak dapat diubah lagi setelah mengonfirmasi. Lanjutkan?",
+                    "Peringatan"
+                ) {
                     negativeButton("Batal") {
                         main_logout_button.isEnabled = true
                         main_data_button.isClickable = true
@@ -161,7 +164,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun toQuiz(role: String) {
         main_popup.visibility = View.GONE
-        if(role=="alumni" || role=="stakeholder") {
+        if (role == "alumni" || role == "stakeholder") {
             startActivity<QuizMenuActivity>("ROLE" to role)
         } else {
             Log.e("role", "Error $role")
@@ -177,10 +180,10 @@ class MainActivity : AppCompatActivity() {
                 roleConfirm = false
             }
             !roleConfirm && !loading -> {
-                if(count<1) {
+                if (count < 1) {
                     toast("Tekan tombol kembali sekali lagi untuk keluar")
                     timer.start()
-                    if(timer.isRun()) {
+                    if (timer.isRun()) {
                         count++
                     }
                 } else {
@@ -189,6 +192,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun showLoading() {
         main_popup.visibility = View.GONE
         main_loading.visibility = View.VISIBLE

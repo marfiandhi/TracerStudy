@@ -10,10 +10,9 @@ import android.view.ViewGroup
 import com.google.firebase.auth.FirebaseUser
 import id.divascion.tracerstudy.R
 import id.divascion.tracerstudy.data.model.AlumniQuizOne
-import id.divascion.tracerstudy.util.StringManipulation
 import id.divascion.tracerstudy.util.SharedPreferenceManager
+import id.divascion.tracerstudy.util.StringManipulation
 import kotlinx.android.synthetic.main.fragment_alumni_one.*
-import org.jetbrains.anko.backgroundColor
 import org.jetbrains.anko.support.v4.alert
 import java.util.*
 
@@ -32,27 +31,34 @@ class AlumniOneFragment : Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
             user = it.get(ARG_PARAM1) as FirebaseUser?
-            status = it.getString(ARG_PARAM2)?: "none"
+            status = it.getString(ARG_PARAM2) ?: "none"
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_alumni_one, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        data = SharedPreferenceManager().getAlumniOne(activity!!, user!!.uid)?: AlumniQuizOne()
+        data = SharedPreferenceManager().getAlumniOne(activity!!, user!!.uid) ?: AlumniQuizOne()
 
-        if(status.equals("done", true)) {
+        if (status.equals("done", true)) {
             injectData()
         }
 
         alumni_one_save_button.setOnClickListener {
-            alert ("Data tidak dapat diubah setelah disimpan.\nPastikan data yang Anda masukkan semuanya telah benar dan sesuai", "Peringatan") {
+            alert(
+                "Data tidak dapat diubah setelah disimpan.\nPastikan data yang Anda masukkan semuanya telah benar dan sesuai",
+                "Peringatan"
+            ) {
                 isCancelable = false
                 positiveButton("Simpan") {
-                    if(checkAndGetData()) {
+                    if (checkAndGetData()) {
                         onButtonPressed("done")
                     } else {
                         onButtonPressed("miss")
@@ -148,14 +154,14 @@ class AlumniOneFragment : Fragment() {
     private fun checkAndGetData(): Boolean {
         var valid = true
         data.name = alumni_one_et_name.text.toString()
-        if(data.name.isEmpty()) {
+        if (data.name.isEmpty()) {
             valid = false
             alumni_one_et_name.error = resources.getString(R.string.prompt_alert_required)
         } else {
             alumni_one_et_name.error = null
         }
 
-        if(alumni_one_radio_male.isChecked) {
+        if (alumni_one_radio_male.isChecked) {
             data.gender = alumni_one_radio_male.text.toString()
         } else {
             data.gender = alumni_one_radio_female.text.toString()
@@ -170,7 +176,7 @@ class AlumniOneFragment : Fragment() {
         data.schoolPostCode = alumni_one_et_school_postcode.text.toString()
 
         data.bornProvince = alumni_one_et_born_province.text.toString()
-        if(data.bornProvince.isEmpty()) {
+        if (data.bornProvince.isEmpty()) {
             valid = false
             alumni_one_et_born_province.error = resources.getString(R.string.prompt_alert_required)
         } else {
@@ -178,7 +184,7 @@ class AlumniOneFragment : Fragment() {
         }
 
         data.bornCity = alumni_one_et_born_city.text.toString()
-        if(data.bornCity.isEmpty()) {
+        if (data.bornCity.isEmpty()) {
             valid = false
             alumni_one_et_born_city.error = resources.getString(R.string.prompt_alert_required)
         } else {
@@ -186,7 +192,7 @@ class AlumniOneFragment : Fragment() {
         }
 
         data.bornDate = alumni_one_et_born_date.text.toString()
-        if(data.bornDate.isEmpty()) {
+        if (data.bornDate.isEmpty()) {
             valid = false
             alumni_one_et_born_date.error = resources.getString(R.string.prompt_alert_required)
         } else {
@@ -200,15 +206,16 @@ class AlumniOneFragment : Fragment() {
         data.officePhone = alumni_one_et_office_postcode.text.toString()
 
         data.addressProvince = alumni_one_et_address_province.text.toString()
-        if(data.addressProvince.isEmpty()) {
+        if (data.addressProvince.isEmpty()) {
             valid = false
-            alumni_one_et_address_province.error = resources.getString(R.string.prompt_alert_required)
+            alumni_one_et_address_province.error =
+                resources.getString(R.string.prompt_alert_required)
         } else {
             alumni_one_et_address_province.error = null
         }
 
         data.addressCity = alumni_one_et_address_city.text.toString()
-        if(data.addressCity.isEmpty()) {
+        if (data.addressCity.isEmpty()) {
             valid = false
             alumni_one_et_address_city.error = resources.getString(R.string.prompt_alert_required)
         } else {
@@ -216,17 +223,19 @@ class AlumniOneFragment : Fragment() {
         }
 
         data.addressDistrict = alumni_one_et_address_district.text.toString()
-        if(data.addressDistrict.isEmpty()) {
+        if (data.addressDistrict.isEmpty()) {
             valid = false
-            alumni_one_et_address_district.error = resources.getString(R.string.prompt_alert_required)
+            alumni_one_et_address_district.error =
+                resources.getString(R.string.prompt_alert_required)
         } else {
             alumni_one_et_address_district.error = null
         }
 
         data.addressVillage = alumni_one_et_address_village.text.toString()
-        if(data.addressVillage.isEmpty()) {
+        if (data.addressVillage.isEmpty()) {
             valid = false
-            alumni_one_et_address_village.error = resources.getString(R.string.prompt_alert_required)
+            alumni_one_et_address_village.error =
+                resources.getString(R.string.prompt_alert_required)
         } else {
             alumni_one_et_address_village.error = null
         }
@@ -234,7 +243,7 @@ class AlumniOneFragment : Fragment() {
         data.addressPostCode = alumni_one_et_address_postcode.text.toString()
 
         data.addressStreet = alumni_one_et_address_street.text.toString()
-        if(data.addressStreet.isEmpty()) {
+        if (data.addressStreet.isEmpty()) {
             valid = false
             alumni_one_et_address_street.error = resources.getString(R.string.prompt_alert_required)
         } else {
@@ -244,7 +253,7 @@ class AlumniOneFragment : Fragment() {
         data.addressPhone = alumni_one_et_address_phone.text.toString()
 
         data.addressMobilePhone = alumni_one_et_address_hp.text.toString()
-        if(data.addressMobilePhone.isEmpty()) {
+        if (data.addressMobilePhone.isEmpty()) {
             valid = false
             alumni_one_et_address_hp.error = resources.getString(R.string.prompt_alert_required)
         } else {
@@ -252,7 +261,7 @@ class AlumniOneFragment : Fragment() {
         }
 
         data.email = alumni_one_et_email.text.toString()
-        if(data.email.isEmpty()) {
+        if (data.email.isEmpty()) {
             valid = false
             alumni_one_et_email.error = resources.getString(R.string.prompt_alert_required)
         } else {
@@ -278,7 +287,7 @@ class AlumniOneFragment : Fragment() {
         year -= 17
 
         alumni_one_button_date_picker.setOnClickListener {
-            val dpd = DatePickerDialog(activity!!, dateSetListener,1990,12,31)
+            val dpd = DatePickerDialog(activity!!, dateSetListener, 1990, 12, 31)
             newDate.set(year, newDate.get(Calendar.MONTH), newDate.get(Calendar.DATE))
             dpd.datePicker.maxDate = newDate.timeInMillis
             dpd.show()
@@ -287,15 +296,15 @@ class AlumniOneFragment : Fragment() {
 
     private fun updateDateInView() {
         val year = calendar.get(Calendar.YEAR).toString()
-        val month = calendar.get(Calendar.MONTH)+1
+        val month = calendar.get(Calendar.MONTH) + 1
         val date = calendar.get(Calendar.DATE)
         val text = StringManipulation().getDateToday(year, month, date)
         alumni_one_et_born_date.setText(text)
     }
 
     private fun onButtonPressed(status: String) {
-        if(status=="done") {
-            listener?.onFragmentInteractionAlumniOne(data)
+        if (status == "done") {
+            listener?.onFragmentInteraction(data)
         }
     }
 
@@ -314,7 +323,7 @@ class AlumniOneFragment : Fragment() {
     }
 
     interface OnFragmentInteractionListener {
-        fun onFragmentInteractionAlumniOne(data: AlumniQuizOne)
+        fun onFragmentInteraction(data: AlumniQuizOne)
     }
 
     companion object {

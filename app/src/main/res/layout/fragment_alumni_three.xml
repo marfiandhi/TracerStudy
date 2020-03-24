@@ -1,0 +1,2497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDarkBackground"
+    tools:context=".ui.quiz.fragment.AlumniThreeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pertanyaan dengan tanda"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" * "
+                android:textColor="@color/colorLightRed"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wajib diisi."
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/alumni_three_et_name_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama tempat bekerja*"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="3"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Jenis instansi/bidang usaha/industri"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_type_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_type_work_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pemerintah (pusat/departemen)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_type_work_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pemerintah (daerah)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_type_work_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pemerintah (BUMN, BHMN)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_type_work_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Swasta (jasa)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_type_work_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Swasta (manufaktur)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_type_work_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wiraswasta"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_type_work_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perusahaan Asing/Luar Negeri"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_type_work_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/alumni_three_et_type_work_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:hint="Jenis lainnya*"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Jabata/Posisi dalam pekerjaan (apakah sesuai dengan bidang penerbangan)*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_yes"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_no"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_position_yes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_yes_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pilot"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_yes_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pramugara"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_yes_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job 1"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_yes_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job 2"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_yes_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_position_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_no_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PNS"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_no_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dosen"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_no_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Karyawan Perusahaan Swasta"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_no_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Karyawan Perusahaan BUMN"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_no_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TNI/Polri"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_no_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wiraswasta/Wirausaha"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_position_no_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/alumni_three_et_position_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:hint="Jabatan lainnya*"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="4dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_stroke"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/alumni_three_tv_select_month_entrance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:maxLines="1"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:text="Bulan mulai kerja*"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorLightGrey"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/alumni_three_spinner_list_month_entrance"
+                        style="@style/Spinner.Dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/list_month_number"
+                        android:gravity="center|start"
+                        android:spinnerMode="dialog"
+                        app:backgroundTint="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_stroke"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/alumni_three_tv_select_year_entrance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:maxLines="1"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:text="Tahun mulai kerja*"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorLightGrey"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/alumni_three_spinner_list_year_entrance"
+                        style="@style/Spinner.Dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:spinnerMode="dialog"
+                        app:backgroundTint="@color/colorWhite" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="(Jika masih bekerja, tidak perlu diisi)"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_stroke"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/alumni_three_tv_select_month_stop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:maxLines="1"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:text="Bulan berhenti"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorLightGrey"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/alumni_three_spinner_list_month_stop"
+                        style="@style/Spinner.Dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/list_month_number_null"
+                        android:gravity="center|start"
+                        android:spinnerMode="dialog"
+                        app:backgroundTint="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_stroke"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/alumni_three_tv_select_year_stop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:maxLines="1"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:text="Tahun berhenti"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorLightGrey"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/alumni_three_spinner_list_year_stop"
+                        style="@style/Spinner.Dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:spinnerMode="dialog"
+                        app:backgroundTint="@color/colorWhite" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Bagaimana proses Saudara mendapatkan pekerjaan ini?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_effort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_effort_active"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aktif (mencari sendiri)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_effort_passive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pasif (ditawari pekerjaan)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Darimana Saudara mengetahui atau mendapatkan informasi mengenai adanya pekerjaan ini?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorLightGrey" />
+
+            <LinearLayout
+                android:id="@+id/alumni_three_checked_box_group_origin_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/alumni_three_checked_box_origin_info_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Iklan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_three_checked_box_origin_info_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Internet"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_three_checked_box_origin_info_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Almamater/alumni"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_three_checked_box_origin_info_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Koneksi (teman, dosen, saudara/keluarga, dll)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_three_checked_box_origin_info_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Info lowongan dari kampus"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/alumni_three_checked_box_origin_info_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/alumni_three_et_origin_info_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:hint="Kompetensi lainnya*"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Sejauh mana pekerjaan Saudara yang terakhir/sekarang sesuai dengan harapan ketika pertama kali belajar di Poltekbang Jayapura*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_expectation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_expectation_very"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat sesuai dengan harapan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_expectation_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sesuai harapan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_expectation_less"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kurang sesuai harapan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_expectation_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak sesuai harapan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Apakah Saudara puas dengan pekerjaan Saudara yang terakhir/sekarang?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_satisfied"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_satisfied_very"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_satisfied"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_satisfied_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_satisfied"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_satisfied_less"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_less_satisfied"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_satisfied_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_not_satisfied"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Secara umum, apa pertimbangan utama Saudara dalam memilih pekerjaan yang terakhir/sekarang?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_reason_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gaji memadai"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_reason_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sesuai bidang keilmuan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_reason_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mendapatkan pengalaman"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_reason_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mendapatkan ilmu pengetahuan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_reason_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mendapatkan keterampilan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_reason_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lainnya"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/alumni_three_et_reason_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:hint="Pertimbangan lainnya*"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Berapa rata-rata pendapatan Saudara pada pekerjaan terakhir/sekarang? (Termasuk bonus, intensif, dsb)*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_income_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_1_000_000"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_income_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_1_000_000_rp_3_000_000"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_income_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_3_000_000_rp_5_000_000"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_income_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_5_000_000_rp_7_500_000"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_income_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_7_500_000_rp_10_000_000"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_income_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_10_000_000_rp_12_500_000"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_income_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_12_500_000_rp_15_000_000"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_income_eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_15_000_000"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Apakah pekerjaan Saudara ini berhubungan dengan bidang ilmu yang Saudara pelajari selama kuliah?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_major_related"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_major_related_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_yes"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_major_related_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_no"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Menurut Saudara, bagaimana kebutuhan institusi tempat Saudara bekerja terhadap lulusan dari Program Studi/Jurusan Saudara*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_institution_need"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_institution_need_very"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_high"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_institution_need_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_high"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_institution_need_less"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_low"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_institution_need_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_low"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Apakah Saudara pernah bekerja di tempat lain sebelumnya?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/alumni_three_radio_group_previous_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_previous_work_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_yes"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_previous_work_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_no"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/alumni_three_layout_previous_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Sudah berapa kali Saudara berganti pekerjaan?*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/alumni_three_et_number_change_job"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_advice"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/colorWhite" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Alasan pindah tempat kerja*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <RadioGroup
+                    android:id="@+id/alumni_three_radio_group_reason_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_change_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gaji tidak sesuai dengan beban kerja"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_change_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bidang pekerjaan tidak sesuai"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_change_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mencari tantangan dan pengalaman baru"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_change_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak cocok dengan rekan kerja"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_change_five"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gaji terlalu kecil"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_change_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prompt_other"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                </RadioGroup>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/alumni_three_et_reason_change_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="start|top"
+                        android:hint="Jenis lainnya*"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/alumni_three_tv_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pertanyaan dibawah ini terkait dengan pekerjaan pertama."
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Nama tempat bekerja pertama kali*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/alumni_three_et_name_previous_work"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Perusahaan"
+                        android:importantForAutofill="no"
+                        android:inputType="text|textMultiLine"
+                        android:maxLines="3"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/colorWhite" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Jabatan/Posisi terakhir dalam pekerjaan pertama*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/alumni_three_et_name_previous_position"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Jabatan"
+                        android:importantForAutofill="no"
+                        android:inputType="text|textMultiLine"
+                        android:maxLines="3"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/colorWhite" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="4dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_stroke"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/alumni_three_tv_select_month_entrance_previous"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:maxLines="1"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="Bulan mulai kerja pertama*"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/alumni_three_spinner_list_month_entrance_previous"
+                            style="@style/Spinner.Dark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/list_month_number"
+                            android:gravity="center|start"
+                            android:spinnerMode="dialog"
+                            app:backgroundTint="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_stroke"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/alumni_three_tv_select_year_entrance_previous"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:maxLines="1"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="Tahun mulai kerja pertama*"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/alumni_three_spinner_list_year_entrance_previous"
+                            style="@style/Spinner.Dark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:spinnerMode="dialog"
+                            app:backgroundTint="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_stroke"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/alumni_three_tv_select_month_stop_previous"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:maxLines="1"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="Bulan berhenti"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/alumni_three_spinner_list_month_stop_previous"
+                            style="@style/Spinner.Dark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/list_month_number"
+                            android:gravity="center|start"
+                            android:spinnerMode="dialog"
+                            app:backgroundTint="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_stroke"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/alumni_three_tv_select_year_stop_previous"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:maxLines="1"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="Tahun berhenti"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/alumni_three_spinner_list_year_stop_previous"
+                            style="@style/Spinner.Dark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:spinnerMode="dialog"
+                            app:backgroundTint="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Bagaimana proses Saudara mendapatkan pekerjaan pertama?*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <RadioGroup
+                    android:id="@+id/alumni_three_radio_group_effort_previous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_effort_previous_active"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aktif (mencari sendiri)"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_effort_previous_passive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pasif (ditawari pekerjaan)"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Darimana Saudara mengetahui atau mendapatkan informasi mengenai adanya pekerjaan pertama?*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/colorLightGrey" />
+
+                <LinearLayout
+                    android:id="@+id/alumni_three_checked_box_group_origin_info_previous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/alumni_three_checked_box_origin_info_previous_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:text="Iklan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <CheckBox
+                        android:id="@+id/alumni_three_checked_box_origin_info_previous_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:text="Internet"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <CheckBox
+                        android:id="@+id/alumni_three_checked_box_origin_info_previous_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:text="Almamater/alumni"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <CheckBox
+                        android:id="@+id/alumni_three_checked_box_origin_info_previous_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:text="Koneksi (teman, dosen, saudara/keluarga, dll)"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <CheckBox
+                        android:id="@+id/alumni_three_checked_box_origin_info_previous_five"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:text="Info lowongan dari kampus"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <CheckBox
+                        android:id="@+id/alumni_three_checked_box_origin_info_previous_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:text="@string/prompt_other"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/alumni_three_et_origin_info_previous_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="start|top"
+                        android:hint="Kompetensi lainnya*"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Sejauh mana kesesuaian pekerjaan pertama Saudara dengan harapan ketika pertama kali belajar di Poltekbang Jayapura*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <RadioGroup
+                    android:id="@+id/alumni_three_radio_group_expectation_previous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_expectation_previous_very"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat sesuai dengan harapan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_expectation_previous_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sesuai harapan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_expectation_previous_less"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kurang sesuai harapan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_expectation_previous_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak sesuai harapan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Apakah Saudara puas dengan pekerjaan pertama Saudara?*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <RadioGroup
+                    android:id="@+id/alumni_three_radio_group_satisfied_previous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_satisfied_previous_very"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prompt_very_satisfied"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_satisfied_previous_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prompt_satisfied"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_satisfied_previous_less"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prompt_less_satisfied"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_satisfied_previous_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prompt_not_satisfied"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Secara umum, apa pertimbangan utama Saudara dalam memilih pekerjaan pertama?*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <RadioGroup
+                    android:id="@+id/alumni_three_radio_group_reason_previous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_previous_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gaji memadai"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_previous_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sesuai bidang keilmuan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_previous_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mendapatkan pengalaman"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_previous_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mendapatkan ilmu pengetahuan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_previous_five"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mendapatkan keterampilan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_reason_previous_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lainnya"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                </RadioGroup>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/alumni_three_et_reason_previous_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="start|top"
+                        android:hint="Pertimbangan lainnya*"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Berapa rata-rata pendapatan Saudara pada pekerjaan pertama? (Termasuk bonus, intensif, dsb)*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <RadioGroup
+                    android:id="@+id/alumni_three_radio_group_income_previous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_income_previous_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rp_1_000_000"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_income_previous_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rp_1_000_000_rp_3_000_000"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_income_previous_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rp_3_000_000_rp_5_000_000"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_income_previous_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rp_5_000_000_rp_7_500_000"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_income_previous_five"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rp_7_500_000_rp_10_000_000"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_income_previous_six"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rp_10_000_000_rp_12_500_000"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_income_previous_seven"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rp_12_500_000_rp_15_000_000"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_income_previous_eight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rp_15_000_000"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Kapan Saudara mulai mencarai pekerjaan? (Pekerjaan sambilan/sampingan tidak termasuk)*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/card_stroke"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/alumni_three_spinner_when_look_previous"
+                        style="@style/Spinner.Dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/when_looking_list"
+                        android:gravity="center|start"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:spinnerMode="dialog"
+                        app:backgroundTint="@color/colorWhite" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Berapa perusahaan/instansi/institusi yang sudah Saudara lamar (lewat surat atau e-mail) sebelum Saudara memperoleh pekerjaan pertama?*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/alumni_three_et_number_applied_previous"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_advice"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/colorWhite" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorDarkForeground"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Berapa lama Saudara mendapatkan pekerjaan pertama?*"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/colorLightGrey" />
+
+                <RadioGroup
+                    android:id="@+id/alumni_three_radio_group_duration_get_previous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_duration_get_previous_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_3_bulan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_duration_get_previous_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_6_bulan"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_duration_get_previous_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1 Tahun"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                    <RadioButton
+                        android:id="@+id/alumni_three_radio_duration_get_previous_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="> 1 Tahun"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorLightGrey" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/alumni_three_save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/prompt_save_continue" />
+
+    </LinearLayout>
+
+</ScrollView>

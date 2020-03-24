@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/quiz_parent_view"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quiz_parent_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkBackground"
@@ -11,6 +10,6 @@
     <FrameLayout
         android:id="@+id/quiz_frame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

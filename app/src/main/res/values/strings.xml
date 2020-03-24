@@ -33,7 +33,92 @@
         <item>C. Kinerja Alumni Politeknik Penerbangan Jayapura</item>
         <item>D. Prospek Masa Mendatang</item>
     </string-array>
+    <string-array name="when_looking_list">
+        <item>Kira-kira 1 bulan sebelum lulus</item>
+        <item>Kira-kira 1 bulan sesudah lulus</item>
+        <item>Kira-kira 2 bulan sesudah lulus</item>
+        <item>Kira-kira 3 bulan sesudah lulus</item>
+        <item>Kira-kira 4 bulan sesudah lulus</item>
+        <item>Kira-kira 5 bulan sesudah lulus</item>
+        <item>Kira-kira 6 bulan sesudah lulus</item>
+        <item>Kira-kira 7 bulan sesudah lulus</item>
+        <item>Kira-kira 8 bulan sesudah lulus</item>
+        <item>Kira-kira 9 bulan sesudah lulus</item>
+        <item>Kira-kira 10 bulan sesudah lulus</item>
+        <item>Kira-kira 11 bulan sesudah lulus</item>
+        <item>Kira-kira 12 bulan sesudah lulus</item>
+        <item>Kira-kira lebih dari setahun sesudah lulus</item>
+        <item>Saya tidak mencari kerja</item>
+    </string-array>
+    <string-array name="list_month_number">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="list_month_number_null">
+        <item>-</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="list_school_level">
+        <item>D4</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prompt_save_continue">Simpan dan Lanjutkan</string>
+    <string name="prompt_not_important">Tidak Penting</string>
+    <string name="prompt_less_important">Kurang Penting</string>
+    <string name="prompt_important">Penting</string>
+    <string name="prompt_very_important">Sangat Penting</string>
+    <string name="prompt_yes">Iya</string>
+    <string name="prompt_no">Tidak</string>
+    <string name="prompt_other">Lainnya</string>
+    <string name="prompt_very_capable">Sangat Mampu</string>
+    <string name="prompt_less_capable">Kurang Mampu</string>
+    <string name="prompt_not_capable">Tidak Mampu</string>
+    <string name="prompt_capable">Mampu</string>
+    <string name="prompt_advice">Saran</string>
+    <string name="prompt_reason">Alasan</string>
+    <string name="prompt_competence">Kompetensi</string>
+    <string name="prompt_very_satisfied">Sangat Puas</string>
+    <string name="prompt_satisfied">Puas</string>
+    <string name="prompt_less_satisfied">Kurang Puas</string>
+    <string name="prompt_not_satisfied">Tidak Puas</string>
+    <string name="prompt_very_high">Sangat Tinggi</string>
+    <string name="prompt_high">Tinggi</string>
+    <string name="prompt_low">Rendah</string>
+    <string name="prompt_very_low">Sangat Rendah</string>
+    <string name="rp_1_000_000"><![CDATA[< Rp. 1.000.000]]></string>
+    <string name="rp_1_000_000_rp_3_000_000"><![CDATA[> Rp. 1.000.000 - Rp. 3.000.000]]></string>
+    <string name="rp_3_000_000_rp_5_000_000"><![CDATA[> Rp. 3.000.000 - Rp. 5.000.000]]></string>
+    <string name="rp_5_000_000_rp_7_500_000"><![CDATA[> Rp. 5.000.000 - Rp. 7.500.000]]></string>
+    <string name="rp_7_500_000_rp_10_000_000"><![CDATA[> Rp. 7.500.000 - Rp. 10.000.000]]></string>
+    <string name="rp_10_000_000_rp_12_500_000"><![CDATA[> Rp. 10.000.000 - Rp. 12.500.000]]></string>
+    <string name="rp_12_500_000_rp_15_000_000"><![CDATA[> Rp. 12.500.000 - Rp. 15.000.000]]></string>
+    <string name="rp_15_000_000"><![CDATA[> Rp. 15.000.000]]></string>
+    <string name="_3_bulan"><![CDATA[< 3 Bulan]]></string>
+    <string name="_6_bulan"><![CDATA[< 6 Bulan]]></string>
 </resources>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkBackground">
@@ -12,15 +11,15 @@
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.CardView
-            app:cardCornerRadius="4dp"
-            app:cardElevation="8dp"
-            app:cardBackgroundColor="@color/colorDarkForeground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="80dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="64dp">
+            android:layout_marginBottom="64dp"
+            app:cardBackgroundColor="@color/colorDarkForeground"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="8dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -33,13 +32,13 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/layout_login_username"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
                     android:orientation="vertical"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:textColorHint="@color/colorGrey"
                     android:textColor="@color/colorWhite"
-                    android:layout_centerHorizontal="true">
+                    android:textColorHint="@color/colorGrey">
 
                     <EditText
                         android:id="@+id/login_username"
@@ -47,24 +46,24 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/prompt_email"
                         android:inputType="textWebEmailAddress"
-                        android:textColor="@color/colorWhite"
                         android:lines="1"
-                        app:autoSizeTextType="uniform"
                         android:maxLength="32"
-                        android:selectAllOnFocus="true" />
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/colorWhite"
+                        app:autoSizeTextType="uniform" />
 
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/layout_login_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_below="@id/layout_login_username"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:textColorHint="@color/colorGrey"
-                    android:textColor="@color/colorWhite"
                     android:layout_centerHorizontal="true"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorGrey"
                     app:passwordToggleEnabled="true"
                     app:passwordToggleTint="@color/colorWhite">
 
@@ -74,10 +73,10 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/prompt_password"
                         android:imeOptions="actionDone"
-                        android:textColor="@color/colorWhite"
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:singleLine="true"
+                        android:textColor="@color/colorWhite"
                         app:backgroundTint="@color/colorWhite"
                         tools:ignore="Autofill" />
 
@@ -87,11 +86,11 @@
                     android:id="@+id/login_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_login_password"
+                    android:layout_centerHorizontal="true"
                     android:layout_gravity="start"
                     android:layout_marginTop="16dp"
-                    android:text="@string/action_sign_in"
-                    android:layout_below="@id/layout_login_password"
-                    android:layout_centerHorizontal="true"/>
+                    android:text="@string/action_sign_in" />
 
             </RelativeLayout>
 
@@ -102,7 +101,6 @@
     <include
         android:id="@+id/login_loading"
         layout="@layout/loading_screen"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
 
 </android.support.design.widget.CoordinatorLayout>
