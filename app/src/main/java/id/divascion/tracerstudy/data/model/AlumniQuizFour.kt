@@ -7,7 +7,7 @@ import kotlinx.android.parcel.Parcelize
 data class AlumniQuizFour(
     var isUseful: String = "",
     var practicalAdvice: String? = null,
-    var competenceSupportMajor: String = "",
-    var competenceSupportExpert: String = "",
+//    var competenceSupportMajor: String = "",
+//    var competenceSupportExpert: String = "",
     var requiredCompetencies: String? = null
 ) : Parcelable

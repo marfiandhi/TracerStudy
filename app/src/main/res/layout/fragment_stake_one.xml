@@ -1,14 +1,502 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorDarkBackground"
     tools:context=".ui.quiz.fragment.StakeOneFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pertanyaan dengan tanda"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" * "
+                android:textColor="@color/colorLightRed"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wajib diisi."
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_one_et_name_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Perusahaan/Instansi*"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_one_et_address_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Alamat Perusahaan/Instansi*"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="3"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_one_et_phone_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No. Telp Perusahaan/Instansi*"
+                    android:importantForAutofill="no"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_one_et_fax_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fax Perusahaan/Instansi"
+                    android:importantForAutofill="no"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_one_et_email_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Perusahaan/Instansi*"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Jenis instansi/perusahaan ini adalah*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/stake_one_radio_group_type_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_type_work_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perusahaan Penerbangan Swasta Dalam Negeri"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_type_work_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perusahaan Penerbangan Swasta Luar Negeri"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_type_work_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BUMN/Perusahaan Milik Pemerintah"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_type_work_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lembaga/Instansi Pemerintah"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_type_work_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lembaga/Instansi Swasta"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_type_work_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TNI/Polri"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_type_work_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_one_et_type_work_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:hint="Jenis lainnya*"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Berapa jumlah tenaga kerja di instansi/perusahaan ini? (termasuk di perwakilan/cabang)"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/stake_one_radio_group_number_worker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_number_worker_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="kurang dari 10%"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_number_worker_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10%-25%"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_number_worker_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="25%-50%"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_number_worker_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="lebih dari 50%"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Berapa presentasi pegawai dari alumni Lemdik penerbangan yang bekerja di instansi/perusahaan ini?"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/stake_one_radio_group_number_aviator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_number_aviator_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="kurang dari 10%"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_number_aviator_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10%-25%"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_number_aviator_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="25%-50%"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_one_radio_number_aviator_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="lebih dari 50%"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Berapa orang jumlah pegawai dari alumni Lemdik penerbangan lulusan Poltekbang Jayapura yang bekerja di instansi/perusahaan ini?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_one_et_number_poltekbang_aviator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="Jumlah*"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/stake_one_save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/prompt_save_continue" />
+
+    </LinearLayout>
+
+</ScrollView>

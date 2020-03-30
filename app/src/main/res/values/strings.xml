@@ -85,8 +85,21 @@
         <item>S2</item>
         <item>S3</item>
     </string-array>
+    <string-array name="existing_condition">
+        <item>Sangat Tidak Baik</item>
+        <item>Tidak Baik</item>
+        <item>Netral</item>
+        <item>Baik</item>
+        <item>Sangat Baik</item>
+    </string-array>
+    <string-array name="desirable_condition">
+        <item>Sangat Tidak Penting</item>
+        <item>Tidak Penting</item>
+        <item>Netral</item>
+        <item>Penting</item>
+        <item>Sangat Penting</item>
+    </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="prompt_save_continue">Simpan dan Lanjutkan</string>
     <string name="prompt_not_important">Tidak Penting</string>
@@ -105,8 +118,10 @@
     <string name="prompt_competence">Kompetensi</string>
     <string name="prompt_very_satisfied">Sangat Puas</string>
     <string name="prompt_satisfied">Puas</string>
+    <string name="prompt_satisfied_enough">Cukup Puas</string>
     <string name="prompt_less_satisfied">Kurang Puas</string>
     <string name="prompt_not_satisfied">Tidak Puas</string>
+    <string name="prompt_very_not_satisfied">Sangat Tidak Puas</string>
     <string name="prompt_very_high">Sangat Tinggi</string>
     <string name="prompt_high">Tinggi</string>
     <string name="prompt_low">Rendah</string>
@@ -121,4 +136,35 @@
     <string name="rp_15_000_000"><![CDATA[> Rp. 15.000.000]]></string>
     <string name="_3_bulan"><![CDATA[< 3 Bulan]]></string>
     <string name="_6_bulan"><![CDATA[< 6 Bulan]]></string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="prompt_existing_condition">Kondisi Existing</string>
+    <string name="prompt_suitable_condition">Kondisi Diinginkan</string>
+    <string name="prompt_assessement_instructions">Petunjuk Penilaian</string>
+    <string name="good_level_very_low">Sangat Tidak Baik</string>
+    <string name="good_level_low">Tidak Baik</string>
+    <string name="neutral">Netral</string>
+    <string name="good_level_high">Baik</string>
+    <string name="good_level_very_high">Sangat Baik</string>
+    <string name="important_level_very_low">Sangat Tidak Penting</string>
+    <string name="important_level_low">Tidak Penting</string>
+    <string name="important_level_high">Penting</string>
+    <string name="important_level_very_high">Sangat Penting</string>
+    <string name="prompt_very_good">Sangat Bagus</string>
+    <string name="prompt_good">Bagus</string>
+    <string name="prompt_enough_good">Cukup Bagus</string>
+    <string name="prompt_bad">Tidak Bagus</string>
+    <string name="prompt_very_bad">Sangat Tidak Bagus</string>
+    <string name="major_one">D-II AMPO (Aerodrome Multi Purpose Officer)</string>
+    <string name="major_two">D-II TNU (Teknik Telekomunikasi dan Navigasi Udara)</string>
+    <string name="major_three">D-II TEKPEN (Teknik Penerbangan)</string>
+    <string name="major_four">D-II ATC (Air Traffic Controller)</string>
+    <string name="major_five">D-II PLLU (Pemanduan Lalu Lintas Udara)</string>
+    <string name="major_six">D-II KP (Komunikasi Penerbangan)</string>
+    <string name="major_seven">D-III MLLU (Manajemen Lalu Lintas Udara)</string>
+    <string name="major_eight">D-III MBU (Manajemen Bandar Udara)</string>
+    <string name="major_nine">D-III TLBU (teknik Listrik Bandar Udara)</string>
 </resources>

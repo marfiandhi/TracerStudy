@@ -61,7 +61,7 @@
                 android:paddingEnd="4dp"
                 android:text="Apakah pendidikan yang Saudara dapat di Poltekbang Jayapura bermanfaat untuk pekerjaan Saudara?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorGrey"
+                android:textColor="@color/colorLightGrey"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -72,7 +72,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_four_radio_group_useful"
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_yes"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_four_radio_useful_no"
@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_no"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_four_et_useful_no"
@@ -140,7 +140,7 @@
                 android:paddingEnd="4dp"
                 android:text="Dari pengalaman Saudara bekerja, apa saran praktis Saudara untuk pendidikan di Poltekbang Jayapura dalam rangka meningkatkan kesesuaian antara pendidikan dengan lapangan pekerjaan?"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorGrey"
+                android:textColor="@color/colorLightGrey"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -151,7 +151,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <android.support.design.widget.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_four_et_practical_advice"
@@ -176,7 +176,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -414,7 +414,7 @@
 
             </android.support.design.widget.TextInputLayout>
 
-        </LinearLayout>
+        </LinearLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -432,7 +432,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kompetensi apa yang dibutuhkan pekerjaan Saudara yang tidak Saudara dapatkan selama kuliah?"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorGrey"
+                android:textColor="@color/colorLightGrey"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -443,7 +443,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <android.support.design.widget.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -451,7 +451,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_four_et_required_compentece"

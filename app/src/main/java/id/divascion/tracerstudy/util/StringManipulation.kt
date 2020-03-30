@@ -118,4 +118,22 @@ class StringManipulation {
         }
         return "$sDate $sMonth $year"
     }
+
+    fun removePunctuation(original: String, puncuation: Char): String {
+        var text = ""
+        var valid = false
+        var space = false
+        for(i in original.indices) {
+            if(original[i] == puncuation) {
+                valid = true
+            }
+            if(valid && original[i] == ' ') {
+                space = true
+            }
+            if(valid && space) {
+                text += original[i]
+            }
+        }
+        return text
+    }
 }

@@ -1,14 +1,2964 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorDarkBackground"
     tools:context=".ui.quiz.fragment.StakeTwoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pertanyaan dengan tanda"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" * "
+                android:textColor="@color/colorLightRed"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wajib diisi."
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Cara penyebaran informasi untuk penerimaan tenaga kerja alumni Lemdik penerbangan di instansi ini*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <LinearLayout
+                android:id="@+id/stake_two_checked_box_group_info_dissemination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_info_dissemination_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Iklan di media massa (televisi, radio, internet, dsb)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_info_dissemination_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Pemberitahuan lowongan pekerja untuk kalangan terbatas"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_info_dissemination_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Lamaran langsung dari pada lulusan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_info_dissemination_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Menghubungi kampus-kampus terkait"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_info_dissemination_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Hubungan pribadi dengan para lulusan"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_info_dissemination_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_two_et_info_dissemination_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:hint="Penyebaran lainnya*"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Bagaimana instansi/perusahaan Bapak/Ibu melakukan seleksi penerimaan tenaga baru?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <LinearLayout
+                android:id="@+id/stake_two_checked_box_group_company_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_company_selection_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Seleksi sendiri (HRD department atau bagian dalam instansi/perusahaan)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_company_selection_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Kerjasama antara institusi dengan lembaga rekrutmen SDM"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_company_selection_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Diserahkan sepenuhnya kepada lembaga rekrutmen SDM"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_company_selection_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Menghubungi kampus-kampus terkait untuk rekrutmen SDM"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_company_selection_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Beasiswa ikatan dinas"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_company_selection_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="Sistem magang (program internship)"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <CheckBox
+                    android:id="@+id/stake_two_checked_box_company_selection_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="@string/prompt_other"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_two_et_company_selection_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:hint="Seleksi lainnya*"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Apakah instansi Bapak/Ibu melakukan rekrutmen tenaga kerja baru secara berkala?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_period_recruitment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_period_recruitment_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_yes"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_period_recruitment_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_no"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stake_two_layout_period_recruitment_yes_extension"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Bagaimana intensitas rekrutmen tenaga kerja baru?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/stake_two_et_recruitment_intensity_applied"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:hint="Jumlah penerima*"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:lines="1"
+                    android:maxLines="3"
+                    android:text=" kali dalam "
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/stake_two_et_recruitment_intensity_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:hint="0*"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text=" tahun"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Menurut instansi/perusahaan ini, seberapa penting aspek-aspek berikut bagi pegawai dari Lemdik penerbangan dalam penerimaan pegawai"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_assessement_instructions"
+                android:textColor="@color/colorLightRed"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp">
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/good_level_very_low"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/good_level_low"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/neutral"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/good_level_high"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/good_level_very_high"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/one"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/two"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/three"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/four"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/five"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp">
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/important_level_very_low"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/important_level_low"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/neutral"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/important_level_high"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/important_level_very_high"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/one"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/two"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/three"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/four"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="@string/five"
+                        android:textColor="@color/colorWhite"
+                        app:buttonTint="@color/colorUltraLightGrey" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Kesesuaian Bidang Studi*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_suitability_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_suitability_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_suitability_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Attitude/Tingkah Laku*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_attitude_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_attitude_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_attitude_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Prestasi Akademik (Transkrip)*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_achievement_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_achievement_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_achievement_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Keterampilan Praktis yang diperoleh Semasa Kuliah*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_practical_in_campus_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_practical_in_campus_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_in_campus_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Keterampilan Praktis yang diperoleh di luar Kuliah*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_practical_out_campus_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_practical_out_campus_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_practical_out_campus_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Reputasi Almamater/Pendidikan Asal*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_campus_fame_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_campus_fame_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_campus_fame_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Pengalaman Kerja*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_work_experience_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_work_experience_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_work_experience_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Kemampuan Bahasa Asing*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_foreign_language_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_foreign_language_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_foreign_language_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Keterampilan Komputer*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_computer_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_computer_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_computer_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Rekomendasi/Pengantar dari Pihak Ketiga*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_recommendation_third_party_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_recommendation_third_party_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_recommendation_third_party_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Penampilan selama Wawancara*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_appearance_interview_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_appearance_interview_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_appearance_interview_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Kepribadian*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_personality_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_personality_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_personality_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Provinsi/Daerah Asal*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_place_of_origin_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_place_of_origin_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_place_of_origin_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_two_et_other_aspect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:hint="@string/prompt_other"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_other_aspect_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_other_aspect_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_other_aspect_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/stake_two_save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/prompt_save_continue" />
+
+    </LinearLayout>
+
+</ScrollView>

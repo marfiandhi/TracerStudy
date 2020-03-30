@@ -1,14 +1,328 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorDarkBackground"
     tools:context=".ui.quiz.fragment.StakeFourFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pertanyaan dengan tanda"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" * "
+                android:textColor="@color/colorLightRed"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wajib diisi."
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Apakah instansi Bapak/Ibu melakukan rekrutmen tenaga kerja baru secara berkala?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <RadioGroup
+                android:id="@+id/stake_four_radio_group_poltekbang_quality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_four_radio_poltekbang_quality_very_good"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_good"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_four_radio_poltekbang_quality_good"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_good"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_four_radio_poltekbang_quality_enough"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_enough_good"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_four_radio_poltekbang_quality_bad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_bad"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_four_radio_poltekbang_quality_very_bad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_very_bad"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Dalam 5-10 tahun mendatang, berapakah jumlah lulusan di bidang penerbangan yang diperlukan?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:lines="1"
+                    android:maxLines="3"
+                    android:text="Kira-kira "
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorWhite" />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGrey">
+
+                    <EditText
+                        android:id="@+id/stake_four_et_number_aviator_needs_expect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:hint="0"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text=" orang"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Kriteria lulusan penerbangan seperti apa yang diinginkan oleh instansi/perusahaan kini?*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_four_et_desired_criteria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Kriteria yang diharapkan"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="5"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Tuliskan saran dan hal-hal lain yang ingin disampaikan*"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorLightGrey">
+
+                <EditText
+                    android:id="@+id/stake_four_et_suggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_advice"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="5"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/colorWhite" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/stake_four_save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/prompt_save_continue" />
+
+
+    </LinearLayout>
+
+</ScrollView>

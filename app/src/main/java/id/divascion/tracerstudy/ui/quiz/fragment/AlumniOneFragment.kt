@@ -14,6 +14,7 @@ import id.divascion.tracerstudy.util.SharedPreferenceManager
 import id.divascion.tracerstudy.util.StringManipulation
 import kotlinx.android.synthetic.main.fragment_alumni_one.*
 import org.jetbrains.anko.support.v4.alert
+import org.jetbrains.anko.support.v4.longToast
 import java.util.*
 
 private const val ARG_PARAM1 = "USER"
@@ -61,6 +62,7 @@ class AlumniOneFragment : Fragment() {
                     if (checkAndGetData()) {
                         onButtonPressed("done")
                     } else {
+                        longToast("Tolong lengkapi kuis yang bertanda *")
                         onButtonPressed("miss")
                     }
                 }

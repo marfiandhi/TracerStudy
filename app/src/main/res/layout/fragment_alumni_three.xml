@@ -67,8 +67,8 @@
                     android:layout_height="wrap_content"
                     android:hint="Nama tempat bekerja*"
                     android:importantForAutofill="no"
-                    android:inputType="text|textMultiLine"
-                    android:maxLines="3"
+                    android:inputType="text"
+                    android:maxLines="1"
                     android:selectAllOnFocus="true"
                     android:textColor="@color/colorWhite" />
 
@@ -90,7 +90,7 @@
                 android:gravity="center|start"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
-                android:text="Jenis instansi/bidang usaha/industri"
+                android:text="Jenis instansi/bidang usaha/industri*"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorLightGrey"
                 android:textSize="14sp"
@@ -103,7 +103,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_type_work"
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pemerintah (pusat/departemen)"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_type_work_two"
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pemerintah (daerah)"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_type_work_three"
@@ -133,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pemerintah (BUMN, BHMN)"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_type_work_four"
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:text="Swasta (jasa)"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_type_work_five"
@@ -149,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:text="Swasta (manufaktur)"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
 
                 <RadioButton
@@ -158,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:text="Wiraswasta"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
 
                 <RadioButton
@@ -167,8 +167,16 @@
                     android:layout_height="wrap_content"
                     android:text="Perusahaan Asing/Luar Negeri"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
+
+                <RadioButton
+                    android:id="@+id/alumni_three_radio_type_work_eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TNI/Polri"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_type_work_other"
@@ -176,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_other"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -234,7 +242,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_position"
@@ -249,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_yes"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_no"
@@ -257,7 +265,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_no"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -275,7 +283,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pilot"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_yes_two"
@@ -283,7 +291,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pramugara"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_yes_three"
@@ -291,7 +299,7 @@
                     android:layout_height="wrap_content"
                     android:text="Job 1"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_yes_four"
@@ -299,7 +307,7 @@
                     android:layout_height="wrap_content"
                     android:text="Job 2"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_yes_other"
@@ -307,7 +315,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_other"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -325,7 +333,7 @@
                     android:layout_height="wrap_content"
                     android:text="PNS"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_no_two"
@@ -333,7 +341,7 @@
                     android:layout_height="wrap_content"
                     android:text="Dosen"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_no_three"
@@ -341,7 +349,7 @@
                     android:layout_height="wrap_content"
                     android:text="Karyawan Perusahaan Swasta"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_no_four"
@@ -349,7 +357,7 @@
                     android:layout_height="wrap_content"
                     android:text="Karyawan Perusahaan BUMN"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_no_five"
@@ -357,7 +365,7 @@
                     android:layout_height="wrap_content"
                     android:text="TNI/Polri"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_no_six"
@@ -365,7 +373,7 @@
                     android:layout_height="wrap_content"
                     android:text="Wiraswasta/Wirausaha"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_position_no_other"
@@ -373,7 +381,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_other"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -415,13 +423,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginEnd="4dp"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_stroke"
                     android:orientation="vertical">
@@ -456,7 +465,6 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_stroke"
                     android:orientation="vertical">
@@ -493,7 +501,7 @@
                 android:layout_height="2dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -553,7 +561,6 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_stroke"
                     android:orientation="vertical">
@@ -614,7 +621,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_effort"
@@ -629,7 +636,7 @@
                     android:layout_height="wrap_content"
                     android:text="Aktif (mencari sendiri)"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_effort_passive"
@@ -637,7 +644,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pasif (ditawari pekerjaan)"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -668,7 +675,7 @@
                 android:layout_height="2dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="12dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <LinearLayout
                 android:id="@+id/alumni_three_checked_box_group_origin_info"
@@ -683,7 +690,7 @@
                     android:orientation="vertical"
                     android:text="Iklan"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <CheckBox
                     android:id="@+id/alumni_three_checked_box_origin_info_two"
@@ -692,7 +699,7 @@
                     android:orientation="vertical"
                     android:text="Internet"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <CheckBox
                     android:id="@+id/alumni_three_checked_box_origin_info_three"
@@ -701,7 +708,7 @@
                     android:orientation="vertical"
                     android:text="Almamater/alumni"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <CheckBox
                     android:id="@+id/alumni_three_checked_box_origin_info_four"
@@ -710,7 +717,7 @@
                     android:orientation="vertical"
                     android:text="Koneksi (teman, dosen, saudara/keluarga, dll)"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <CheckBox
                     android:id="@+id/alumni_three_checked_box_origin_info_five"
@@ -719,7 +726,7 @@
                     android:orientation="vertical"
                     android:text="Info lowongan dari kampus"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <CheckBox
                     android:id="@+id/alumni_three_checked_box_origin_info_other"
@@ -728,7 +735,7 @@
                     android:orientation="vertical"
                     android:text="@string/prompt_other"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </LinearLayout>
 
@@ -786,7 +793,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_expectation"
@@ -801,7 +808,7 @@
                     android:layout_height="wrap_content"
                     android:text="Sangat sesuai dengan harapan"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_expectation_yes"
@@ -809,7 +816,7 @@
                     android:layout_height="wrap_content"
                     android:text="Sesuai harapan"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_expectation_less"
@@ -817,7 +824,7 @@
                     android:layout_height="wrap_content"
                     android:text="Kurang sesuai harapan"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_expectation_no"
@@ -825,7 +832,7 @@
                     android:layout_height="wrap_content"
                     android:text="Tidak sesuai harapan"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -858,7 +865,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_satisfied"
@@ -873,7 +880,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_very_satisfied"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_satisfied_yes"
@@ -881,7 +888,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_satisfied"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_satisfied_less"
@@ -889,7 +896,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_less_satisfied"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_satisfied_no"
@@ -897,7 +904,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_not_satisfied"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -930,7 +937,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_reason"
@@ -945,7 +952,7 @@
                     android:layout_height="wrap_content"
                     android:text="Gaji memadai"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_reason_two"
@@ -953,7 +960,7 @@
                     android:layout_height="wrap_content"
                     android:text="Sesuai bidang keilmuan"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_reason_three"
@@ -961,7 +968,7 @@
                     android:layout_height="wrap_content"
                     android:text="Mendapatkan pengalaman"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_reason_four"
@@ -969,7 +976,7 @@
                     android:layout_height="wrap_content"
                     android:text="Mendapatkan ilmu pengetahuan"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_reason_five"
@@ -977,7 +984,7 @@
                     android:layout_height="wrap_content"
                     android:text="Mendapatkan keterampilan"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_reason_other"
@@ -985,7 +992,7 @@
                     android:layout_height="wrap_content"
                     android:text="Lainnya"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -1043,7 +1050,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_income"
@@ -1058,7 +1065,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rp_1_000_000"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_income_two"
@@ -1066,7 +1073,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rp_1_000_000_rp_3_000_000"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_income_three"
@@ -1074,7 +1081,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rp_3_000_000_rp_5_000_000"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_income_four"
@@ -1082,7 +1089,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rp_5_000_000_rp_7_500_000"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_income_five"
@@ -1090,7 +1097,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rp_7_500_000_rp_10_000_000"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_income_six"
@@ -1098,7 +1105,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rp_10_000_000_rp_12_500_000"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_income_seven"
@@ -1106,7 +1113,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rp_12_500_000_rp_15_000_000"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_income_eight"
@@ -1114,7 +1121,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rp_15_000_000"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -1147,7 +1154,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_major_related"
@@ -1162,7 +1169,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_yes"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_major_related_no"
@@ -1170,7 +1177,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_no"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -1203,7 +1210,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_institution_need"
@@ -1218,7 +1225,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_very_high"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_institution_need_yes"
@@ -1226,7 +1233,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_high"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_institution_need_less"
@@ -1234,7 +1241,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_low"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_institution_need_no"
@@ -1242,7 +1249,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_very_low"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -1275,7 +1282,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="4dp"
-                android:background="@color/colorLightGrey" />
+                android:background="@color/colorUltraLightGrey" />
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_previous_work"
@@ -1290,7 +1297,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_yes"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
                 <RadioButton
                     android:id="@+id/alumni_three_radio_previous_work_no"
@@ -1298,7 +1305,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/prompt_no"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey" />
 
             </RadioGroup>
 
@@ -1338,7 +1345,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <android.support.design.widget.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -1352,7 +1359,7 @@
                         android:id="@+id/alumni_three_et_number_change_job"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/prompt_advice"
+                        android:hint="Jumlah ganti pekerjaan*"
                         android:importantForAutofill="no"
                         android:inputType="number"
                         android:maxLines="1"
@@ -1390,7 +1397,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <RadioGroup
                     android:id="@+id/alumni_three_radio_group_reason_change"
@@ -1404,7 +1411,7 @@
                         android:layout_height="wrap_content"
                         android:text="Gaji tidak sesuai dengan beban kerja"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_change_two"
@@ -1412,7 +1419,7 @@
                         android:layout_height="wrap_content"
                         android:text="Bidang pekerjaan tidak sesuai"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_change_three"
@@ -1420,7 +1427,7 @@
                         android:layout_height="wrap_content"
                         android:text="Mencari tantangan dan pengalaman baru"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_change_four"
@@ -1428,7 +1435,7 @@
                         android:layout_height="wrap_content"
                         android:text="Tidak cocok dengan rekan kerja"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_change_five"
@@ -1436,7 +1443,7 @@
                         android:layout_height="wrap_content"
                         android:text="Gaji terlalu kecil"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_change_other"
@@ -1444,7 +1451,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/prompt_other"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                 </RadioGroup>
 
@@ -1525,7 +1532,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <android.support.design.widget.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -1541,8 +1548,8 @@
                         android:layout_height="wrap_content"
                         android:hint="Nama Perusahaan"
                         android:importantForAutofill="no"
-                        android:inputType="text|textMultiLine"
-                        android:maxLines="3"
+                        android:inputType="text"
+                        android:maxLines="1"
                         android:selectAllOnFocus="true"
                         android:textColor="@color/colorWhite" />
 
@@ -1577,7 +1584,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <android.support.design.widget.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -1613,13 +1620,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginEnd="4dp"
                     android:baselineAligned="false"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_weight="1"
                         android:background="@drawable/card_stroke"
                         android:orientation="vertical">
@@ -1632,7 +1640,7 @@
                             android:maxLines="1"
                             android:paddingStart="4dp"
                             android:paddingEnd="4dp"
-                            android:text="Bulan mulai kerja pertama*"
+                            android:text="Bulan mulai kerja*"
                             android:textAlignment="viewStart"
                             android:textColor="@color/colorLightGrey"
                             android:textSize="14sp"
@@ -1654,7 +1662,6 @@
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="4dp"
-                        android:layout_marginEnd="4dp"
                         android:layout_weight="1"
                         android:background="@drawable/card_stroke"
                         android:orientation="vertical">
@@ -1667,7 +1674,7 @@
                             android:maxLines="1"
                             android:paddingStart="4dp"
                             android:paddingEnd="4dp"
-                            android:text="Tahun mulai kerja pertama*"
+                            android:text="Tahun mulai kerja*"
                             android:textAlignment="viewStart"
                             android:textColor="@color/colorLightGrey"
                             android:textSize="14sp"
@@ -1691,7 +1698,7 @@
                     android:layout_height="2dp"
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1716,7 +1723,7 @@
                             android:maxLines="1"
                             android:paddingStart="4dp"
                             android:paddingEnd="4dp"
-                            android:text="Bulan berhenti"
+                            android:text="Bulan berhenti*"
                             android:textAlignment="viewStart"
                             android:textColor="@color/colorLightGrey"
                             android:textSize="14sp"
@@ -1738,7 +1745,6 @@
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="4dp"
-                        android:layout_marginEnd="4dp"
                         android:layout_weight="1"
                         android:background="@drawable/card_stroke"
                         android:orientation="vertical">
@@ -1751,7 +1757,7 @@
                             android:maxLines="1"
                             android:paddingStart="4dp"
                             android:paddingEnd="4dp"
-                            android:text="Tahun berhenti"
+                            android:text="Tahun berhenti*"
                             android:textAlignment="viewStart"
                             android:textColor="@color/colorLightGrey"
                             android:textSize="14sp"
@@ -1799,7 +1805,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <RadioGroup
                     android:id="@+id/alumni_three_radio_group_effort_previous"
@@ -1814,7 +1820,7 @@
                         android:layout_height="wrap_content"
                         android:text="Aktif (mencari sendiri)"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_effort_previous_passive"
@@ -1822,7 +1828,7 @@
                         android:layout_height="wrap_content"
                         android:text="Pasif (ditawari pekerjaan)"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                 </RadioGroup>
 
@@ -1853,7 +1859,7 @@
                     android:layout_height="2dp"
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="12dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <LinearLayout
                     android:id="@+id/alumni_three_checked_box_group_origin_info_previous"
@@ -1868,7 +1874,7 @@
                         android:orientation="vertical"
                         android:text="Iklan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <CheckBox
                         android:id="@+id/alumni_three_checked_box_origin_info_previous_two"
@@ -1877,7 +1883,7 @@
                         android:orientation="vertical"
                         android:text="Internet"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <CheckBox
                         android:id="@+id/alumni_three_checked_box_origin_info_previous_three"
@@ -1886,7 +1892,7 @@
                         android:orientation="vertical"
                         android:text="Almamater/alumni"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <CheckBox
                         android:id="@+id/alumni_three_checked_box_origin_info_previous_four"
@@ -1895,7 +1901,7 @@
                         android:orientation="vertical"
                         android:text="Koneksi (teman, dosen, saudara/keluarga, dll)"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <CheckBox
                         android:id="@+id/alumni_three_checked_box_origin_info_previous_five"
@@ -1904,7 +1910,7 @@
                         android:orientation="vertical"
                         android:text="Info lowongan dari kampus"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <CheckBox
                         android:id="@+id/alumni_three_checked_box_origin_info_previous_other"
@@ -1913,7 +1919,7 @@
                         android:orientation="vertical"
                         android:text="@string/prompt_other"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                 </LinearLayout>
 
@@ -1971,7 +1977,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <RadioGroup
                     android:id="@+id/alumni_three_radio_group_expectation_previous"
@@ -1986,7 +1992,7 @@
                         android:layout_height="wrap_content"
                         android:text="Sangat sesuai dengan harapan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_expectation_previous_yes"
@@ -1994,7 +2000,7 @@
                         android:layout_height="wrap_content"
                         android:text="Sesuai harapan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_expectation_previous_less"
@@ -2002,7 +2008,7 @@
                         android:layout_height="wrap_content"
                         android:text="Kurang sesuai harapan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_expectation_previous_no"
@@ -2010,7 +2016,7 @@
                         android:layout_height="wrap_content"
                         android:text="Tidak sesuai harapan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                 </RadioGroup>
 
@@ -2043,7 +2049,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <RadioGroup
                     android:id="@+id/alumni_three_radio_group_satisfied_previous"
@@ -2058,7 +2064,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/prompt_very_satisfied"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_satisfied_previous_yes"
@@ -2066,7 +2072,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/prompt_satisfied"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_satisfied_previous_less"
@@ -2074,7 +2080,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/prompt_less_satisfied"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_satisfied_previous_no"
@@ -2082,7 +2088,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/prompt_not_satisfied"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                 </RadioGroup>
 
@@ -2115,7 +2121,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <RadioGroup
                     android:id="@+id/alumni_three_radio_group_reason_previous"
@@ -2130,7 +2136,7 @@
                         android:layout_height="wrap_content"
                         android:text="Gaji memadai"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_previous_two"
@@ -2138,7 +2144,7 @@
                         android:layout_height="wrap_content"
                         android:text="Sesuai bidang keilmuan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_previous_three"
@@ -2146,7 +2152,7 @@
                         android:layout_height="wrap_content"
                         android:text="Mendapatkan pengalaman"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_previous_four"
@@ -2154,7 +2160,7 @@
                         android:layout_height="wrap_content"
                         android:text="Mendapatkan ilmu pengetahuan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_previous_five"
@@ -2162,7 +2168,7 @@
                         android:layout_height="wrap_content"
                         android:text="Mendapatkan keterampilan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_reason_previous_other"
@@ -2170,7 +2176,7 @@
                         android:layout_height="wrap_content"
                         android:text="Lainnya"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                 </RadioGroup>
 
@@ -2228,7 +2234,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <RadioGroup
                     android:id="@+id/alumni_three_radio_group_income_previous"
@@ -2243,7 +2249,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/rp_1_000_000"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_income_previous_two"
@@ -2251,7 +2257,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/rp_1_000_000_rp_3_000_000"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_income_previous_three"
@@ -2259,7 +2265,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/rp_3_000_000_rp_5_000_000"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_income_previous_four"
@@ -2267,7 +2273,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/rp_5_000_000_rp_7_500_000"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_income_previous_five"
@@ -2275,7 +2281,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/rp_7_500_000_rp_10_000_000"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_income_previous_six"
@@ -2283,7 +2289,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/rp_10_000_000_rp_12_500_000"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_income_previous_seven"
@@ -2291,7 +2297,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/rp_12_500_000_rp_15_000_000"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_income_previous_eight"
@@ -2299,7 +2305,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/rp_15_000_000"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                 </RadioGroup>
 
@@ -2332,7 +2338,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2386,7 +2392,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <android.support.design.widget.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -2400,7 +2406,7 @@
                         android:id="@+id/alumni_three_et_number_applied_previous"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/prompt_advice"
+                        android:hint="Jumlah lamaran*"
                         android:importantForAutofill="no"
                         android:inputType="number"
                         android:maxLines="1"
@@ -2438,7 +2444,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@color/colorLightGrey" />
+                    android:background="@color/colorUltraLightGrey" />
 
                 <RadioGroup
                     android:id="@+id/alumni_three_radio_group_duration_get_previous"
@@ -2453,7 +2459,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/_3_bulan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_duration_get_previous_two"
@@ -2461,7 +2467,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/_6_bulan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_duration_get_previous_three"
@@ -2469,7 +2475,7 @@
                         android:layout_height="wrap_content"
                         android:text="1 Tahun"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_three_radio_duration_get_previous_four"
@@ -2477,7 +2483,7 @@
                         android:layout_height="wrap_content"
                         android:text="> 1 Tahun"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                 </RadioGroup>
 

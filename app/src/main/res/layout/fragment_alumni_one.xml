@@ -54,7 +54,7 @@
             android:padding="4dp"
             android:text="Identitas Diri"
             android:textAllCaps="true"
-            android:textColor="@color/colorLightGrey" />
+            android:textColor="@color/colorUltraLightGrey" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_name"
@@ -91,7 +91,7 @@
                 android:layout_marginStart="3dp"
                 android:layout_marginTop="4dp"
                 android:text="Jenis kelamin*"
-                android:textColor="@color/colorGrey"
+                android:textColor="@color/colorLightGrey"
                 android:textSize="12sp" />
 
             <LinearLayout
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:textColor="@color/colorWhite"
-                    android:textColorHint="@color/colorGrey"
+                    android:textColorHint="@color/colorLightGrey"
                     android:visibility="gone">
 
                     <EditText
@@ -140,7 +140,7 @@
                         android:checked="true"
                         android:text="Laki-laki"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                     <RadioButton
                         android:id="@+id/alumni_one_radio_female"
@@ -149,7 +149,7 @@
                         android:layout_weight="1"
                         android:text="Perempuan"
                         android:textColor="@color/colorWhite"
-                        app:buttonTint="@color/colorLightGrey" />
+                        app:buttonTint="@color/colorUltraLightGrey" />
 
                 </RadioGroup>
 
@@ -166,7 +166,7 @@
             android:padding="4dp"
             android:text="Pendidikan sebelumnya"
             android:textAllCaps="true"
-            android:textColor="@color/colorLightGrey" />
+            android:textColor="@color/colorUltraLightGrey" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -181,13 +181,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_school_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Asal SMA/SMU/SMP (Jika dari SMP)"
+                    android:hint="Asal SMA/SMU"
                     android:inputType="textCapWords|textMultiLine"
                     android:maxLines="3"
                     android:selectAllOnFocus="true"
@@ -202,7 +202,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_school_province"
@@ -225,7 +225,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_school_city"
@@ -248,7 +248,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_school_postcode"
@@ -275,7 +275,7 @@
             android:padding="4dp"
             android:text="Tempat/tanggal lahir"
             android:textAllCaps="true"
-            android:textColor="@color/colorLightGrey" />
+            android:textColor="@color/colorUltraLightGrey" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -290,7 +290,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_born_province"
@@ -313,7 +313,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_born_city"
@@ -342,7 +342,7 @@
                     android:focusable="false"
                     android:orientation="vertical"
                     android:textColor="@color/colorWhite"
-                    android:textColorHint="@color/colorGrey">
+                    android:textColorHint="@color/colorLightGrey">
 
                     <EditText
                         android:id="@+id/alumni_one_et_born_date"
@@ -380,7 +380,7 @@
             android:padding="4dp"
             android:text="Kantor"
             android:textAllCaps="true"
-            android:textColor="@color/colorLightGrey" />
+            android:textColor="@color/colorUltraLightGrey" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -395,7 +395,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_office_address"
@@ -416,7 +416,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_office_phone"
@@ -439,7 +439,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_office_postcode"
@@ -466,7 +466,7 @@
             android:padding="4dp"
             android:text="Alamat dan Kontak"
             android:textAllCaps="true"
-            android:textColor="@color/colorLightGrey" />
+            android:textColor="@color/colorUltraLightGrey" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -481,7 +481,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_address_province"
@@ -504,7 +504,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_address_city"
@@ -527,7 +527,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_address_district"
@@ -550,7 +550,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_address_village"
@@ -573,7 +573,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_address_street"
@@ -594,7 +594,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_address_postcode"
@@ -617,7 +617,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_address_phone"
@@ -640,7 +640,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_address_hp"
@@ -661,7 +661,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:text="Misal: 081234567890"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorUltraLightGrey"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -675,7 +675,7 @@
             android:padding="4dp"
             android:text="Sosial Media"
             android:textAllCaps="true"
-            android:textColor="@color/colorLightGrey" />
+            android:textColor="@color/colorUltraLightGrey" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -690,7 +690,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_email"
@@ -713,7 +713,7 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGrey">
+                android:textColorHint="@color/colorLightGrey">
 
                 <EditText
                     android:id="@+id/alumni_one_et_fb"
@@ -733,8 +733,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:text="Misal: https://facebook.com/raitoti/"
-                android:textColor="@color/colorLightGrey"
+                android:text="Misal: https://facebook.com/poltekbangjayapura/"
+                android:textColor="@color/colorUltraLightGrey"
                 android:textSize="12sp" />
 
         </LinearLayout>

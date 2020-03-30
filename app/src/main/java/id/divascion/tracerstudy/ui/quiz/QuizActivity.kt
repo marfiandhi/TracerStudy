@@ -121,22 +121,22 @@ class QuizActivity : AppCompatActivity(), AlumniOneFragment.OnFragmentInteractio
     }
 
     override fun onFragmentInteraction(data: StakeQuizOne) {
-//        SharedPreferenceManager().saveAlumni(this, data, user.uid)
+        SharedPreferenceManager().saveStake(this, data, user.uid)
         finish()
     }
 
     override fun onFragmentInteraction(data: StakeQuizTwo) {
-//        SharedPreferenceManager().saveAlumni(this, data, user.uid)
+        SharedPreferenceManager().saveStake(this, data, user.uid)
         finish()
     }
 
     override fun onFragmentInteraction(data: StakeQuizThree) {
-//        SharedPreferenceManager().saveAlumni(this, data, user.uid)
+        SharedPreferenceManager().saveStake(this, data, user.uid)
         finish()
     }
 
     override fun onFragmentInteraction(data: StakeQuizFour) {
-//        SharedPreferenceManager().saveAlumni(this, data, user.uid)
+        SharedPreferenceManager().saveStake(this, data, user.uid)
         finish()
     }
 

@@ -5,5 +5,8 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class StakeQuizFour(
-    var year: String = ""
+    var poltekbangGraduateQuality: String = "",
+    var numberAviatorNeededExpectation: Int = -1,
+    var desiredCriteria: String = "",
+    var suggestion: String = ""
 ) : Parcelable

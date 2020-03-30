@@ -49,7 +49,7 @@ class AlumniFourFragment : Fragment() {
                 }
         }
 
-        alumni_four_radio_group_major.setOnCheckedChangeListener { _, checkedId ->
+        /*alumni_four_radio_group_major.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
                 R.id.alumni_four_radio_major_one -> {
                     alumni_four_checked_box_group_expert_one.visibility = View.VISIBLE
@@ -76,7 +76,7 @@ class AlumniFourFragment : Fragment() {
                     View.GONE
                 }
             }
-        }
+        }*/
     }
 
     override fun onCreateView(
@@ -86,7 +86,7 @@ class AlumniFourFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_alumni_four, container, false)
 
-        val radioOne = view.findViewById<RadioButton>(R.id.alumni_four_radio_major_one)
+        /*val radioOne = view.findViewById<RadioButton>(R.id.alumni_four_radio_major_one)
         val radioTwo = view.findViewById<RadioButton>(R.id.alumni_four_radio_major_two)
         val radioThree = view.findViewById<RadioButton>(R.id.alumni_four_radio_major_three)
 
@@ -164,7 +164,7 @@ class AlumniFourFragment : Fragment() {
                     editTextExpert.visibility = View.GONE
                 }
             }
-        }
+        }*/
 
         return view
     }

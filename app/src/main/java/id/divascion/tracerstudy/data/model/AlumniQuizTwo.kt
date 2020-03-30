@@ -5,13 +5,14 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class AlumniQuizTwo(
-    var yearEntrance: String = "",
+    var yearEntrance: Int = -1,
     var monthGraduate: Int = -1,
     var yearGraduate: Int = -1,
     var majorProgram: String = "",
     var isOrganization: String = "",
     var afterGraduate: String = "",
     var afterGraduateDetail: AlumniQuizTwoIsSchool? = null,
+    var jobExpected: String = "",
     var placementGraduate: String = "",
     var applyJob: String = "",
     var timeApplyJob: String = "",
