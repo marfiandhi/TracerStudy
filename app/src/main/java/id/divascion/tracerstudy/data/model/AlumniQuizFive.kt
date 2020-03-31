@@ -13,7 +13,7 @@ data class AlumniQuizFive(
     var campusSocietyExperience: String = "",
     var independentExperience: String = "",
     var englishDay: String = "",
-    var planeVisit: String = "",
+    var workPlaceVisit: String = "",
     var spirituality: String = "",
     var luck: String = "",
     var guardDuty: String = ""

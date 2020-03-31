@@ -105,15 +105,16 @@ class MainActivity : AppCompatActivity() {
     private fun popup() {
         popup_radio_group.setOnCheckedChangeListener { _, _ -> popup_error.visibility = View.GONE }
         popup_confirm_button.setOnClickListener {
+            var role: String
             isAlumni = popup_radio_alumni.isChecked
             isStakeholder = popup_radio_stakeholder.isChecked
             if (!isAlumni && !isStakeholder) {
                 popup_error.visibility = View.VISIBLE
             } else {
-                if (isAlumni) {
-                    this.role = "alumni"
+                role = if (isAlumni) {
+                    "alumni"
                 } else {
-                    this.role = "stakeholder"
+                    "stakeholder"
                 }
                 alert(
                     "Role Anda tidak dapat diubah lagi setelah mengonfirmasi. Lanjutkan?",
@@ -157,6 +158,7 @@ class MainActivity : AppCompatActivity() {
             ?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     hideLoading()
+                    this.role = role
                     toQuiz(role)
                 }
             }
@@ -166,6 +168,8 @@ class MainActivity : AppCompatActivity() {
         main_popup.visibility = View.GONE
         if (role == "alumni" || role == "stakeholder") {
             startActivity<QuizMenuActivity>("ROLE" to role)
+        } else if (role == "none") {
+            toast("Role Anda tidak ada.")
         } else {
             Log.e("role", "Error $role")
             toast("Maaf terdapat kesalahan terhadap status Anda. Silahkan hubungi Admin")

@@ -8,6 +8,7 @@
     tools:context=".ui.quiz.fragment.AlumniFourFragment">
 
     <LinearLayout
+        android:id="@+id/alumni_four_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -112,7 +113,7 @@
                     android:id="@+id/alumni_four_et_useful_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_reason"
+                    android:hint="Alasan*"
                     android:importantForAutofill="no"
                     android:inputType="text|textMultiLine"
                     android:maxLines="5"
@@ -469,7 +470,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/alumni_six_save_button"
+            android:id="@+id/alumni_four_save_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"

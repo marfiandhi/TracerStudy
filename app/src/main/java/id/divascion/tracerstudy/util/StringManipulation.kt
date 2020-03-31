@@ -119,21 +119,38 @@ class StringManipulation {
         return "$sDate $sMonth $year"
     }
 
-    fun removePunctuation(original: String, puncuation: Char): String {
+    fun removePunctuation(original: String, punctuation: Char): String {
         var text = ""
         var valid = false
         var space = false
         for(i in original.indices) {
-            if(original[i] == puncuation) {
+            if(original[i] == punctuation) {
                 valid = true
-            }
-            if(valid && original[i] == ' ') {
+            } else if(valid && original[i] == ' ') {
                 space = true
-            }
-            if(valid && space) {
+            } else if(valid && space) {
                 text += original[i]
             }
         }
         return text
+    }
+
+    fun changeToList(original: String, punctuation: Char): ArrayList<String> {
+        val list = ArrayList<String>()
+        var text = ""
+        var change = false
+        for(i in original.indices) {
+            if(original[i] == punctuation) {
+                change = true
+            } else if(change && original[i] == ' ') {
+                list.add(text)
+                change = false
+                text = ""
+            } else {
+                text += original[i]
+            }
+        }
+        list.add(text)
+        return list
     }
 }

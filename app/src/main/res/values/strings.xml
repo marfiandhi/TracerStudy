@@ -33,7 +33,7 @@
         <item>C. Kinerja Alumni Politeknik Penerbangan Jayapura</item>
         <item>D. Prospek Masa Mendatang</item>
     </string-array>
-    <string-array name="when_looking_list">
+    <string-array name="list_when_looking">
         <item>Kira-kira 1 bulan sebelum lulus</item>
         <item>Kira-kira 1 bulan sesudah lulus</item>
         <item>Kira-kira 2 bulan sesudah lulus</item>

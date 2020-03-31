@@ -6,15 +6,16 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.RadioButton
 import com.google.firebase.auth.FirebaseUser
-
 import id.divascion.tracerstudy.R
 import id.divascion.tracerstudy.data.model.AlumniQuizFour
+import id.divascion.tracerstudy.util.SharedPreferenceManager
+import id.divascion.tracerstudy.util.StringManipulation
+import id.divascion.tracerstudy.util.ViewManipulation
 import kotlinx.android.synthetic.main.fragment_alumni_four.*
+import org.jetbrains.anko.support.v4.alert
+import org.jetbrains.anko.support.v4.longToast
 
 private const val ARG_PARAM1 = "USER"
 private const val ARG_PARAM2 = "STATUS"
@@ -36,7 +37,71 @@ class AlumniFourFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        data = SharedPreferenceManager().getAlumniFour(activity!!, user!!.uid) ?: AlumniQuizFour()
         radio()
+        if (status.equals("done", true)) {
+            injectData()
+            @Suppress("DEPRECATION")
+            alumni_four_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
+            ViewManipulation().disableEnableControls(false, alumni_four_layout)
+        }
+        alumni_four_save_button.setOnClickListener {
+            alert(
+                "Data tidak dapat diubah setelah disimpan.\nPastikan data yang Anda masukkan semuanya telah benar dan sesuai",
+                "Peringatan"
+            ) {
+                isCancelable = false
+                positiveButton("Simpan") {
+                    if (checkAndGetData()) {
+                        onButtonPressed("done")
+                    } else {
+                        longToast("Tolong lengkapi kuis yang bertanda *")
+                        onButtonPressed("miss")
+                    }
+                }
+                negativeButton("Batal") {
+                    it.dismiss()
+                }
+            }.show()
+        }
+    }
+
+    private fun injectData() {
+        if (data.isUseful.equals("iya", true)) {
+            alumni_four_radio_useful_yes.isChecked = true
+        } else {
+            alumni_four_radio_useful_no.isChecked = true
+            val text = StringManipulation().removePunctuation(data.isUseful, ',')
+            alumni_four_et_useful_no.setText(text)
+        }
+
+        alumni_four_et_practical_advice.setText(data.practicalAdvice)
+        alumni_four_et_required_compentece.setText(data.requiredCompetencies)
+    }
+
+    private fun checkAndGetData(): Boolean {
+        var valid = true
+        if (alumni_four_radio_group_useful.checkedRadioButtonId != -1) {
+            val selectedId = alumni_four_radio_group_useful.checkedRadioButtonId
+            val selectedRadioButton = activity!!.findViewById(selectedId) as RadioButton
+            data.isUseful = "${selectedRadioButton.text}"
+            if (data.isUseful.equals("tidak", true)) {
+                if (alumni_four_et_useful_no.text.toString().isEmpty()) {
+                    valid = false
+                    alumni_four_et_useful_no.error =
+                        resources.getString(R.string.prompt_alert_required)
+                } else {
+                    alumni_four_et_useful_no.error = null
+                    data.isUseful += ", ${alumni_four_et_useful_no.text}"
+                }
+            }
+        } else {
+            valid = false
+            alumni_four_radio_group_useful.findFocus()
+        }
+        data.practicalAdvice = alumni_four_et_practical_advice.text.toString()
+        data.requiredCompetencies = alumni_four_et_required_compentece.text.toString()
+        return valid
     }
 
     private fun radio() {

@@ -8,6 +8,7 @@
     tools:context=".ui.quiz.fragment.AlumniThreeFragment">
 
     <LinearLayout
+        android:id="@+id/alumni_three_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -67,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Nama tempat bekerja*"
                     android:importantForAutofill="no"
-                    android:inputType="text"
+                    android:inputType="text|textCapWords"
                     android:maxLines="1"
                     android:selectAllOnFocus="true"
                     android:textColor="@color/colorWhite" />
@@ -205,7 +206,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="start|top"
                     android:hint="Jenis lainnya*"
-                    android:inputType="text"
+                    android:inputType="text|textCapSentences"
                     android:lines="1"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp"
@@ -215,7 +216,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -229,7 +230,7 @@
                 android:gravity="center|start"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
-                android:text="Jabata/Posisi dalam pekerjaan (apakah sesuai dengan bidang penerbangan)*"
+                android:text="Jabatan/Posisi dalam pekerjaan (apakah sesuai dengan bidang penerbangan)*"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorLightGrey"
                 android:textSize="14sp"
@@ -269,7 +270,7 @@
 
             </RadioGroup>
 
-            <RadioGroup
+            &lt;!&ndash;<RadioGroup
                 android:id="@+id/alumni_three_radio_group_position_yes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -317,7 +318,7 @@
                     android:textColor="@color/colorWhite"
                     app:buttonTint="@color/colorUltraLightGrey" />
 
-            </RadioGroup>
+            </RadioGroup>&ndash;&gt;
 
             <RadioGroup
                 android:id="@+id/alumni_three_radio_group_position_no"
@@ -410,7 +411,7 @@
 
             </android.support.design.widget.TextInputLayout>
 
-        </LinearLayout>
+        </LinearLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -690,7 +691,7 @@
                     android:orientation="vertical"
                     android:text="Iklan"
                     android:textColor="@color/colorWhite"
-                    app:buttonTint="@color/colorUltraLightGrey" />
+                    app:buttonTint="@color/colorUltraLightGrey"/>
 
                 <CheckBox
                     android:id="@+id/alumni_three_checked_box_origin_info_two"
@@ -755,8 +756,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:gravity="start|top"
-                    android:hint="Kompetensi lainnya*"
-                    android:inputType="text"
+                    android:hint="Sumber lainnya*"
+                    android:inputType="text|textCapSentences"
                     android:lines="1"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp"
@@ -1013,7 +1014,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="start|top"
                     android:hint="Pertimbangan lainnya*"
-                    android:inputType="text"
+                    android:inputType="text|textCapSentences"
                     android:lines="1"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp"
@@ -1471,9 +1472,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:gravity="start|top"
-                        android:hint="Jenis lainnya*"
+                        android:hint="Alasan lainnya*"
                         android:importantForAutofill="no"
-                        android:inputType="text"
+                        android:inputType="text|textCapSentences"
                         android:lines="1"
                         android:textColor="@color/colorWhite"
                         android:textSize="16sp"
@@ -1548,7 +1549,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Nama Perusahaan"
                         android:importantForAutofill="no"
-                        android:inputType="text"
+                        android:inputType="text|textCapWords"
                         android:maxLines="1"
                         android:selectAllOnFocus="true"
                         android:textColor="@color/colorWhite" />
@@ -1600,8 +1601,8 @@
                         android:layout_height="wrap_content"
                         android:hint="Jabatan"
                         android:importantForAutofill="no"
-                        android:inputType="text|textMultiLine"
-                        android:maxLines="3"
+                        android:inputType="text|textCapSentences"
+                        android:maxLines="1"
                         android:selectAllOnFocus="true"
                         android:textColor="@color/colorWhite" />
 
@@ -1939,8 +1940,8 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:gravity="start|top"
-                        android:hint="Kompetensi lainnya*"
-                        android:inputType="text"
+                        android:hint="Sumber lainnya*"
+                        android:inputType="text|textCapSentences"
                         android:lines="1"
                         android:textColor="@color/colorWhite"
                         android:textSize="16sp"
@@ -2174,7 +2175,7 @@
                         android:id="@+id/alumni_three_radio_reason_previous_other"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lainnya"
+                        android:text="@string/prompt_other"
                         android:textColor="@color/colorWhite"
                         app:buttonTint="@color/colorUltraLightGrey" />
 
@@ -2197,7 +2198,7 @@
                         android:layout_centerVertical="true"
                         android:gravity="start|top"
                         android:hint="Pertimbangan lainnya*"
-                        android:inputType="text"
+                        android:inputType="text|textCapSentences"
                         android:lines="1"
                         android:textColor="@color/colorWhite"
                         android:textSize="16sp"
@@ -2354,7 +2355,7 @@
                         style="@style/Spinner.Dark"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:entries="@array/when_looking_list"
+                        android:entries="@array/list_when_looking"
                         android:gravity="center|start"
                         android:paddingTop="8dp"
                         android:paddingBottom="8dp"

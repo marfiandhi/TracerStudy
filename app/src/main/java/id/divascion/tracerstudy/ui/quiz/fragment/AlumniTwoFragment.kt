@@ -14,12 +14,11 @@ import id.divascion.tracerstudy.data.model.AlumniQuizTwo
 import id.divascion.tracerstudy.data.model.AlumniQuizTwoIsSchool
 import id.divascion.tracerstudy.util.SharedPreferenceManager
 import id.divascion.tracerstudy.util.StringManipulation
+import id.divascion.tracerstudy.util.ViewManipulation
 import kotlinx.android.synthetic.main.fragment_alumni_two.*
 import org.jetbrains.anko.support.v4.alert
 import org.jetbrains.anko.support.v4.longToast
-import org.jetbrains.anko.support.v4.toast
 import java.util.*
-
 
 private const val ARG_PARAM1 = "USER"
 private const val ARG_PARAM2 = "STATUS"
@@ -45,10 +44,15 @@ class AlumniTwoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         data = SharedPreferenceManager().getAlumniTwo(activity!!, user!!.uid) ?: AlumniQuizTwo()
         adapter()
+        radio()
         if (status.equals("done", true)) {
             injectData()
+            alumni_two_save_button.isClickable = false
+            alumni_two_save_button.isFocusable = false
+            alumni_two_save_button.isEnabled = false
+            @Suppress("DEPRECATION")
+            alumni_two_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
         }
-        radio()
         alumni_two_save_button.setOnClickListener {
             alert(
                 "Data tidak dapat diubah setelah disimpan.\nPastikan data yang Anda masukkan semuanya telah benar dan sesuai",
@@ -99,164 +103,8 @@ class AlumniTwoFragment : Fragment() {
         alumni_two_spinner_school_level_two.adapter = levelSchoolOne
     }
 
-    private fun disabledView() {
-        alumni_two_spinner_list_year_entrance.isClickable = false
-        alumni_two_spinner_list_year_entrance.isFocusable = false
-        alumni_two_spinner_list_year_graduate.isClickable = false
-        alumni_two_spinner_list_year_graduate.isFocusable = false
-        alumni_two_spinner_list_month_graduated.isClickable = false
-        alumni_two_spinner_list_month_graduated.isFocusable = false
-
-        alumni_two_radio_major_first.isClickable = false
-        alumni_two_radio_major_first.isFocusable = false
-        alumni_two_radio_major_second.isClickable = false
-        alumni_two_radio_major_second.isFocusable = false
-        alumni_two_radio_major_third.isClickable = false
-        alumni_two_radio_major_third.isFocusable = false
-        alumni_two_radio_major_fourth.isClickable = false
-        alumni_two_radio_major_fourth.isFocusable = false
-        alumni_two_radio_major_fifth.isClickable = false
-        alumni_two_radio_major_fifth.isFocusable = false
-        alumni_two_radio_major_sixth.isClickable = false
-        alumni_two_radio_major_sixth.isFocusable = false
-        alumni_two_radio_major_seventh.isClickable = false
-        alumni_two_radio_major_seventh.isFocusable = false
-        alumni_two_radio_major_eight.isClickable = false
-        alumni_two_radio_major_eight.isFocusable = false
-        alumni_two_radio_major_ninth.isClickable = false
-        alumni_two_radio_major_ninth.isFocusable = false
-
-        alumni_two_radio_organ_yes.isClickable = false
-        alumni_two_radio_organ_yes.isFocusable = false
-        alumni_two_radio_organ_no.isClickable = false
-        alumni_two_radio_organ_no.isFocusable = false
-        alumni_two_radio_organ_no_first.isClickable = false
-        alumni_two_radio_organ_no_first.isFocusable = false
-        alumni_two_radio_organ_no_second.isClickable = false
-        alumni_two_radio_organ_no_second.isFocusable = false
-        alumni_two_radio_organ_no_third.isClickable = false
-        alumni_two_radio_organ_no_third.isFocusable = false
-        alumni_two_radio_organ_no_fourth.isClickable = false
-        alumni_two_radio_organ_no_fourth.isFocusable = false
-        alumni_two_radio_organ_no_other.isClickable = false
-        alumni_two_radio_organ_no_other.isFocusable = false
-        alumni_two_et_organ_no_other.isClickable = false
-        alumni_two_et_organ_no_other.isFocusable = false
-
-        alumni_two_radio_study_yes.isClickable = false
-        alumni_two_radio_study_yes.isFocusable = false
-        alumni_two_radio_study_no.isClickable = false
-        alumni_two_radio_study_no.isFocusable = false
-
-        alumni_two_et_school_name_one.isClickable = false
-        alumni_two_et_school_name_one.isFocusable = false
-        alumni_two_et_school_location_one.isClickable = false
-        alumni_two_et_school_location_one.isFocusable = false
-        alumni_two_et_school_major_one.isClickable = false
-        alumni_two_et_school_major_one.isFocusable = false
-        alumni_two_spinner_school_level_one.isClickable = false
-        alumni_two_spinner_school_level_one.isFocusable = false
-        alumni_two_et_school_year_one.isClickable = false
-        alumni_two_et_school_year_one.isFocusable = false
-
-        alumni_two_et_school_name_two.isClickable = false
-        alumni_two_et_school_name_two.isFocusable = false
-        alumni_two_et_school_location_two.isClickable = false
-        alumni_two_et_school_location_two.isFocusable = false
-        alumni_two_et_school_major_two.isClickable = false
-        alumni_two_et_school_major_two.isFocusable = false
-        alumni_two_spinner_school_level_two.isClickable = false
-        alumni_two_spinner_school_level_two.isFocusable = false
-        alumni_two_et_school_year_two.isClickable = false
-        alumni_two_et_school_year_two.isFocusable = false
-
-        alumni_two_radio_school_reason_one.isClickable = false
-        alumni_two_radio_school_reason_one.isFocusable = false
-        alumni_two_radio_school_reason_two.isClickable = false
-        alumni_two_radio_school_reason_two.isFocusable = false
-        alumni_two_radio_school_reason_third.isClickable = false
-        alumni_two_radio_school_reason_third.isFocusable = false
-        alumni_two_radio_school_reason_fourth.isClickable = false
-        alumni_two_radio_school_reason_fourth.isFocusable = false
-        alumni_two_radio_school_reason_fifth.isClickable = false
-        alumni_two_radio_school_reason_fifth.isFocusable = false
-        alumni_two_radio_school_reason_other.isClickable = false
-        alumni_two_radio_school_reason_other.isFocusable = false
-        alumni_two_et_school_reason_other.isClickable = false
-        alumni_two_et_school_reason_other.isFocusable = false
-
-        alumni_two_radio_expect_work_one.isClickable = false
-        alumni_two_radio_expect_work_one.isFocusable = false
-        alumni_two_radio_expect_work_two.isClickable = false
-        alumni_two_radio_expect_work_two.isFocusable = false
-        alumni_two_radio_expect_work_three.isClickable = false
-        alumni_two_radio_expect_work_three.isFocusable = false
-        alumni_two_radio_expect_work_four.isClickable = false
-        alumni_two_radio_expect_work_four.isFocusable = false
-        alumni_two_radio_expect_work_five.isClickable = false
-        alumni_two_radio_expect_work_five.isFocusable = false
-        alumni_two_radio_expect_work_six.isClickable = false
-        alumni_two_radio_expect_work_six.isFocusable = false
-        alumni_two_radio_expect_work_seven.isClickable = false
-        alumni_two_radio_expect_work_seven.isFocusable = false
-        alumni_two_radio_expect_work_eight.isClickable = false
-        alumni_two_radio_expect_work_eight.isFocusable = false
-        alumni_two_radio_expect_work_other.isClickable = false
-        alumni_two_radio_expect_work_other.isFocusable = false
-        alumni_two_et_expect_work_other.isClickable = false
-        alumni_two_et_expect_work_other.isFocusable = false
-
-        alumni_two_radio_placement_yes.isClickable = false
-        alumni_two_radio_placement_yes.isFocusable = false
-        alumni_two_radio_placement_no.isClickable = false
-        alumni_two_radio_placement_no.isFocusable = false
-
-        alumni_two_radio_apply_yes.isClickable = false
-        alumni_two_radio_apply_yes.isFocusable = false
-        alumni_two_radio_apply_no.isClickable = false
-        alumni_two_radio_apply_no.isFocusable = false
-
-        alumni_two_radio_when_apply_one.isClickable = false
-        alumni_two_radio_when_apply_one.isFocusable = false
-        alumni_two_radio_when_apply_two.isClickable = false
-        alumni_two_radio_when_apply_two.isFocusable = false
-        alumni_two_radio_when_apply_three.isClickable = false
-        alumni_two_radio_when_apply_three.isFocusable = false
-        alumni_two_radio_when_apply_four.isClickable = false
-        alumni_two_radio_when_apply_four.isFocusable = false
-        alumni_two_radio_when_apply_five.isClickable = false
-        alumni_two_radio_when_apply_five.isFocusable = false
-
-        alumni_two_radio_cv_yes.isClickable = false
-        alumni_two_radio_cv_yes.isFocusable = false
-        alumni_two_radio_cv_no.isClickable = false
-        alumni_two_radio_cv_no.isFocusable = false
-
-        alumni_two_radio_when_cv_one.isClickable = false
-        alumni_two_radio_when_cv_one.isFocusable = false
-        alumni_two_radio_when_cv_two.isClickable = false
-        alumni_two_radio_when_cv_two.isFocusable = false
-        alumni_two_radio_when_cv_three.isClickable = false
-        alumni_two_radio_when_cv_three.isFocusable = false
-        alumni_two_radio_when_cv_four.isClickable = false
-        alumni_two_radio_when_cv_four.isFocusable = false
-        alumni_two_radio_when_cv_five.isClickable = false
-        alumni_two_radio_when_cv_five.isFocusable = false
-
-        alumni_two_et_gpi.isClickable = false
-        alumni_two_et_gpi.isFocusable = false
-
-        alumni_two_radio_work_yes.isClickable = false
-        alumni_two_radio_work_yes.isFocusable = false
-        alumni_two_radio_work_no.isClickable = false
-        alumni_two_radio_work_no.isFocusable = false
-
-        alumni_two_save_button.isClickable = false
-        alumni_two_save_button.isFocusable = false
-    }
-
     private fun injectData() {
-        disabledView()
+        ViewManipulation().disableEnableControls(false, alumni_two_layout)
         var selectionYearEntrance = -1
         var selectionYearGraduate = -1
         var selectionMonthGraduate = -1
@@ -420,7 +268,7 @@ class AlumniTwoFragment : Fragment() {
             else -> {
                 alumni_two_radio_expect_work_other.isChecked = true
                 alumni_two_radio_expect_work_other.visibility = View.VISIBLE
-                alumni_two_et_expect_work_other.setText(data.afterGraduateDetail?.reason)
+                alumni_two_et_expect_work_other.setText(data.jobExpected)
             }
         }
 
@@ -605,6 +453,7 @@ class AlumniTwoFragment : Fragment() {
             }
             alumni_two_radio_study_no.isChecked -> {
                 data.afterGraduate = alumni_two_radio_study_no.text.toString()
+                data.afterGraduateDetail = null
             }
             !alumni_two_radio_study_no.isChecked && !alumni_two_radio_study_yes.isChecked -> {
                 valid = false
@@ -677,12 +526,17 @@ class AlumniTwoFragment : Fragment() {
         val IPK = data.GPI.toDouble()
         if (data.GPI.isEmpty()) {
             alumni_two_et_gpi.error = resources.getString(R.string.prompt_alert_required)
-        } else if (IPK < 0 || IPK > 4.0 || data.GPI.contains('-') || data.GPI.contains(',') || data.GPI.contains(' ')){
+            valid = false
+        } else if (IPK < 0 || IPK > 4.0 || data.GPI[0] == '.' || data.GPI.contains('-') || data.GPI.contains(
+                ','
+            ) || data.GPI.contains(
+                ' '
+            )
+        ) {
             alumni_two_et_gpi.error = "IPK tidak sesuai"
             valid = false
         } else {
             alumni_two_et_gpi.error = null
-            valid = false
         }
 
         if (alumni_two_radio_work_yes.isChecked) {
