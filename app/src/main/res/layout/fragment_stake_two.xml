@@ -8,6 +8,7 @@
     tools:context=".ui.quiz.fragment.StakeTwoFragment">
 
     <LinearLayout
+        android:id="@+id/stake_two_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -151,7 +152,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="start|top"
                     android:hint="Penyebaran lainnya*"
-                    android:inputType="text"
+                    android:inputType="text|textCapSentences"
                     android:lines="1"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp"
@@ -276,7 +277,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="start|top"
                     android:hint="Seleksi lainnya*"
-                    android:inputType="text"
+                    android:inputType="text|textCapSentences"
                     android:lines="1"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp"
@@ -374,6 +375,7 @@
                 android:background="@color/colorUltraLightGrey" />
 
             <LinearLayout
+                android:id="@+id/stake_two_layout_yes_extension_gone_result"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:baselineAligned="false"
@@ -453,6 +455,26 @@
                     android:textColor="@color/colorWhite" />
 
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stake_two_layout_period_recruitment_yes_extension_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorDarkForeground"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/stake_two_period_recruitment_yes_extension_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"/>
 
         </LinearLayout>
 
@@ -2329,6 +2351,161 @@
                 android:gravity="center|start"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
+                android:text="Hasil tes penerimaan"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_existing_condition"
+                android:textColor="@color/colorBlueSpecial"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_test_result_existing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_existing_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_existing_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_existing_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_existing_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_existing_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prompt_suitable_condition"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/stake_two_radio_group_test_result_suitable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_suitable_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_suitable_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_suitable_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_suitable_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+                <RadioButton
+                    android:id="@+id/stake_two_radio_test_result_suitable_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five"
+                    android:textColor="@color/colorWhite"
+                    app:buttonTint="@color/colorUltraLightGrey" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorUltraLightGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
                 android:text="Penampilan selama Wawancara*"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorLightGrey"
@@ -2807,7 +2984,7 @@
                     android:gravity="start|top"
                     android:hint="@string/prompt_other"
                     android:importantForAutofill="no"
-                    android:inputType="text"
+                    android:inputType="text|textCapWords"
                     android:lines="1"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp" />

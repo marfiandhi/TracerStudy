@@ -8,6 +8,7 @@
     tools:context=".ui.quiz.fragment.StakeThreeFragment">
 
     <LinearLayout
+        android:id="@+id/stake_three_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -3171,7 +3172,7 @@
                     android:gravity="start|top"
                     android:hint="@string/prompt_other"
                     android:importantForAutofill="no"
-                    android:inputType="text"
+                    android:inputType="text|textCapWords"
                     android:lines="1"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp" />

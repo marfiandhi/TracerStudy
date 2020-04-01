@@ -614,13 +614,13 @@ class AlumniThreeFragment : Fragment() {
             if (selectedRadioButton != alumni_three_radio_type_work_other) {
                 data.type = "${selectedRadioButton.text}"
             } else {
-                if (alumni_three_radio_type_work_other.text.toString().isEmpty()) {
-                    alumni_three_radio_type_work_other.error =
+                if (alumni_three_et_type_work_other.text.toString().isEmpty()) {
+                    alumni_three_et_type_work_other.error =
                         resources.getString(R.string.prompt_alert_required)
                     valid = false
                 } else {
-                    alumni_three_radio_type_work_other.error = null
-                    data.type = "${alumni_three_radio_type_work_other.text}"
+                    alumni_three_et_type_work_other.error = null
+                    data.type = "${alumni_three_et_type_work_other.text}"
                 }
             }
         } else {

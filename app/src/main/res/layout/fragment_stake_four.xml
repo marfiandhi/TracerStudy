@@ -8,6 +8,7 @@
     tools:context=".ui.quiz.fragment.StakeFourFragment">
 
     <LinearLayout
+        android:id="@+id/stake_four_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -167,6 +168,8 @@
                     android:layout_weight="3"
                     android:lines="1"
                     android:maxLines="3"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
                     android:text="Kira-kira "
                     android:textAlignment="textStart"
                     android:textColor="@color/colorWhite" />
@@ -254,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Kriteria yang diharapkan"
                     android:importantForAutofill="no"
-                    android:inputType="text|textMultiLine"
+                    android:inputType="text|textMultiLine|textCapSentences"
                     android:maxLines="5"
                     android:selectAllOnFocus="true"
                     android:textColor="@color/colorWhite" />
@@ -306,7 +309,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_advice"
                     android:importantForAutofill="no"
-                    android:inputType="text|textMultiLine"
+                    android:inputType="text|textMultiLine|textCapSentences"
                     android:maxLines="5"
                     android:selectAllOnFocus="true"
                     android:textColor="@color/colorWhite" />
@@ -321,7 +324,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/prompt_save_continue" />
-
 
     </LinearLayout>
 

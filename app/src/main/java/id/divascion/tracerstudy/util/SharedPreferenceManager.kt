@@ -186,7 +186,7 @@ class SharedPreferenceManager {
     fun getStakeOne(context: Context, uid: String): StakeQuizOne? {
         val sharedPreferences = context.getSharedPreferences("STAKEHOLDER_$uid", 0)
         val gson = Gson()
-        val type = object : TypeToken<AlumniQuizSix>() {}.type
+        val type = object : TypeToken<StakeQuizOne>() {}.type
         val json = sharedPreferences.getString("ONE", "")
         return gson.fromJson(json, type)
     }
@@ -212,7 +212,7 @@ class SharedPreferenceManager {
     fun getStakeTwo(context: Context, uid: String): StakeQuizTwo? {
         val sharedPreferences = context.getSharedPreferences("STAKEHOLDER_$uid", 0)
         val gson = Gson()
-        val type = object : TypeToken<AlumniQuizSix>() {}.type
+        val type = object : TypeToken<StakeQuizTwo>() {}.type
         val json = sharedPreferences.getString("TWO", "")
         return gson.fromJson(json, type)
     }
@@ -238,7 +238,7 @@ class SharedPreferenceManager {
     fun getStakeThree(context: Context, uid: String): StakeQuizThree? {
         val sharedPreferences = context.getSharedPreferences("STAKEHOLDER_$uid", 0)
         val gson = Gson()
-        val type = object : TypeToken<AlumniQuizSix>() {}.type
+        val type = object : TypeToken<StakeQuizThree>() {}.type
         val json = sharedPreferences.getString("THREE", "")
         return gson.fromJson(json, type)
     }
@@ -264,7 +264,7 @@ class SharedPreferenceManager {
     fun getStakeFour(context: Context, uid: String): StakeQuizFour? {
         val sharedPreferences = context.getSharedPreferences("STAKEHOLDER_$uid", 0)
         val gson = Gson()
-        val type = object : TypeToken<AlumniQuizSix>() {}.type
+        val type = object : TypeToken<StakeQuizFour>() {}.type
         val json = sharedPreferences.getString("FOUR", "")
         return gson.fromJson(json, type)
     }

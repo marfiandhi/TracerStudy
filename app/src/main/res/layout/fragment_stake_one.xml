@@ -8,6 +8,7 @@
     tools:context=".ui.quiz.fragment.StakeOneFragment">
 
     <LinearLayout
+        android:id="@+id/stake_one_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -66,8 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nama Perusahaan/Instansi*"
-                    android:importantForAutofill="no"
-                    android:inputType="text"
+                    android:inputType="text|textCapWords"
                     android:maxLines="1"
                     android:selectAllOnFocus="true"
                     android:textColor="@color/colorWhite" />
@@ -97,8 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Alamat Perusahaan/Instansi*"
-                    android:importantForAutofill="no"
-                    android:inputType="text|textMultiLine"
+                    android:inputType="text|textMultiLine|textCapSentences"
                     android:maxLines="3"
                     android:selectAllOnFocus="true"
                     android:textColor="@color/colorWhite" />
@@ -119,7 +118,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="No. Telp Perusahaan/Instansi*"
-                    android:importantForAutofill="no"
                     android:inputType="phone"
                     android:maxLines="1"
                     android:selectAllOnFocus="true"
@@ -141,7 +139,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Fax Perusahaan/Instansi"
-                    android:importantForAutofill="no"
                     android:inputType="phone"
                     android:maxLines="1"
                     android:selectAllOnFocus="true"
@@ -163,7 +160,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email Perusahaan/Instansi*"
-                    android:importantForAutofill="no"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:selectAllOnFocus="true"
@@ -285,7 +281,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="start|top"
                     android:hint="Jenis lainnya*"
-                    android:inputType="text"
+                    android:inputType="text|textCapSentences"
                     android:lines="1"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp"
@@ -334,7 +330,7 @@
                     android:id="@+id/stake_one_radio_number_worker_one"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="kurang dari 10%"
+                    android:text="kurang dari 10 orang"
                     android:textColor="@color/colorWhite"
                     app:buttonTint="@color/colorUltraLightGrey" />
 
@@ -342,7 +338,7 @@
                     android:id="@+id/stake_one_radio_number_worker_two"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="10%-25%"
+                    android:text="10-50 orang"
                     android:textColor="@color/colorWhite"
                     app:buttonTint="@color/colorUltraLightGrey" />
 
@@ -350,7 +346,7 @@
                     android:id="@+id/stake_one_radio_number_worker_three"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="25%-50%"
+                    android:text="50-100 orang"
                     android:textColor="@color/colorWhite"
                     app:buttonTint="@color/colorUltraLightGrey" />
 
@@ -358,7 +354,7 @@
                     android:id="@+id/stake_one_radio_number_worker_four"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="lebih dari 50%"
+                    android:text="lebih 100 orang"
                     android:textColor="@color/colorWhite"
                     app:buttonTint="@color/colorUltraLightGrey" />
 
