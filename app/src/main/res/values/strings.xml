@@ -167,4 +167,5 @@
     <string name="major_seven">D-III MLLU (Manajemen Lalu Lintas Udara)</string>
     <string name="major_eight">D-III MBU (Manajemen Bandar Udara)</string>
     <string name="major_nine">D-III TLBU (teknik Listrik Bandar Udara)</string>
+    <string name="prompt_save">Simpan</string>
 </resources>

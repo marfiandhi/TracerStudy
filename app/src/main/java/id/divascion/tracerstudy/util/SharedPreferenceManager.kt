@@ -10,6 +10,54 @@ import id.divascion.tracerstudy.data.model.*
 class SharedPreferenceManager {
 
     @SuppressLint("CommitPrefEdits")
+    fun saveAlumni(context: Context, item: AlumniQuiz, uid: String): Boolean {
+        return try {
+            saveAlumni(context, item.quizOne, uid)
+            saveAlumni(context, item.quizTwo, uid)
+            saveAlumni(context, item.quizThree, uid)
+            saveAlumni(context, item.quizFour, uid)
+            saveAlumni(context, item.quizFive, uid)
+            saveAlumni(context, item.quizSix, uid)
+        } catch (e: Exception) {
+            e("Alumni failed", e.message)
+            false
+        }
+    }
+
+    fun getAlumni(context: Context, uid: String): AlumniQuiz {
+        val data = AlumniQuiz()
+        data.quizOne = getAlumniOne(context, uid)?: AlumniQuizOne()
+        data.quizTwo = getAlumniTwo(context, uid)?: AlumniQuizTwo()
+        data.quizThree = getAlumniThree(context, uid)?: AlumniQuizThree()
+        data.quizFour = getAlumniFour(context, uid)?: AlumniQuizFour()
+        data.quizFive = getAlumniFive(context, uid)?: AlumniQuizFive()
+        data.quizSix = getAlumniSix(context, uid)?: AlumniQuizSix()
+        return data
+    }
+
+    @SuppressLint("CommitPrefEdits")
+    fun saveStake(context: Context, item: StakeQuiz, uid: String): Boolean {
+        return try {
+            saveStake(context, item.stakeQuizOne, uid)
+            saveStake(context, item.stakeQuizTwo, uid)
+            saveStake(context, item.stakeQuizThree, uid)
+            saveStake(context, item.stakeQuizFour, uid)
+        } catch (e: Exception) {
+            e("Stake failed", e.message)
+            false
+        }
+    }
+
+    fun getStake(context: Context, uid: String): StakeQuiz {
+        val data = StakeQuiz()
+        data.stakeQuizOne = getStakeOne(context, uid)?: StakeQuizOne()
+        data.stakeQuizTwo = getStakeTwo(context, uid)?: StakeQuizTwo()
+        data.stakeQuizThree = getStakeThree(context, uid)?: StakeQuizThree()
+        data.stakeQuizFour = getStakeFour(context, uid)?: StakeQuizFour()
+        return data
+    }
+
+    @SuppressLint("CommitPrefEdits")
     fun saveAlumni(context: Context, item: AlumniQuizOne, uid: String): Boolean {
         return try {
             val sharedPreferences = context.getSharedPreferences("ALUMNI_$uid", 0)
