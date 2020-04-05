@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import com.google.firebase.auth.FirebaseUser
 import id.divascion.tracerstudy.R
+import id.divascion.tracerstudy.data.model.AlumniQuiz
 import id.divascion.tracerstudy.data.model.AlumniQuizSix
 import id.divascion.tracerstudy.util.SharedPreferenceManager
 import id.divascion.tracerstudy.util.ViewManipulation
@@ -18,12 +19,14 @@ import org.jetbrains.anko.support.v4.longToast
 
 private const val ARG_PARAM1 = "USER"
 private const val ARG_PARAM2 = "STATUS"
+private const val ARG_PARAM3 = "ITEM"
 
 class AlumniSixFragment : Fragment() {
 
     private lateinit var data: AlumniQuizSix
     private lateinit var status: String
     private var user: FirebaseUser? = null
+    private var dataView: AlumniQuiz? = null
     private var listener: OnFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,16 +34,26 @@ class AlumniSixFragment : Fragment() {
         arguments?.let {
             user = it.get(ARG_PARAM1) as FirebaseUser?
             status = it.getString(ARG_PARAM2) ?: "none"
+            dataView = it.getParcelable(ARG_PARAM3)
         }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        data = SharedPreferenceManager().getAlumniSix(activity!!, user!!.uid) ?: AlumniQuizSix()
+        if (dataView == null) {
+            data = SharedPreferenceManager().getAlumniSix(activity!!, user!!.uid) ?: AlumniQuizSix()
+        } else {
+            data = dataView!!.quizSix ?: AlumniQuizSix()
+            alumni_six_save_button.visibility = View.GONE
+            alumni_six_message_layout.visibility = View.GONE
+        }
         if (status.equals("done", true)) {
             injectData()
+            alumni_six_save_button.isClickable = false
+            alumni_six_save_button.isFocusable = false
+            alumni_six_save_button.isEnabled = false
             @Suppress("DEPRECATION")
-            alumni_six_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
+            alumni_six_save_button.setTextColor(activity!!.resources.getColor(R.color.colorWhiteTransparent))
             ViewManipulation().disableEnableControls(false, alumni_six_layout)
         }
         alumni_six_save_button.setOnClickListener {
@@ -501,7 +514,8 @@ class AlumniSixFragment : Fragment() {
             alumni_six_radio_group_mastering_written.findFocus()
         }
         if (alumni_six_radio_group_mastering_community_development.checkedRadioButtonId != -1) {
-            val selectedId = alumni_six_radio_group_mastering_community_development.checkedRadioButtonId
+            val selectedId =
+                alumni_six_radio_group_mastering_community_development.checkedRadioButtonId
             val selectedRadioButton = activity!!.findViewById(selectedId) as RadioButton
             data.masteringCompetence.communityDevelopment = "${selectedRadioButton.text}"
         } else {
@@ -598,7 +612,8 @@ class AlumniSixFragment : Fragment() {
             alumni_six_radio_group_required_written.findFocus()
         }
         if (alumni_six_radio_group_required_community_development.checkedRadioButtonId != -1) {
-            val selectedId = alumni_six_radio_group_required_community_development.checkedRadioButtonId
+            val selectedId =
+                alumni_six_radio_group_required_community_development.checkedRadioButtonId
             val selectedRadioButton = activity!!.findViewById(selectedId) as RadioButton
             data.requiredCompetences.communityDevelopment = "${selectedRadioButton.text}"
         } else {

@@ -83,7 +83,7 @@ class AlumniOneFragment : Fragment() {
         alumni_one_save_button.isClickable = false
         alumni_one_save_button.isFocusable = false
         alumni_one_save_button.isEnabled = false
-        alumni_one_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
+        alumni_one_save_button.setTextColor(activity!!.resources.getColor(R.color.colorWhiteTransparent))
 
         alumni_one_et_name.setText(data.name)
         alumni_one_et_name.isEnabled = false

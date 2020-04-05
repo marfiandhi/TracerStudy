@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import com.google.firebase.auth.FirebaseUser
 import id.divascion.tracerstudy.R
+import id.divascion.tracerstudy.data.model.AlumniQuiz
 import id.divascion.tracerstudy.data.model.AlumniQuizFive
 import id.divascion.tracerstudy.util.SharedPreferenceManager
 import id.divascion.tracerstudy.util.ViewManipulation
@@ -18,12 +19,14 @@ import org.jetbrains.anko.support.v4.longToast
 
 private const val ARG_PARAM1 = "USER"
 private const val ARG_PARAM2 = "STATUS"
+private const val ARG_PARAM3 = "ITEM"
 
 class AlumniFiveFragment : Fragment() {
 
     private lateinit var data: AlumniQuizFive
     private lateinit var status: String
     private var user: FirebaseUser? = null
+    private var dataView: AlumniQuiz? = null
     private var listener: OnFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,16 +34,27 @@ class AlumniFiveFragment : Fragment() {
         arguments?.let {
             user = it.get(ARG_PARAM1) as FirebaseUser?
             status = it.getString(ARG_PARAM2) ?: "none"
+            dataView = it.getParcelable(ARG_PARAM3)
         }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        data = SharedPreferenceManager().getAlumniFive(activity!!, user!!.uid) ?: AlumniQuizFive()
+        if (dataView == null) {
+            data =
+                SharedPreferenceManager().getAlumniFive(activity!!, user!!.uid) ?: AlumniQuizFive()
+        } else {
+            data = dataView!!.quizFive ?: AlumniQuizFive()
+            alumni_five_save_button.visibility = View.GONE
+            alumni_five_message_layout.visibility = View.GONE
+        }
         if (status.equals("done", true)) {
             injectData()
+            alumni_five_save_button.isClickable = false
+            alumni_five_save_button.isFocusable = false
+            alumni_five_save_button.isEnabled = false
             @Suppress("DEPRECATION")
-            alumni_five_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
+            alumni_five_save_button.setTextColor(activity!!.resources.getColor(R.color.colorWhiteTransparent))
             ViewManipulation().disableEnableControls(false, alumni_five_layout)
         }
         alumni_five_save_button.setOnClickListener {

@@ -462,11 +462,11 @@
             android:id="@+id/stake_two_layout_period_recruitment_yes_extension_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="12dp"
             android:background="@color/colorDarkForeground"
-            android:orientation="vertical"
-            android:layout_gravity="center"
             android:gravity="center"
+            android:orientation="vertical"
             android:padding="4dp"
             android:visibility="gone">
 
@@ -474,7 +474,7 @@
                 android:id="@+id/stake_two_period_recruitment_yes_extension_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite"/>
+                android:textColor="@color/colorWhite" />
 
         </LinearLayout>
 
@@ -3134,7 +3134,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="@string/prompt_save_continue" />
+            android:fontFamily="sans-serif"
+            android:text="@string/prompt_save_continue"
+            android:textColor="@color/colorWhite"
+            app:backgroundTint="#3C5AEC00" />
 
     </LinearLayout>
 

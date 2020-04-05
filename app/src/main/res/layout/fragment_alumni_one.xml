@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -556,7 +556,7 @@
                     android:id="@+id/alumni_one_et_address_village"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Kecamatan*"
+                    android:hint="Kelurahan*"
                     android:inputType="textCapWords"
                     android:maxLength="20"
                     android:maxLines="1"
@@ -744,8 +744,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="@string/prompt_save_continue" />
+            android:fontFamily="sans-serif"
+            android:text="@string/prompt_save_continue"
+            android:textColor="@color/colorWhite"
+            app:backgroundTint="#3C5AEC00" />
 
     </LinearLayout>
 
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>

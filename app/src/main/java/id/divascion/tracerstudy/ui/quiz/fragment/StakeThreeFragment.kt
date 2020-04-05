@@ -46,7 +46,7 @@ class StakeThreeFragment : Fragment() {
             stake_three_save_button.isClickable = false
             stake_three_save_button.isEnabled = false
             @Suppress("DEPRECATION")
-            stake_three_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
+            stake_three_save_button.setTextColor(activity!!.resources.getColor(R.color.colorWhiteTransparent))
             ViewManipulation()
                 .disableEnableControls(false, stake_three_layout)
         }

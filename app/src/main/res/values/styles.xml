@@ -1,8 +1,6 @@
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorBlueSpecial</item>
         <item name="colorPrimaryDark">@color/colorBlue</item>
         <item name="colorAccent">@color/colorLime</item>
@@ -11,13 +9,20 @@
     </style>
 
     <style name="AppTheme.Dark" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorBrown</item>
         <item name="colorPrimaryDark">@color/colorDarkBrown</item>
         <item name="colorAccent">@color/colorAccentBlue</item>
         <item name="android:editTextStyle">@style/EditText.Dark</item>
         <item name="editTextStyle">@style/EditText.Dark</item>
         <item name="android:buttonStyle">@style/Button.Dark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorBrown</item>
+        <item name="colorPrimaryDark">@color/colorDarkBrown</item>
+        <item name="colorAccent">@color/colorAccentBlue</item>
     </style>
 
     <style name="EditText.Dark" parent="Widget.AppCompat.EditText">
@@ -42,6 +47,18 @@
 
     <style name="Spinner.Dark" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
         <item name="android:textColor">@color/colorGrey</item>
+    </style>
+
+    <style name="CollapsingToolbarLayoutExpandedTextStyle" parent="AppTheme">
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textSize">0sp</item>
+    </style>
+
+    <style name="ShadowText">
+        <item name="android:shadowColor">@color/colorBlack</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">2</item>
     </style>
 
 </resources>

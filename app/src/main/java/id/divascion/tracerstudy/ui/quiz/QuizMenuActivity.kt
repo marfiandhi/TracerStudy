@@ -29,13 +29,16 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
     private lateinit var mDatabase: DatabaseReference
     private lateinit var presenter: PresenterQuiz
     private lateinit var uid: String
+    private var menuClicked = false
+    private var list = ArrayList<String>()
+    private var already = 0
     private var pause = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_menu)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = getString(R.string.prompt_quizioner)
+        supportActionBar?.title = getString(R.string.prompt_quiz)
         role = intent.getStringExtra("ROLE")
         user = FirebaseAuth.getInstance().currentUser!!
         uid = user.uid
@@ -43,17 +46,49 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
         presenter = PresenterQuiz(mDatabase)
         when (role) {
             "alumni" -> {
+                supportActionBar?.title = getString(R.string.prompt_quiz_study)
                 titles = resources.getStringArray(R.array.list_quiz_alumni_subtitle)
                 quiz_menu_save_button.setOnClickListener {
-                    val data = SharedPreferenceManager().getAlumni(this, uid)
-                    presenter.addData(this, data, uid)
+                    val list = SharedPreferenceManager().getListRole(this, role, uid) ?: ArrayList()
+                    var valid = true
+                    if (list.size > 0) {
+                        for (i in list) {
+                            if(i.equals("none", true)) {
+                                valid = false
+                            }
+                        }
+                    } else {
+                        valid = false
+                    }
+                    if(valid) {
+                        val data = SharedPreferenceManager().getAlumni(this, uid)
+                        presenter.addData(this, data, uid)
+                    } else {
+                        toast("Harap lengkapi semua kuesioner sebelum menyimpan")
+                    }
                 }
             }
             "stakeholder" -> {
+                supportActionBar?.title = getString(R.string.prompt_quiz_stakeholder)
                 titles = resources.getStringArray(R.array.list_quiz_stakeholder_subtitle)
                 quiz_menu_save_button.setOnClickListener {
-                    val data = SharedPreferenceManager().getStake(this, uid)
-                    presenter.addData(this, data, uid)
+                    val list = SharedPreferenceManager().getListRole(this, role, uid) ?: ArrayList()
+                    var valid = true
+                    if (list.size > 0) {
+                        for (i in list) {
+                            if(i.equals("none", true)) {
+                                valid = false
+                            }
+                        }
+                    } else {
+                        valid = false
+                    }
+                    if(valid) {
+                        val data = SharedPreferenceManager().getStake(this, uid)
+                        presenter.addData(this, data, uid)
+                    } else {
+                        toast("Harap lengkapi semua kuesioner sebelum menyimpan")
+                    }
                 }
             }
             else -> {
@@ -65,11 +100,16 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
 
     override fun onPause() {
         pause = true
+        if(menuClicked) {
+            showLoading()
+            menuClicked = false
+        }
         super.onPause()
     }
 
     override fun onResume() {
         if (pause) {
+            hideLoading("")
             loadDataAdapter()
             adapter.notifyDataSetChanged()
             quiz_menu_rv.layoutManager = LinearLayoutManager(this)
@@ -94,32 +134,27 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
 
     private fun loadDataAdapter() {
         val list = SharedPreferenceManager().getListRole(this, role, uid) ?: ArrayList()
+        already++
         try {
-            if (list.size > 0) {
+            if (this.list.size > 0) {
                 Log.e("List quiz", "Size is not 0")
-            } else {
+                this.list.clear()
+                this.list.addAll(list)
+            } else if (already == 1) {
                 for (i in 0..5) {
-                    list.add("none")
+                    this.list.add("none")
                 }
                 if (role == "alumni") {
                     presenter.getDataAlumni(this, uid)
-
                 } else if (role == "stakeholder") {
                     presenter.getDataStake(this, uid)
                 }
             }
         } catch (e: Exception) {
-            for (i in 0..5) {
-                list.add("none")
-            }
-            if (role == "alumni") {
-                presenter.getDataAlumni(this, uid)
-
-            } else if (role == "stakeholder") {
-                presenter.getDataStake(this, uid)
-            }
+            Log.e("Quiz Menu", e.message)
         }
-        adapter = QuizMenuAdapter(this, titles, list) { i: Int, s: String, l: String ->
+        adapter = QuizMenuAdapter(this, titles, this.list) { i: Int, s: String, l: String ->
+            menuClicked = true
             startActivity<QuizActivity>(
                 "QUIZ_NUMBER" to i,
                 "QUIZ_TITLE" to s,
@@ -140,13 +175,17 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
         }
     }
 
-    override fun getData(data: AlumniQuiz) {
-        SharedPreferenceManager().saveAlumni(this, data, uid)
-        initUI()
+    override fun getData(data: AlumniQuiz?) {
+        if (data != null) {
+            SharedPreferenceManager().saveAlumni(this, data, uid)
+            initUI()
+        }
     }
 
-    override fun getData(data: StakeQuiz) {
-        SharedPreferenceManager().saveStake(this, data, uid)
-        initUI()
+    override fun getData(data: StakeQuiz?) {
+        if (data != null) {
+            SharedPreferenceManager().saveStake(this, data, uid)
+            initUI()
+        }
     }
 }

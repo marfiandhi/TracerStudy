@@ -51,7 +51,7 @@ class AlumniTwoFragment : Fragment() {
             alumni_two_save_button.isFocusable = false
             alumni_two_save_button.isEnabled = false
             @Suppress("DEPRECATION")
-            alumni_two_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
+            alumni_two_save_button.setTextColor(activity!!.resources.getColor(R.color.colorWhiteTransparent))
         }
         alumni_two_save_button.setOnClickListener {
             alert(

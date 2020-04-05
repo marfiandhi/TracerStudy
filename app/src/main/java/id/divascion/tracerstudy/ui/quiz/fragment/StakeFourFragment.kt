@@ -43,7 +43,7 @@ class StakeFourFragment : Fragment() {
             stake_four_save_button.isClickable = false
             stake_four_save_button.isEnabled = false
             @Suppress("DEPRECATION")
-            stake_four_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
+            stake_four_save_button.setTextColor(activity!!.resources.getColor(R.color.colorWhiteTransparent))
             ViewManipulation()
                 .disableEnableControls(false, stake_four_layout)
         }

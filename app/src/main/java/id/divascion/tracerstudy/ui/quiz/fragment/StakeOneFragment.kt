@@ -44,7 +44,7 @@ class StakeOneFragment : Fragment() {
             stake_one_save_button.isFocusable = false
             stake_one_save_button.isClickable = false
             stake_one_save_button.isEnabled = false
-            stake_one_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
+            stake_one_save_button.setTextColor(activity!!.resources.getColor(R.color.colorWhiteTransparent))
             ViewManipulation()
                 .disableEnableControls(false, stake_one_layout)
         }

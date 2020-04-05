@@ -5,10 +5,10 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class AlumniQuiz(
-    var quizOne: AlumniQuizOne = AlumniQuizOne(),
-    var quizTwo: AlumniQuizTwo = AlumniQuizTwo(),
-    var quizThree: AlumniQuizThree = AlumniQuizThree(),
-    var quizFour: AlumniQuizFour = AlumniQuizFour(),
-    var quizFive: AlumniQuizFive = AlumniQuizFive(),
-    var quizSix: AlumniQuizSix = AlumniQuizSix()
+    var quizOne: AlumniQuizOne? = null,
+    var quizTwo: AlumniQuizTwo? = null,
+    var quizThree: AlumniQuizThree? = null,
+    var quizFour: AlumniQuizFour? = null,
+    var quizFive: AlumniQuizFive? = null,
+    var quizSix: AlumniQuizSix? = null
 ) : Parcelable

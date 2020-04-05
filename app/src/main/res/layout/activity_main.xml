@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainActivity"
-    android:background="@color/colorDarkBackground">
+    android:background="@color/colorDarkBackground"
+    tools:context=".ui.main.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,70 +14,92 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:layout_marginStart="40dp"
             android:layout_centerVertical="true"
-            app:contentPaddingBottom="8dp"
-            app:cardElevation="8dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
             app:cardBackgroundColor="@color/colorDarkForeground"
-            app:cardCornerRadius="4dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="8dp"
+            app:contentPaddingBottom="8dp">
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_gravity="center_vertical"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp">
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="92dp"
-                    android:layout_height="92dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="8dp"
-                    android:src="@drawable/tracer_study_border"/>
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+                        android:id="@+id/main_image"
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:src="@drawable/tracer_study_border"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/ShadowText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:text="Poltekbang Jayapura"
+                        android:textColor="@color/colorBrown"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/main_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
 
                 <Button
                     android:id="@+id/main_data_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
                     android:text="@string/prompt_study_data"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorBlueSpecial"
-                    android:textAllCaps="false"/>
+                    app:backgroundTint="#3C2979FF" />
 
                 <Button
                     android:id="@+id/main_quiz_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/prompt_quizioner"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/prompt_quiz"
                     android:textColor="@color/colorWhite"
-                    android:textAllCaps="false"
-                    android:background="@color/colorDarkBlue"
-                    android:layout_marginTop="16dp"/>
+                    app:backgroundTint="#3CFFD600" />
 
                 <Button
                     android:id="@+id/main_logout_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif"
                     android:text="@string/prompt_logout"
                     android:textColor="@color/colorWhite"
-                    android:textAllCaps="false"
-                    android:background="@color/colorMaroon"
-                    android:layout_marginTop="16dp"/>
+                    app:backgroundTint="#3CFC0000" />
 
                 <Button
                     android:id="@+id/main_dev_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif"
                     android:text="Reset Role"
-                    android:textColor="@color/colorBlack"
-                    android:textAllCaps="false"
-                    android:background="@color/colorLime"
-                    android:layout_marginTop="16dp"/>
-
+                    android:textColor="@color/colorWhite"
+                    app:backgroundTint="#3C00BFA5" />
 
             </LinearLayout>
 
@@ -89,13 +110,11 @@
     <include
         android:id="@+id/main_popup"
         layout="@layout/popup_role"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
 
     <include
         android:id="@+id/main_loading"
         layout="@layout/loading_screen"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -8,6 +8,7 @@ import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
+import id.divascion.tracerstudy.ui.alumni.DataAlumniActivity
 import id.divascion.tracerstudy.ui.login.LoginActivity
 import id.divascion.tracerstudy.ui.quiz.QuizMenuActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         role = user.displayName.toString()
         popup()
         main_data_button.setOnClickListener {
-            toast("Data Alumni")
+            startActivity<DataAlumniActivity>()
         }
         main_quiz_button.setOnClickListener {
             if (role.isEmpty() || role == "none") {
@@ -105,7 +106,7 @@ class MainActivity : AppCompatActivity() {
     private fun popup() {
         popup_radio_group.setOnCheckedChangeListener { _, _ -> popup_error.visibility = View.GONE }
         popup_confirm_button.setOnClickListener {
-            var role: String
+            val role: String
             isAlumni = popup_radio_alumni.isChecked
             isStakeholder = popup_radio_stakeholder.isChecked
             if (!isAlumni && !isStakeholder) {

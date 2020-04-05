@@ -43,10 +43,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif-light"
                 android:text="Mohon tunggu..."
                 android:textColor="@color/colorBlack"
-                android:textSize="20sp"
-                android:typeface="sans" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 

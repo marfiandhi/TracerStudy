@@ -53,7 +53,7 @@ class StakeTwoFragment : Fragment() {
             stake_two_save_button.isClickable = false
             stake_two_save_button.isEnabled = false
             @Suppress("DEPRECATION")
-            stake_two_save_button.setTextColor(activity!!.resources.getColor(R.color.colorBlackTransparentLighter))
+            stake_two_save_button.setTextColor(activity!!.resources.getColor(R.color.colorWhiteTransparent))
             ViewManipulation()
                 .disableEnableControls(false, stake_two_layout)
         }

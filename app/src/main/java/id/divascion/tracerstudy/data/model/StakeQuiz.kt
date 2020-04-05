@@ -5,8 +5,8 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class StakeQuiz(
-    var stakeQuizOne: StakeQuizOne = StakeQuizOne(),
-    var stakeQuizTwo: StakeQuizTwo = StakeQuizTwo(),
-    var stakeQuizThree: StakeQuizThree = StakeQuizThree(),
-    var stakeQuizFour: StakeQuizFour = StakeQuizFour()
+    var stakeQuizOne: StakeQuizOne? = null,
+    var stakeQuizTwo: StakeQuizTwo? = null,
+    var stakeQuizThree: StakeQuizThree? = null,
+    var stakeQuizFour: StakeQuizFour? = null
 ) : Parcelable
