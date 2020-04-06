@@ -105,7 +105,7 @@ class PresenterQuiz(private val mDatabase: DatabaseReference) {
             }
 
             override fun onDataChange(p0: DataSnapshot) {
-                val data = p0.getValue(StakeQuiz::class.java)!!
+                val data = p0.getValue(StakeQuiz::class.java)
                 view.getData(data)
                 view.hideLoading("")
                 return
@@ -136,6 +136,42 @@ class PresenterQuiz(private val mDatabase: DatabaseReference) {
                         alumni.quizTwo?.yearGraduate.toString()
                     )
                     list.add(temp)
+                }
+                view.getData(list)
+                view.hideLoading("")
+            }
+
+        })
+    }
+
+    fun getDataAlumni(view: DataAlumniView, entrance: String, major: String) {
+        view.showLoading()
+        val list = ArrayList<AlumniList>()
+        mDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                view.hideLoading("${p0.message}. ${p0.details}")
+                return
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+                for (p1: DataSnapshot in p0.children) {
+                    val alumni = p1.getValue(AlumniQuiz::class.java) ?: AlumniQuiz()
+                    val id = p1.key
+                    val temp = AlumniList(
+                        id.toString(),
+                        alumni.quizOne?.name.toString(),
+                        alumni.quizOne?.gender.toString(),
+                        alumni.quizTwo?.majorProgram.toString(),
+                        alumni.quizTwo?.yearEntrance.toString(),
+                        alumni.quizTwo?.yearGraduate.toString()
+                    )
+                    if ((temp.entrance.equals(entrance, true) || entrance.equals(
+                            "-",
+                            true
+                        )) && (temp.major.equals(major, true) || major.equals("-", true))
+                    ) {
+                        list.add(temp)
+                    }
                 }
                 view.getData(list)
                 view.hideLoading("")

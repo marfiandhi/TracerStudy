@@ -97,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Alamat Perusahaan/Instansi*"
-                    android:inputType="text|textMultiLine|textCapSentences"
+                    android:inputType="text|textMultiLine|textCapWords"
                     android:maxLines="3"
                     android:selectAllOnFocus="true"
                     android:textColor="@color/colorWhite" />

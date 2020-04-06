@@ -53,14 +53,14 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
                     var valid = true
                     if (list.size > 0) {
                         for (i in list) {
-                            if(i.equals("none", true)) {
+                            if (i.equals("none", true)) {
                                 valid = false
                             }
                         }
                     } else {
                         valid = false
                     }
-                    if(valid) {
+                    if (valid) {
                         val data = SharedPreferenceManager().getAlumni(this, uid)
                         presenter.addData(this, data, uid)
                     } else {
@@ -76,14 +76,14 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
                     var valid = true
                     if (list.size > 0) {
                         for (i in list) {
-                            if(i.equals("none", true)) {
+                            if (i.equals("none", true)) {
                                 valid = false
                             }
                         }
                     } else {
                         valid = false
                     }
-                    if(valid) {
+                    if (valid) {
                         val data = SharedPreferenceManager().getStake(this, uid)
                         presenter.addData(this, data, uid)
                     } else {
@@ -95,12 +95,23 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
                 quiz_menu_save_button.isEnabled = false
             }
         }
-        initUI()
+        loadDataAdapter()
+        adapter = QuizMenuAdapter(this, titles, this.list) { i: Int, s: String, l: String ->
+            menuClicked = true
+            startActivity<QuizActivity>(
+                "QUIZ_NUMBER" to i,
+                "QUIZ_TITLE" to s,
+                "ROLE" to role,
+                "STATUS" to l
+            )
+        }
+        quiz_menu_rv.layoutManager = LinearLayoutManager(this)
+        quiz_menu_rv.adapter = adapter
     }
 
     override fun onPause() {
         pause = true
-        if(menuClicked) {
+        if (menuClicked) {
             showLoading()
             menuClicked = false
         }
@@ -112,8 +123,6 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
             hideLoading("")
             loadDataAdapter()
             adapter.notifyDataSetChanged()
-            quiz_menu_rv.layoutManager = LinearLayoutManager(this)
-            quiz_menu_rv.adapter = adapter
             pause = false
         }
         super.onResume()
@@ -126,41 +135,29 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun initUI() {
-        loadDataAdapter()
-        quiz_menu_rv.layoutManager = LinearLayoutManager(this)
-        quiz_menu_rv.adapter = adapter
-    }
-
     private fun loadDataAdapter() {
         val list = SharedPreferenceManager().getListRole(this, role, uid) ?: ArrayList()
         already++
         try {
-            if (this.list.size > 0) {
+            if (list.size > 0) {
                 Log.e("List quiz", "Size is not 0")
                 this.list.clear()
                 this.list.addAll(list)
             } else if (already == 1) {
-                for (i in 0..5) {
-                    this.list.add("none")
-                }
                 if (role == "alumni") {
+                    for (i in 0..5) {
+                        this.list.add("none")
+                    }
                     presenter.getDataAlumni(this, uid)
                 } else if (role == "stakeholder") {
+                    for (i in 0..3) {
+                        this.list.add("none")
+                    }
                     presenter.getDataStake(this, uid)
                 }
             }
         } catch (e: Exception) {
             Log.e("Quiz Menu", e.message)
-        }
-        adapter = QuizMenuAdapter(this, titles, this.list) { i: Int, s: String, l: String ->
-            menuClicked = true
-            startActivity<QuizActivity>(
-                "QUIZ_NUMBER" to i,
-                "QUIZ_TITLE" to s,
-                "ROLE" to role,
-                "STATUS" to l
-            )
         }
     }
 
@@ -178,14 +175,14 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
     override fun getData(data: AlumniQuiz?) {
         if (data != null) {
             SharedPreferenceManager().saveAlumni(this, data, uid)
-            initUI()
+            loadDataAdapter()
         }
     }
 
     override fun getData(data: StakeQuiz?) {
         if (data != null) {
             SharedPreferenceManager().saveStake(this, data, uid)
-            initUI()
+            loadDataAdapter()
         }
     }
 }

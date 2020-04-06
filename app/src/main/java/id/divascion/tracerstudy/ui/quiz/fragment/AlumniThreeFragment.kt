@@ -28,10 +28,10 @@ class AlumniThreeFragment : Fragment() {
 
     private lateinit var data: AlumniQuizThree
     private lateinit var status: String
-    private lateinit var originInfoOther: String
-    private lateinit var originInfoOtherPrevious: String
     private lateinit var listYear: ArrayList<String>
     private lateinit var listNullYear: ArrayList<String>
+    private var originInfoOther = ""
+    private var originInfoOtherPrevious = ""
     private var originInfo = ArrayList<String>()
     private var originInfoPrevious = ArrayList<String>()
     private var user: FirebaseUser? = null

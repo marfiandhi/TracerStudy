@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils
+import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
@@ -88,7 +89,24 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
-                    updateUI(user)
+                    if (user!!.displayName.isNullOrEmpty()) {
+                        val profileUpdates = UserProfileChangeRequest.Builder()
+                            .setDisplayName("none")
+                            .build()
+                        user.updateProfile(profileUpdates)
+                            .addOnCompleteListener { taskUpdate ->
+                                if (taskUpdate.isSuccessful) {
+                                    hideLoading()
+                                    updateUI(user)
+                                } else {
+                                    Log.e("createUser:failure", taskUpdate.exception.toString())
+                                    toast(getString(R.string.sign_up_failed))
+                                    updateUI(null)
+                                }
+                            }
+                    } else {
+                        updateUI(user)
+                    }
                 } else {
                     hideLoading()
                     try {
@@ -136,18 +154,19 @@ class LoginActivity : AppCompatActivity() {
                     val profileUpdates = UserProfileChangeRequest.Builder()
                         .setDisplayName("none")
                         .build()
-                    var done = false
-                    while (!done) {
-                        user?.updateProfile(profileUpdates)
-                            ?.addOnCompleteListener { task ->
-                                if (task.isSuccessful) {
-                                    hideLoading()
-                                    updateUI(user)
-                                    done = true
-                                }
+                    user?.updateProfile(profileUpdates)
+                        ?.addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                hideLoading()
+                                updateUI(user)
+                            } else {
+                                Log.e("createUser:failure", task.exception.toString())
+                                toast(getString(R.string.sign_up_failed))
+                                updateUI(null)
                             }
-                    }
+                        }
                 } else {
+                    Log.e("createUser:failure", createTask.exception.toString())
                     toast(getString(R.string.sign_up_failed))
                     updateUI(null)
                 }

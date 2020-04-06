@@ -523,21 +523,24 @@ class AlumniTwoFragment : Fragment() {
         }
 
         data.GPI = alumni_two_et_gpi.text.toString()
-        val IPK = data.GPI.toDouble()
         if (data.GPI.isEmpty()) {
             alumni_two_et_gpi.error = resources.getString(R.string.prompt_alert_required)
             valid = false
-        } else if (IPK < 0 || IPK > 4.0 || data.GPI[0] == '.' || data.GPI.contains('-') || data.GPI.contains(
-                ','
-            ) || data.GPI.contains(
-                ' '
-            )
-        ) {
-            alumni_two_et_gpi.error = "IPK tidak sesuai"
-            valid = false
         } else {
-            alumni_two_et_gpi.error = null
+            val IPK = data.GPI.toDouble()
+            if (IPK < 0 || IPK > 4.0 || data.GPI[0] == '.' || data.GPI.contains('-') || data.GPI.contains(
+                    ','
+                ) || data.GPI.contains(
+                    ' '
+                )
+            ) {
+                alumni_two_et_gpi.error = "IPK tidak sesuai"
+                valid = false
+            } else {
+                alumni_two_et_gpi.error = null
+            }
         }
+
 
         if (alumni_two_radio_work_yes.isChecked) {
             data.work = alumni_two_radio_work_yes.text.toString()

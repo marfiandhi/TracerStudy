@@ -27,8 +27,8 @@ class StakeTwoFragment : Fragment() {
 
     private lateinit var data: StakeQuizTwo
     private lateinit var status: String
-    private lateinit var infoDisseminationOther: String
-    private lateinit var companySelectionOther: String
+    private var companySelectionOther = ""
+    private var infoDisseminationOther = ""
     private var infoDisseminationList = ArrayList<String>()
     private var companySelectionList = ArrayList<String>()
     private var user: FirebaseUser? = null

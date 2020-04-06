@@ -54,9 +54,15 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
             android.R.color.holo_red_light
         )
         data_alumni_swipe.setOnRefreshListener {
-            data.clear()
-            presenter.getDataAlumni(this)
+            reloadData()
         }
+    }
+
+    private fun reloadData() {
+        data.clear()
+        year = data_alumni_spinner_list_year_entrance.selectedItem.toString()
+        major = data_alumni_spinner_list_major.selectedItem.toString()
+        presenter.getDataAlumni(this, year, major)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -111,7 +117,7 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
                     year = data_alumni_spinner_list_year_entrance.selectedItem.toString()
                     data.clear()
                     if (year.equals("-", true) && major.equals("-", true)) {
-                        data.addAll(searchData)
+                        reloadData()
                     } else {
                         searchData.forEach {
                             try {
@@ -127,7 +133,11 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
                             }
                         }
                     }
-                    adapter.notifyDataSetChanged()
+                    if (data.none()) {
+                        reloadData()
+                    } else {
+                        adapter.notifyDataSetChanged()
+                    }
                 }
 
                 override fun onNothingSelected(arg0: AdapterView<*>) {
@@ -148,7 +158,7 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
                     major = data_alumni_spinner_list_major.selectedItem.toString()
                     data.clear()
                     if (major.equals("-", true) && year.equals("-", true)) {
-                        data.addAll(searchData)
+                        reloadData()
                     } else {
                         searchData.forEach {
                             try {
@@ -168,7 +178,11 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
                             }
                         }
                     }
-                    adapter.notifyDataSetChanged()
+                    if (data.none()) {
+                        reloadData()
+                    } else {
+                        adapter.notifyDataSetChanged()
+                    }
                 }
 
                 override fun onNothingSelected(arg0: AdapterView<*>) {
@@ -189,6 +203,7 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
     override fun getData(listAlumni: ArrayList<AlumniList>) {
         searchData.clear()
         searchData.addAll(listAlumni)
+        data.clear()
         data.addAll(listAlumni)
         adapter.notifyDataSetChanged()
     }
