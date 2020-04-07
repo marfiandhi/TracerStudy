@@ -13,7 +13,169 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/alumni_biodata_layout_school_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDarkBackground"
+                android:padding="4dp"
+                app:elevation="4dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toStartOf="@id/dummy_zero"
+                    android:background="@color/colorWhiteTransparent" />
+
+                <TextView
+                    android:id="@+id/dummy_zero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Tempat/Tanggal Lahir"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhiteTransparentLighter"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/dummy_zero"
+                    android:background="@color/colorWhiteTransparent" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp">
+
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_province"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_born_province"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dummy_province"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_city"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_born_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dummy_city"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Tanggal Lahir"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_born_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorDarkForeground"
@@ -40,7 +202,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Data SMA"
+                    android:text="Alamat dan Kontak"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhiteTransparentLighter"
                     android:textSize="20sp" />
@@ -55,33 +217,388 @@
 
             </RelativeLayout>
 
-            <TextView
-                android:id="@+id/alumni_biodata_tv_school_one_name"
-                android:layout_width="wrap_content"
+            <TableLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
-                android:text="nama"
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite"
-                android:textSize="16sp" />
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp">
 
-            <TextView
-                android:id="@+id/alumni_biodata_tv_school_one_address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-light"
-                android:text="alamat"
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite" />
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_province"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_address_province"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dummy_province"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_city"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_address_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dummy_city"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kecamatan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_address_district"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kelurahan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_address_village"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Jalan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_address_street"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_postal_code"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_address_postcode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Nomor Telp. Rumah"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_address_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Nomor HP"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_address_hp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Email"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Facebook"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_fb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+            </TableLayout>
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/alumni_biodata_layout_campus_one"
+            android:id="@+id/alumni_biodata_layout_school_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorDarkForeground"
@@ -108,7 +625,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Data Pendidikan Tinggi"
+                    android:text="Data SMA"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhiteTransparentLighter"
                     android:textSize="20sp" />
@@ -123,32 +640,166 @@
 
             </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <TableLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
-                android:text="Politeknik Penerbangan Jayapura"
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite"
-                android:textSize="16sp" />
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp">
 
-            <TextView
-                android:id="@+id/alumni_biodata_tv_campus_one_major"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-light"
-                android:text="alamat"
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite" />
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_name"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_school_one_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_province"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_school_one_province"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dummy_province"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_city"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_school_one_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dummy_city"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_postal_code"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_school_one_postcode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dummy_postal_code"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+            </TableLayout>
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/alumni_biodata_layout_work_one"
+            android:id="@+id/alumni_biodata_layout_campus_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorDarkForeground"
@@ -175,7 +826,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Riwayat Pekerjaan"
+                    android:text="Data Pendidikan Tinggi"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhiteTransparentLighter"
                     android:textSize="20sp" />
@@ -190,28 +841,2306 @@
 
             </RelativeLayout>
 
-            <TextView
-                android:id="@+id/alumni_biodata_tv_work_one_name"
-                android:layout_width="wrap_content"
+            <TableLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
-                android:text="nama"
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite"
-                android:textSize="16sp" />
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp">
 
-            <TextView
-                android:id="@+id/alumni_biodata_tv_work_one_type"
-                android:layout_width="wrap_content"
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_name"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="Politeknik Penerbangan Jayapura"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kota/Negara"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="Kota Jayapura/Indonesia"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Fakultas/Jurusan/Program Studi"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_one_major"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Tahun Masuk"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_one_entrance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Bulan/Tahun Lulus"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_one_graduate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="IPK"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_one_gpi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Berorganisasi"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_one_organ"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/alumni_biodata_layout_campus_other_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDarkBackground"
+                android:padding="4dp"
+                app:elevation="4dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toStartOf="@id/dummy_four"
+                    android:background="@color/colorWhiteTransparent" />
+
+                <TextView
+                    android:id="@+id/dummy_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Data Pendidikan Tinggi I"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhiteTransparentLighter"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/dummy_four"
+                    android:background="@color/colorWhiteTransparent" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-light"
-                android:text="jenis"
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite" />
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp">
+
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_name"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_two_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kota/Negara"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_two_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Fakultas/Jurusan/Program Studi"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_two_city_major"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Jenjang Pendidikan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_two_level"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Tahun Masuk/Lulus"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_two_entrance_graduate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Alasan Sekolah"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_two_reason"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/alumni_biodata_layout_campus_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDarkBackground"
+                android:padding="4dp"
+                app:elevation="4dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toStartOf="@id/dummy_five"
+                    android:background="@color/colorWhiteTransparent" />
+
+                <TextView
+                    android:id="@+id/dummy_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Data Pendidikan Tinggi II"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhiteTransparentLighter"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/dummy_five"
+                    android:background="@color/colorWhiteTransparent" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp">
+
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_name"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_three_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kota/Negara"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_three_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Fakultas/Jurusan/Program Studi"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_three_city_major"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Jenjang Pendidikan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_three_level"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Tahun Masuk/Lulus"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_campus_three_entrance_graduate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDarkBackground"
+                android:padding="4dp"
+                app:elevation="4dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toStartOf="@id/dummy_six"
+                    android:background="@color/colorWhiteTransparent" />
+
+                <TextView
+                    android:id="@+id/dummy_six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Ekspektasi dan Pengetahuan Prosedur Kerja"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhiteTransparentLighter"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/dummy_six"
+                    android:background="@color/colorWhiteTransparent" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp">
+
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Ekspektasi Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_expect_work"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Bersedia Ditempatkan Dimana Saja"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_placement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Tahu Cara Melamar Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_apply_job"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kapan Harusnya Cara Melamar Pekerjaan Diketahui"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_time_apply_job"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Tahu Membuat CV"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_make_cv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kapan Harusnya Membuat CV Diketahui"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_time_make_cv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Bekerja Setelah Lulus"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_when_graduate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/alumni_biodata_layout_work_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDarkBackground"
+                android:padding="4dp"
+                app:elevation="4dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toStartOf="@id/dummy_xxx"
+                    android:background="@color/colorWhiteTransparent" />
+
+                <TextView
+                    android:id="@+id/dummy_xxx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Pekerjaan Saat Ini"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhiteTransparentLighter"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/dummy_xxx"
+                    android:background="@color/colorWhiteTransparent" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp">
+
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_name"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Jenis"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Alamat"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dummy_city"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Nomor Telp."
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_postal_code"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_postcode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Mulai Bekerja"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Berhenti Bekerja"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_quit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Proses Mencari Kerja"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_effort"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Sumber Informasi Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_origin_info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kesesuaian Pekerjaan dengan Harapan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_origin_expectation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kepuasaan Terhadap Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_satisfied"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Pertimbangan Memilih Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_reason"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Rata-Rata Pendapatan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_income"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Berhubungan dengan Bidang Ilmu"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_major_related"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kebutuhan Institusi dengan Bidang"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_one_need"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/alumni_biodata_layout_work_previous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkForeground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDarkBackground"
+                android:padding="4dp"
+                app:elevation="4dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toStartOf="@id/dummy_zzz"
+                    android:background="@color/colorWhiteTransparent" />
+
+                <TextView
+                    android:id="@+id/dummy_zzz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Riwayat Pekerjaan Lainnya"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhiteTransparentLighter"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/dummy_zzz"
+                    android:background="@color/colorWhiteTransparent" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp">
+
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Jumlah Ganti Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_number_change_job"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Alasan Pindah"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_reason_change"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dummy_province"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="@string/prompt_name"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Jabatan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_placement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Mulai Bekerja"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Berhenti Bekerja"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_quit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Proses Mencari Kerja"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_effort"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Sumber Informasi Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_origin_info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kesesuaian Pekerjaan dengan Harapan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_origin_expectation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Kepuasaan Terhadap Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_satisfied"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Pertimbangan Memilih Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_reason"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Rata-Rata Pendapatan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_income"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Waktu Mulai Mencari Kerja"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_start_looking_job"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Jumlah Lamaran Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_number_applied"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="3"
+                        android:text="Rentang Mendapatkan Pekerjaan"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/prompt_colon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/alumni_biodata_tv_work_previous_duration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:maxLines="7"
+                        android:text="@string/dash"
+                        android:textColor="@color/colorWhite"
+                        android:textIsSelectable="true" />
+
+                </TableRow>
+
+            </TableLayout>
 
         </LinearLayout>
 

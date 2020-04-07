@@ -29,6 +29,8 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
     private lateinit var listNullYear: ArrayList<String>
     private lateinit var adapter: DataAlumniAdapter
     private lateinit var user: FirebaseUser
+    private var pause = false
+    private var isClicked = false
     private var year = "-"
     private var major = "-"
     private var calendar = Calendar.getInstance()
@@ -58,6 +60,23 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
         }
     }
 
+    override fun onPause() {
+        pause = true
+        if (isClicked) {
+            showLoading()
+            isClicked = false
+        }
+        super.onPause()
+    }
+
+    override fun onResume() {
+        if (pause) {
+            hideLoading("")
+            pause = false
+        }
+        super.onResume()
+    }
+
     private fun reloadData() {
         data.clear()
         year = data_alumni_spinner_list_year_entrance.selectedItem.toString()
@@ -75,6 +94,7 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
     private fun initUI() {
         adapter()
         adapter = DataAlumniAdapter(this, user.uid, data) { uid: String ->
+            isClicked = true
             startActivity<DataAlumniDetailActivity>(
                 "UID" to uid
             )

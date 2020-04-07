@@ -181,4 +181,13 @@
     <string name="major_nine">D-III TLBU (teknik Listrik Bandar Udara)</string>
     <string name="prompt_save">Simpan</string>
     <string name="picture">Picture</string>
+    <string name="prompt_province">Provinsi</string>
+    <string name="prompt_colon">:</string>
+    <string name="dummy_province">Sulawesi Selatan</string>
+    <string name="prompt_city">Kota</string>
+    <string name="prompt_postal_code">Kode Pos</string>
+    <string name="dummy_city">Kota Makasasr</string>
+    <string name="dummy_postal_code">90221</string>
+    <string name="dash">-</string>
+    <string name="prompt_name">Nama</string>
 </resources>
