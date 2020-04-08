@@ -151,9 +151,16 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { createTask ->
                 if (createTask.isSuccessful) {
                     val user = auth.currentUser
-                    val profileUpdates = UserProfileChangeRequest.Builder()
-                        .setDisplayName("none")
-                        .build()
+                    val profileUpdates =
+                        if (user?.email.equals("tracerpoltekbangjayapura@gmail.com", true)) {
+                            UserProfileChangeRequest.Builder()
+                                .setDisplayName("admin")
+                                .build()
+                        } else {
+                            UserProfileChangeRequest.Builder()
+                                .setDisplayName("none")
+                                .build()
+                        }
                     user?.updateProfile(profileUpdates)
                         ?.addOnCompleteListener { task ->
                             if (task.isSuccessful) {

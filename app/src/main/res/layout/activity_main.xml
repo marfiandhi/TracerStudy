@@ -92,6 +92,16 @@
                     app:backgroundTint="#3CFC0000" />
 
                 <Button
+                    android:id="@+id/main_admin_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Export Stakeholder"
+                    android:textColor="@color/colorWhite"
+                    app:backgroundTint="#3C64DD17" />
+
+                <!--<Button
                     android:id="@+id/main_dev_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -99,7 +109,7 @@
                     android:fontFamily="sans-serif"
                     android:text="Reset Role"
                     android:textColor="@color/colorWhite"
-                    app:backgroundTint="#3C00BFA5" />
+                    app:backgroundTint="#3C00BFA5" />-->
 
             </LinearLayout>
 

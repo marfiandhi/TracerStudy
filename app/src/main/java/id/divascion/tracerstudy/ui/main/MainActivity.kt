@@ -1,30 +1,39 @@
 package id.divascion.tracerstudy.ui.main
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.database.FirebaseDatabase
+import id.divascion.tracerstudy.data.model.StakeQuiz
+import id.divascion.tracerstudy.data.presenter.PresenterQuiz
 import id.divascion.tracerstudy.ui.alumni.DataAlumniActivity
 import id.divascion.tracerstudy.ui.login.LoginActivity
 import id.divascion.tracerstudy.ui.quiz.QuizMenuActivity
+import id.divascion.tracerstudy.util.ExportStakeholder
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.popup_role.*
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainView {
 
     private lateinit var user: FirebaseUser
-    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
     private lateinit var role: String
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
+    private var list: MutableList<StakeQuiz> = mutableListOf()
+    private var isStakeholder = false
     private var roleConfirm = false
     private var isAlumni = false
-    private var isStakeholder = false
     private var loading = false
     private var pause = false
     private var count = 0
@@ -50,6 +59,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(id.divascion.tracerstudy.R.layout.activity_main)
         user = auth.currentUser!!
         role = user.displayName.toString()
+        if (role != "admin") {
+            main_admin_button.visibility = View.GONE
+        }
         popup()
         main_data_button.setOnClickListener {
             startActivity<DataAlumniActivity>()
@@ -74,18 +86,66 @@ class MainActivity : AppCompatActivity() {
                 positiveButton("Iya") {
                     showLoading()
                     FirebaseAuth.getInstance().signOut()
-                    hideLoading()
+                    hideLoading("")
                     finishAffinity()
                     startActivity<LoginActivity>()
                 }
                 negativeButton("Tidak") { it.cancel() }
             }.show()
         }
-        //TODO hapus nanti
+        main_admin_button.setOnClickListener {
+            alert("Anda ingin mengekspor data stakeholder?") {
+                positiveButton("Iya") {
+                    exportStakeHolder()
+                }
+                negativeButton("Tidak") { it.cancel() }
+            }.show()
+        }
+        /*
         main_dev_button.setOnClickListener {
-            changeRole("none")
-            user = auth.currentUser!!
-            role = ""
+            if (role != "admin") {
+                changeRole("none")
+                user = auth.currentUser!!
+                role = ""
+            } else {
+                toast("Anda adalah ADMIN. Tidak perlu mengubah ROLE")
+            }
+        }*/
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            val mDatabase =
+                FirebaseDatabase.getInstance().reference.child("quiz").child("stakeholder")
+                    .child("answer")
+            val presenter = PresenterQuiz(mDatabase)
+            presenter.getDataStake(this)
+        }
+
+    }
+
+    private fun exportStakeHolder() {
+        if (PackageManager.PERMISSION_GRANTED == ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            )
+        ) {
+            val mDatabase =
+                FirebaseDatabase.getInstance().reference.child("quiz").child("stakeholder")
+                    .child("answer")
+            val presenter = PresenterQuiz(mDatabase)
+            presenter.getDataStake(this)
+        } else {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                1
+            )
         }
     }
 
@@ -158,7 +218,7 @@ class MainActivity : AppCompatActivity() {
         user?.updateProfile(profileUpdates)
             ?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    hideLoading()
+                    hideLoading("")
                     this.role = role
                     toQuiz(role)
                 }
@@ -171,6 +231,8 @@ class MainActivity : AppCompatActivity() {
             startActivity<QuizMenuActivity>("ROLE" to role)
         } else if (role == "none") {
             toast("Role Anda tidak ada.")
+        } else if (role == "admin") {
+            toast("Anda adalah ADMIN. Anda tidak perlu mengisi kuesioner")
         } else {
             Log.e("role", "Error $role")
             toast("Maaf terdapat kesalahan terhadap status Anda. Silahkan hubungi Admin")
@@ -198,7 +260,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showLoading() {
+    override fun getData(list: ArrayList<StakeQuiz>) {
+        this.list.clear()
+        this.list.addAll(list)
+        if (this.list.none()) {
+            toast("Tidak ada data Stakeholder")
+        } else {
+            val export = ExportStakeholder(this)
+            export.export(this.list)
+        }
+    }
+
+    override fun showLoading() {
         main_popup.visibility = View.GONE
         main_loading.visibility = View.VISIBLE
         loading = true
@@ -207,11 +280,14 @@ class MainActivity : AppCompatActivity() {
         main_quiz_button.isEnabled = false
     }
 
-    private fun hideLoading() {
+    override fun hideLoading(message: String) {
         main_loading.visibility = View.GONE
         loading = false
         main_logout_button.isEnabled = true
         main_data_button.isClickable = true
         main_quiz_button.isEnabled = true
+        if (message.isNotEmpty()) {
+            toast(message)
+        }
     }
 }

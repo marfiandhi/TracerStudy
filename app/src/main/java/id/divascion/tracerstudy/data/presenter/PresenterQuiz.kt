@@ -8,6 +8,7 @@ import id.divascion.tracerstudy.data.model.AlumniList
 import id.divascion.tracerstudy.data.model.AlumniQuiz
 import id.divascion.tracerstudy.data.model.StakeQuiz
 import id.divascion.tracerstudy.ui.alumni.DataAlumniView
+import id.divascion.tracerstudy.ui.main.MainView
 import id.divascion.tracerstudy.ui.quiz.QuizMenuView
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
@@ -109,6 +110,27 @@ class PresenterQuiz(private val mDatabase: DatabaseReference) {
                 view.getData(data)
                 view.hideLoading("")
                 return
+            }
+
+        })
+    }
+
+    fun getDataStake(view: MainView) {
+        view.showLoading()
+        val list = ArrayList<StakeQuiz>()
+        mDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                view.hideLoading("${p0.message}. ${p0.details}")
+                return
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+                for (p1: DataSnapshot in p0.children) {
+                    val stakeholder = p1.getValue(StakeQuiz::class.java) ?: StakeQuiz()
+                    list.add(stakeholder)
+                }
+                view.getData(list)
+                view.hideLoading("")
             }
 
         })
