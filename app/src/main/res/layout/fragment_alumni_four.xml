@@ -63,7 +63,7 @@
                 android:paddingEnd="4dp"
                 android:text="Apakah pendidikan yang Saudara dapat di Poltekbang Jayapura bermanfaat untuk pekerjaan Saudara?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -142,7 +142,7 @@
                 android:paddingEnd="4dp"
                 android:text="Dari pengalaman Saudara bekerja, apa saran praktis Saudara untuk pendidikan di Poltekbang Jayapura dalam rangka meningkatkan kesesuaian antara pendidikan dengan lapangan pekerjaan?"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -434,7 +434,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kompetensi apa yang dibutuhkan pekerjaan Saudara yang tidak Saudara dapatkan selama kuliah?"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

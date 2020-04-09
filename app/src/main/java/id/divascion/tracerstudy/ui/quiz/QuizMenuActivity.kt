@@ -14,7 +14,7 @@ import id.divascion.tracerstudy.R
 import id.divascion.tracerstudy.adapter.QuizMenuAdapter
 import id.divascion.tracerstudy.data.model.AlumniQuiz
 import id.divascion.tracerstudy.data.model.StakeQuiz
-import id.divascion.tracerstudy.data.presenter.PresenterQuiz
+import id.divascion.tracerstudy.data.presenter.PresenterData
 import id.divascion.tracerstudy.util.SharedPreferenceManager
 import kotlinx.android.synthetic.main.activity_quiz_menu.*
 import org.jetbrains.anko.startActivity
@@ -27,7 +27,7 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
     private lateinit var adapter: QuizMenuAdapter
     private lateinit var user: FirebaseUser
     private lateinit var mDatabase: DatabaseReference
-    private lateinit var presenter: PresenterQuiz
+    private lateinit var presenter: PresenterData
     private lateinit var uid: String
     private var menuClicked = false
     private var list = ArrayList<String>()
@@ -43,7 +43,7 @@ class QuizMenuActivity : AppCompatActivity(), QuizMenuView {
         user = FirebaseAuth.getInstance().currentUser!!
         uid = user.uid
         mDatabase = FirebaseDatabase.getInstance().reference
-        presenter = PresenterQuiz(mDatabase)
+        presenter = PresenterData(mDatabase)
         when (role) {
             "alumni" -> {
                 supportActionBar?.title = getString(R.string.prompt_quiz_study)

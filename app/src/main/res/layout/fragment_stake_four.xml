@@ -194,6 +194,7 @@
                         android:importantForAutofill="no"
                         android:inputType="number"
                         android:maxLines="1"
+                        android:imeOptions="actionDone"
                         android:selectAllOnFocus="true"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite" />

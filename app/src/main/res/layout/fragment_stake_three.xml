@@ -62,7 +62,7 @@
                 android:paddingEnd="4dp"
                 android:text="Menurut pendapat Bapak/Ibu, bagaimanakah kualitas lulusan Politeknik Penerbangan Jayapura yang bekerja di instansi/perusahaan Bapak/Ibu?"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -371,7 +371,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengetahuan Bidang Penerbangan sesuai dengan Prodi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -526,7 +526,7 @@
                 android:paddingEnd="4dp"
                 android:text="Keterampilan dalam Bekerja*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -681,7 +681,7 @@
                 android:paddingEnd="4dp"
                 android:text="Etika Profesi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -836,7 +836,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kebugaran*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -991,7 +991,7 @@
                 android:paddingEnd="4dp"
                 android:text="Moral*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1146,7 +1146,7 @@
                 android:paddingEnd="4dp"
                 android:text="Jiwa Managerial (Sense of Managerial)*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1301,7 +1301,7 @@
                 android:paddingEnd="4dp"
                 android:text="Jiwa Kepemimpinan (Sense of Leadership)*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1456,7 +1456,7 @@
                 android:paddingEnd="4dp"
                 android:text="Keterampilan Komunikasi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1611,7 +1611,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kemampuan Berkomunikasi dalam Bahasa Asing*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1766,7 +1766,7 @@
                 android:paddingEnd="4dp"
                 android:text="Penggunaan Teknologi Informasi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1921,7 +1921,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengembangan Diri*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2076,7 +2076,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kreativitas*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2231,7 +2231,7 @@
                 android:paddingEnd="4dp"
                 android:text="Inisiatif*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2386,7 +2386,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kemampuan Bekerja dibawah Tekanan*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2541,7 +2541,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kemandirian*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2696,7 +2696,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kemampuan Memecahkan Persoalan*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2851,7 +2851,7 @@
                 android:paddingEnd="4dp"
                 android:text="Visioner*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -3006,7 +3006,7 @@
                 android:paddingEnd="4dp"
                 android:text="Loyalitas dan Komitmen*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -3333,7 +3333,7 @@
                 android:paddingEnd="4dp"
                 android:text="Secara keseluruhan, bagaimana tingkat kepuasan Bapak/Ibu terhadap lulusan Politeknik Penerbangan Jayapura?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

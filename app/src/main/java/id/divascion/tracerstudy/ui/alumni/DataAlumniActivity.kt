@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 import id.divascion.tracerstudy.R
 import id.divascion.tracerstudy.adapter.DataAlumniAdapter
 import id.divascion.tracerstudy.data.model.AlumniList
-import id.divascion.tracerstudy.data.presenter.PresenterQuiz
+import id.divascion.tracerstudy.data.presenter.PresenterData
 import kotlinx.android.synthetic.main.activity_data_alumni.*
 import org.jetbrains.anko.startActivity
 import java.util.*
@@ -24,7 +24,7 @@ import kotlin.collections.ArrayList
 
 class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
 
-    private lateinit var presenter: PresenterQuiz
+    private lateinit var presenter: PresenterData
     private lateinit var mDatabase: DatabaseReference
     private lateinit var listNullYear: ArrayList<String>
     private lateinit var adapter: DataAlumniAdapter
@@ -44,7 +44,7 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
         supportActionBar?.title = "Data Alumni"
         mDatabase =
             FirebaseDatabase.getInstance().reference.child("quiz").child("alumni").child("answer")
-        presenter = PresenterQuiz(mDatabase)
+        presenter = PresenterData(mDatabase)
         user = FirebaseAuth.getInstance().currentUser!!
         initUI()
         presenter.getDataAlumni(this)
@@ -225,6 +225,13 @@ class DataAlumniActivity : AppCompatActivity(), DataAlumniView {
         searchData.addAll(listAlumni)
         data.clear()
         data.addAll(listAlumni)
+        if(data.none()) {
+            data_alumni_tv_no_data.visibility = View.VISIBLE
+            data_alumni_rv.visibility = View.GONE
+        } else {
+            data_alumni_tv_no_data.visibility = View.GONE
+            data_alumni_rv.visibility = View.VISIBLE
+        }
         adapter.notifyDataSetChanged()
     }
 }

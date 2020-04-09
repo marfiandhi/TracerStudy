@@ -62,7 +62,7 @@
                 android:paddingEnd="4dp"
                 android:text="Cara penyebaran informasi untuk penerimaan tenaga kerja alumni Lemdik penerbangan di instansi ini*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -178,7 +178,7 @@
                 android:paddingEnd="4dp"
                 android:text="Bagaimana instansi/perusahaan Bapak/Ibu melakukan seleksi penerimaan tenaga baru?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -303,7 +303,7 @@
                 android:paddingEnd="4dp"
                 android:text="Apakah instansi Bapak/Ibu melakukan rekrutmen tenaga kerja baru secara berkala?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -361,7 +361,7 @@
                 android:paddingEnd="4dp"
                 android:text="Bagaimana intensitas rekrutmen tenaga kerja baru?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -494,7 +494,7 @@
                 android:paddingEnd="4dp"
                 android:text="Menurut instansi/perusahaan ini, seberapa penting aspek-aspek berikut bagi pegawai dari Lemdik penerbangan dalam penerimaan pegawai"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -803,7 +803,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kesesuaian Bidang Studi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -958,7 +958,7 @@
                 android:paddingEnd="4dp"
                 android:text="Attitude/Tingkah Laku*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1113,7 +1113,7 @@
                 android:paddingEnd="4dp"
                 android:text="Prestasi Akademik (Transkrip)*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1268,7 +1268,7 @@
                 android:paddingEnd="4dp"
                 android:text="Keterampilan Praktis yang diperoleh Semasa Kuliah*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1423,7 +1423,7 @@
                 android:paddingEnd="4dp"
                 android:text="Keterampilan Praktis yang diperoleh di luar Kuliah*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1578,7 +1578,7 @@
                 android:paddingEnd="4dp"
                 android:text="Reputasi Almamater/Pendidikan Asal*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1733,7 +1733,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengalaman Kerja*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1888,7 +1888,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kemampuan Bahasa Asing*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2043,7 +2043,7 @@
                 android:paddingEnd="4dp"
                 android:text="Keterampilan Komputer*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2198,7 +2198,7 @@
                 android:paddingEnd="4dp"
                 android:text="Rekomendasi/Pengantar dari Pihak Ketiga*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2353,7 +2353,7 @@
                 android:paddingEnd="4dp"
                 android:text="Hasil tes penerimaan"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2508,7 +2508,7 @@
                 android:paddingEnd="4dp"
                 android:text="Penampilan selama Wawancara*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2663,7 +2663,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kepribadian*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -2818,7 +2818,7 @@
                 android:paddingEnd="4dp"
                 android:text="Provinsi/Daerah Asal*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

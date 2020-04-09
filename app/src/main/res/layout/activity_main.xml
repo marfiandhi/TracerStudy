@@ -69,7 +69,7 @@
                     android:fontFamily="sans-serif"
                     android:text="@string/prompt_study_data"
                     android:textColor="@color/colorWhite"
-                    app:backgroundTint="#3C2979FF" />
+                    app:backgroundTint="@color/colorButtonOne" />
 
                 <Button
                     android:id="@+id/main_quiz_button"
@@ -79,7 +79,7 @@
                     android:fontFamily="sans-serif"
                     android:text="@string/prompt_quiz"
                     android:textColor="@color/colorWhite"
-                    app:backgroundTint="#3CFFD600" />
+                    app:backgroundTint="@color/colorButtonTwo" />
 
                 <Button
                     android:id="@+id/main_logout_button"
@@ -89,7 +89,7 @@
                     android:fontFamily="sans-serif"
                     android:text="@string/prompt_logout"
                     android:textColor="@color/colorWhite"
-                    app:backgroundTint="#3CFC0000" />
+                    app:backgroundTint="@color/colorButtonThree" />
 
                 <Button
                     android:id="@+id/main_admin_button"
@@ -99,7 +99,8 @@
                     android:fontFamily="sans-serif"
                     android:text="Export Stakeholder"
                     android:textColor="@color/colorWhite"
-                    app:backgroundTint="#3C64DD17" />
+                    android:visibility="gone"
+                    app:backgroundTint="@color/colorButtonFour" />
 
                 <!--<Button
                     android:id="@+id/main_dev_button"
@@ -109,7 +110,7 @@
                     android:fontFamily="sans-serif"
                     android:text="Reset Role"
                     android:textColor="@color/colorWhite"
-                    app:backgroundTint="#3C00BFA5" />-->
+                    app:backgroundTint="@color/colorButtonFive" />-->
 
             </LinearLayout>
 

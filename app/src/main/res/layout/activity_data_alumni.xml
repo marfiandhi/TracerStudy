@@ -35,7 +35,7 @@
                 android:paddingEnd="4dp"
                 android:text="Angkatan"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -67,7 +67,7 @@
                 android:paddingEnd="4dp"
                 android:text="Program Studi atau Diklat"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -98,6 +98,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/data_alumni_tv_no_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="4dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="Tidak ada data"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorUltraLightGrey"
+                    android:textSize="24sp"
+                    android:visibility="gone" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/data_alumni_rv"

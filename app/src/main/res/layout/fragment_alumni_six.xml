@@ -63,7 +63,7 @@
                 android:paddingEnd="4dp"
                 android:text="Saat baru lulus, sejauh mana Saudara merasa mampu bersaing dengan lulusan perguruan tinggi lain?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -135,7 +135,7 @@
                 android:paddingEnd="4dp"
                 android:text="Sejauh ini, menurut Saudara lulusan Poltekbang Jayapura yang bagaimana diperlukan oleh pasar/lapangan kerja?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -191,7 +191,7 @@
                 android:paddingEnd="4dp"
                 android:text="Saat baru lulus, sejauh mana Saudara merasa mampu bersaing dengan lulusan perguruan tinggi lain?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -210,7 +210,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengetahuan Umum*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -279,7 +279,7 @@
                 android:paddingEnd="4dp"
                 android:text="Bahasa Inggris*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -348,7 +348,7 @@
                 android:paddingEnd="4dp"
                 android:text="Komputer*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -417,7 +417,7 @@
                 android:paddingEnd="4dp"
                 android:text="Metodologi Penelitian*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -486,7 +486,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kerjasama Tim*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -555,7 +555,7 @@
                 android:paddingEnd="4dp"
                 android:text="Keterampilan Komunikasi Lisan*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -624,7 +624,7 @@
                 android:paddingEnd="4dp"
                 android:text="Keterampilan Komunikasi Tertulis*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -693,7 +693,7 @@
                 android:paddingEnd="4dp"
                 android:text="Proses Pemberdayaan Masyarakat*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -762,7 +762,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengetahuan Teoritis Spesifik Sesuai dengan Prodi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -831,7 +831,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengetahuan Praktis Spesifik Sesuai dengan Prodi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -900,7 +900,7 @@
                 android:paddingEnd="4dp"
                 android:text="Manajemen Organisasi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -969,7 +969,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kepemimpinan/Leadership*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1041,7 +1041,7 @@
                 android:paddingEnd="4dp"
                 android:text="Dalam pekerjaan, menurut penilaian Saudara sejauh mana kompetensi berikut diperlukan?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1060,7 +1060,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengetahuan Umum*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1129,7 +1129,7 @@
                 android:paddingEnd="4dp"
                 android:text="Bahasa Inggris*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1198,7 +1198,7 @@
                 android:paddingEnd="4dp"
                 android:text="Komputer*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1267,7 +1267,7 @@
                 android:paddingEnd="4dp"
                 android:text="Metodologi Penelitian*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1336,7 +1336,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kerjasama Tim*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1405,7 +1405,7 @@
                 android:paddingEnd="4dp"
                 android:text="Keterampilan Komunikasi Lisan*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1474,7 +1474,7 @@
                 android:paddingEnd="4dp"
                 android:text="Keterampilan Komunikasi Tertulis*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1543,7 +1543,7 @@
                 android:paddingEnd="4dp"
                 android:text="Proses Pemberdayaan Masyarakat*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1612,7 +1612,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengetahuan Teoritis Spesifik Sesuai dengan Prodi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1681,7 +1681,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengetahuan Praktis Spesifik Sesuai dengan Prodi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1750,7 +1750,7 @@
                 android:paddingEnd="4dp"
                 android:text="Manajemen Organisasi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1819,7 +1819,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kepemimpinan/Leadership*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

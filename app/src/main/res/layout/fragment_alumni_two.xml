@@ -71,7 +71,7 @@
                     android:paddingEnd="4dp"
                     android:text="Tahun masuk*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -109,7 +109,7 @@
                         android:paddingEnd="4dp"
                         android:text="Bulan lulus*"
                         android:textAlignment="viewStart"
-                        android:textColor="@color/colorLightGrey"
+                        android:textColor="@color/colorTextQuestion"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -144,7 +144,7 @@
                         android:paddingEnd="4dp"
                         android:text="Tahun lulus*"
                         android:textAlignment="viewStart"
-                        android:textColor="@color/colorLightGrey"
+                        android:textColor="@color/colorTextQuestion"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -179,7 +179,7 @@
                 android:paddingEnd="4dp"
                 android:text="Program Diklat dan Program Studi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -293,7 +293,7 @@
                 android:paddingEnd="4dp"
                 android:text="Apakah Saudara berorganisasi ketika masih taruna?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -424,7 +424,7 @@
                 android:paddingEnd="4dp"
                 android:text="Setelah lulus dari Poltekbang Jayapura, apakah Saudara bersekolah lagi?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -482,7 +482,7 @@
                 android:paddingEnd="4dp"
                 android:text="Dimana Saudara bersekolah?"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -494,7 +494,7 @@
                 android:paddingEnd="4dp"
                 android:text="(tambahkan informasi pada Perguruan Tinggi II apabila sekolah lebih dari satu kali)"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorUltraLightGrey"
                 android:textSize="12sp" />
 
             <View
@@ -515,7 +515,7 @@
                 android:padding="4dp"
                 android:text="Data Perguruan Tinggi I*"
                 android:textAlignment="center"
-                android:textColor="@color/colorLightGrey" />
+                android:textColor="@color/colorTextQuestion" />
 
             <android.support.design.widget.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -594,7 +594,7 @@
                     android:paddingEnd="4dp"
                     android:text="Jenjang Pendidikan*"
                     android:textAlignment="textStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp" />
 
                 <Spinner
@@ -638,7 +638,7 @@
                 android:padding="4dp"
                 android:text="Data Perguruan Tinggi II"
                 android:textAlignment="center"
-                android:textColor="@color/colorLightGrey" />
+                android:textColor="@color/colorTextQuestion" />
 
             <android.support.design.widget.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -717,7 +717,7 @@
                     android:paddingEnd="4dp"
                     android:text="Jenjang Pendidikan"
                     android:textAlignment="textStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp" />
 
                 <Spinner
@@ -772,7 +772,7 @@
                 android:paddingEnd="4dp"
                 android:text="Apa alasan utama Saudara bersekolah lagi?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -884,7 +884,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pada saat baru lulus, sebenarnya pekerjaan apa yang Saudara inginkan?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1021,7 +1021,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pada saat baru lulus, apakah Saudara bersedia bekerja/ditempatkan diseluruh wilayah Indonesia atau luar negeri?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1077,7 +1077,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pada saat baru lulus, apakah Saudara mengetahui cara/prosedur melamar pekerjaan?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1133,7 +1133,7 @@
                 android:paddingEnd="4dp"
                 android:text="Menurut Saudara, kapan seharusnya cara/prosedur melamar pekerjaan harus mulai diketahui?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1213,7 +1213,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pada saat baru lulus, apakah Saudara mengetahui cara membuat CV untuk melamar pekerjaan?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1269,7 +1269,7 @@
                 android:paddingEnd="4dp"
                 android:text="Menurut Saudara, kapan seharusnya cara membuat CV harus mulai diketahui?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1390,7 +1390,7 @@
                 android:paddingEnd="4dp"
                 android:text="Setelah lulus, apakah Saudara sudah/pernah bekerja?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

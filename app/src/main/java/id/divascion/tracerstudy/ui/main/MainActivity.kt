@@ -11,10 +11,13 @@ import android.util.Log
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import id.divascion.tracerstudy.data.model.StakeQuiz
-import id.divascion.tracerstudy.data.presenter.PresenterQuiz
+import id.divascion.tracerstudy.data.model.User
+import id.divascion.tracerstudy.data.presenter.PresenterData
 import id.divascion.tracerstudy.ui.alumni.DataAlumniActivity
 import id.divascion.tracerstudy.ui.login.LoginActivity
 import id.divascion.tracerstudy.ui.quiz.QuizMenuActivity
@@ -28,7 +31,8 @@ import org.jetbrains.anko.toast
 class MainActivity : AppCompatActivity(), MainView {
 
     private lateinit var user: FirebaseUser
-    private lateinit var role: String
+    private lateinit var mRole: String
+    private lateinit var userDatabase: User
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
     private var list: MutableList<StakeQuiz> = mutableListOf()
     private var isStakeholder = false
@@ -58,8 +62,15 @@ class MainActivity : AppCompatActivity(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(id.divascion.tracerstudy.R.layout.activity_main)
         user = auth.currentUser!!
-        role = user.displayName.toString()
-        if (role != "admin") {
+        val mDatabase = FirebaseDatabase.getInstance().reference
+        val presenter = PresenterData(mDatabase)
+        presenter.getUser(this, user.uid)
+    }
+
+    private fun initUI() {
+        if (mRole == "admin") {
+            main_admin_button.visibility = View.VISIBLE
+        } else {
             main_admin_button.visibility = View.GONE
         }
         popup()
@@ -67,7 +78,7 @@ class MainActivity : AppCompatActivity(), MainView {
             startActivity<DataAlumniActivity>()
         }
         main_quiz_button.setOnClickListener {
-            if (role.isEmpty() || role == "none") {
+            if (mRole.isEmpty() || mRole == "none") {
                 main_popup.visibility = View.VISIBLE
                 main_logout_button.isEnabled = false
                 main_data_button.isClickable = false
@@ -78,7 +89,7 @@ class MainActivity : AppCompatActivity(), MainView {
                 main_logout_button.isEnabled = true
                 main_data_button.isClickable = true
                 main_quiz_button.isEnabled = true
-                toQuiz(this.role)
+                toQuiz(this.mRole)
             }
         }
         main_logout_button.setOnClickListener {
@@ -103,10 +114,10 @@ class MainActivity : AppCompatActivity(), MainView {
         }
         /*
         main_dev_button.setOnClickListener {
-            if (role != "admin") {
+            if (mRole != "admin") {
                 changeRole("none")
                 user = auth.currentUser!!
-                role = ""
+                mRole = ""
             } else {
                 toast("Anda adalah ADMIN. Tidak perlu mengubah ROLE")
             }
@@ -123,7 +134,7 @@ class MainActivity : AppCompatActivity(), MainView {
             val mDatabase =
                 FirebaseDatabase.getInstance().reference.child("quiz").child("stakeholder")
                     .child("answer")
-            val presenter = PresenterQuiz(mDatabase)
+            val presenter = PresenterData(mDatabase)
             presenter.getDataStake(this)
         }
 
@@ -138,7 +149,7 @@ class MainActivity : AppCompatActivity(), MainView {
             val mDatabase =
                 FirebaseDatabase.getInstance().reference.child("quiz").child("stakeholder")
                     .child("answer")
-            val presenter = PresenterQuiz(mDatabase)
+            val presenter = PresenterData(mDatabase)
             presenter.getDataStake(this)
         } else {
             ActivityCompat.requestPermissions(
@@ -156,8 +167,6 @@ class MainActivity : AppCompatActivity(), MainView {
 
     override fun onResume() {
         if (pause) {
-            user = auth.currentUser!!
-            role = user.displayName.toString()
             pause = false
         }
         super.onResume()
@@ -211,18 +220,28 @@ class MainActivity : AppCompatActivity(), MainView {
 
     private fun changeRole(role: String) {
         showLoading()
-        val user = auth.currentUser
-        val profileUpdates = UserProfileChangeRequest.Builder()
-            .setDisplayName(role)
-            .build()
-        user?.updateProfile(profileUpdates)
-            ?.addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    hideLoading("")
-                    this.role = role
-                    toQuiz(role)
-                }
+        val mDatabase = FirebaseDatabase.getInstance().reference
+        val currentUser = auth.currentUser
+        userDatabase = User(currentUser?.email.toString(), role, userDatabase.createAt)
+        mDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                hideLoading(p0.message)
+                return
             }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+                mDatabase.child("user").child(user.uid).setValue(userDatabase)
+                    .addOnSuccessListener {
+                        hideLoading("")
+                        mRole = role
+                        toQuiz(role)
+                    }
+                    .addOnFailureListener {
+                        hideLoading("Gagal mengubah role. ${it.message}")
+                        Log.e("createUser:failure", it.message.toString())
+                    }
+            }
+        })
     }
 
     private fun toQuiz(role: String) {
@@ -269,6 +288,12 @@ class MainActivity : AppCompatActivity(), MainView {
             val export = ExportStakeholder(this)
             export.export(this.list)
         }
+    }
+
+    override fun getUser(user: User) {
+        userDatabase = user
+        mRole = userDatabase.role
+        initUI()
     }
 
     override fun showLoading() {

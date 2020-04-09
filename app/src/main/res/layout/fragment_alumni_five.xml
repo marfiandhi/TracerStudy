@@ -63,7 +63,7 @@
                 android:paddingEnd="4dp"
                 android:text="Saat belajar di Poltekbang Jayapura, menurut Saudara seberapa penting pengalaman pembelajaran berikut ini memberikan kontribusi dalam dunia kerja?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -82,7 +82,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengalaman belajar di dalam kelas*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -151,7 +151,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengalaman belajar di laboratorium*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -220,7 +220,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengalaman belajar di masyarakat*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -289,7 +289,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengalaman magang di perusahaan/instansi*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -358,7 +358,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengalaman belajar dalam organisasi Staf Resimen Ketarunaan*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -427,7 +427,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengalaman belajar dalam pergaulan kampus*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -496,7 +496,7 @@
                 android:paddingEnd="4dp"
                 android:text="Pengalaman belajar mandiri*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -565,7 +565,7 @@
                 android:paddingEnd="4dp"
                 android:text="English Day*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -634,7 +634,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kunjungan ke Tempat Kerja*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -704,7 +704,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kerohanian*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -773,7 +773,7 @@
                 android:paddingEnd="4dp"
                 android:text="Kesamaptaan*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -842,7 +842,7 @@
                 android:paddingEnd="4dp"
                 android:text="Tugas Jaga*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

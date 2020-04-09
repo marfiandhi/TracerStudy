@@ -185,7 +185,7 @@
                 android:paddingEnd="4dp"
                 android:text="Jenis instansi/perusahaan ini adalah*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -307,7 +307,7 @@
                 android:paddingEnd="4dp"
                 android:text="Berapa jumlah tenaga kerja di instansi/perusahaan ini? (termasuk di perwakilan/cabang)"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -378,7 +378,7 @@
                 android:paddingEnd="4dp"
                 android:text="Berapa presentasi pegawai dari alumni Lemdik penerbangan yang bekerja di instansi/perusahaan ini?"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -449,7 +449,7 @@
                 android:paddingEnd="4dp"
                 android:text="Berapa orang jumlah pegawai dari alumni Lemdik penerbangan lulusan Poltekbang Jayapura yang bekerja di instansi/perusahaan ini?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

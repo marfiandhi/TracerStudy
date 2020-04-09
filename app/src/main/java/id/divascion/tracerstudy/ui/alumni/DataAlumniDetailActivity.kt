@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso
 import id.divascion.tracerstudy.R
 import id.divascion.tracerstudy.adapter.PagerAdapter
 import id.divascion.tracerstudy.data.model.*
-import id.divascion.tracerstudy.data.presenter.PresenterQuiz
+import id.divascion.tracerstudy.data.presenter.PresenterData
 import id.divascion.tracerstudy.ui.quiz.QuizMenuView
 import id.divascion.tracerstudy.ui.quiz.fragment.AlumniBiodataFragment
 import id.divascion.tracerstudy.ui.quiz.fragment.AlumniFiveFragment
@@ -33,7 +33,7 @@ class DataAlumniDetailActivity : AppCompatActivity(), QuizMenuView,
     private lateinit var dataThree: AlumniQuiz
     private lateinit var dataFour: AlumniQuiz
     private lateinit var mDatabase: DatabaseReference
-    private lateinit var presenter: PresenterQuiz
+    private lateinit var presenter: PresenterData
     private lateinit var uid: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +44,7 @@ class DataAlumniDetailActivity : AppCompatActivity(), QuizMenuView,
         supportActionBar?.title = "Profil Alumni"
         uid = intent.getStringExtra("UID")
         mDatabase = FirebaseDatabase.getInstance().reference
-        presenter = PresenterQuiz(mDatabase)
+        presenter = PresenterData(mDatabase)
 
         toolbar_alumni_detail.setNavigationOnClickListener {
             finish()

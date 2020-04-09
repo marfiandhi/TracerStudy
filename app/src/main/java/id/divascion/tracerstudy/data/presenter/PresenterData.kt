@@ -7,13 +7,15 @@ import com.google.firebase.database.ValueEventListener
 import id.divascion.tracerstudy.data.model.AlumniList
 import id.divascion.tracerstudy.data.model.AlumniQuiz
 import id.divascion.tracerstudy.data.model.StakeQuiz
+import id.divascion.tracerstudy.data.model.User
 import id.divascion.tracerstudy.ui.alumni.DataAlumniView
+import id.divascion.tracerstudy.ui.main.MainActivity
 import id.divascion.tracerstudy.ui.main.MainView
 import id.divascion.tracerstudy.ui.quiz.QuizMenuView
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
-class PresenterQuiz(private val mDatabase: DatabaseReference) {
+class PresenterData(private val mDatabase: DatabaseReference) {
 
     fun addData(view: QuizMenuView, data: AlumniQuiz, uid: String) {
         view.showLoading()
@@ -197,6 +199,25 @@ class PresenterQuiz(private val mDatabase: DatabaseReference) {
                 }
                 view.getData(list)
                 view.hideLoading("")
+            }
+
+        })
+    }
+
+    fun getUser(view: MainActivity, uid: String) {
+        view.showLoading()
+        val sUser = mDatabase.child("user").child(uid)
+        sUser.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                view.hideLoading("${p0.message}. ${p0.details}")
+                return
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+                val data = p0.getValue(User::class.java) ?: User()
+                view.getUser(data)
+                view.hideLoading("")
+                return
             }
 
         })

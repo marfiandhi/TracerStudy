@@ -93,7 +93,7 @@
                 android:paddingEnd="4dp"
                 android:text="Jenis instansi/bidang usaha/industri*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -232,7 +232,7 @@
                 android:paddingEnd="4dp"
                 android:text="Jabatan/Posisi dalam pekerjaan (apakah sesuai dengan bidang penerbangan)*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -446,7 +446,7 @@
                         android:paddingEnd="4dp"
                         android:text="Bulan mulai kerja*"
                         android:textAlignment="viewStart"
-                        android:textColor="@color/colorLightGrey"
+                        android:textColor="@color/colorTextQuestion"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -480,7 +480,7 @@
                         android:paddingEnd="4dp"
                         android:text="Tahun mulai kerja*"
                         android:textAlignment="viewStart"
-                        android:textColor="@color/colorLightGrey"
+                        android:textColor="@color/colorTextQuestion"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -513,7 +513,7 @@
                 android:paddingEnd="4dp"
                 android:text="(Jika masih bekerja, tidak perlu diisi)"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorUltraLightGrey"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -542,7 +542,7 @@
                         android:paddingEnd="4dp"
                         android:text="Bulan berhenti"
                         android:textAlignment="viewStart"
-                        android:textColor="@color/colorLightGrey"
+                        android:textColor="@color/colorTextQuestion"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -576,7 +576,7 @@
                         android:paddingEnd="4dp"
                         android:text="Tahun berhenti"
                         android:textAlignment="viewStart"
-                        android:textColor="@color/colorLightGrey"
+                        android:textColor="@color/colorTextQuestion"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -611,7 +611,7 @@
                 android:paddingEnd="4dp"
                 android:text="Bagaimana proses Saudara mendapatkan pekerjaan ini?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -667,7 +667,7 @@
                 android:paddingEnd="4dp"
                 android:text="Darimana Saudara mengetahui atau mendapatkan informasi mengenai adanya pekerjaan ini?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -783,7 +783,7 @@
                 android:paddingEnd="4dp"
                 android:text="Sejauh mana kesesuaian pekerjaan Saudara yang terakhir/sekarang dengan harapan ketika pertama kali belajar di Poltekbang Jayapura*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -855,7 +855,7 @@
                 android:paddingEnd="4dp"
                 android:text="Apakah Saudara puas dengan pekerjaan Saudara yang terakhir/sekarang?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -927,7 +927,7 @@
                 android:paddingEnd="4dp"
                 android:text="Secara umum, apa pertimbangan utama Saudara dalam memilih pekerjaan yang terakhir/sekarang?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1040,7 +1040,7 @@
                 android:paddingEnd="4dp"
                 android:text="Berapa rata-rata pendapatan Saudara pada pekerjaan terakhir/sekarang? (Termasuk bonus, intensif, dsb)*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1144,7 +1144,7 @@
                 android:paddingEnd="4dp"
                 android:text="Apakah pekerjaan Saudara ini berhubungan dengan bidang ilmu yang Saudara pelajari selama kuliah?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1200,7 +1200,7 @@
                 android:paddingEnd="4dp"
                 android:text="Menurut Saudara, bagaimana kebutuhan institusi tempat Saudara bekerja terhadap lulusan dari Program Studi/Jurusan Saudara*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1272,7 +1272,7 @@
                 android:paddingEnd="4dp"
                 android:text="Apakah Saudara pernah bekerja di tempat lain sebelumnya?*"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorLightGrey"
+                android:textColor="@color/colorTextQuestion"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -1335,7 +1335,7 @@
                     android:paddingEnd="4dp"
                     android:text="Sudah berapa kali Saudara berganti pekerjaan?*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -1387,7 +1387,7 @@
                     android:paddingEnd="4dp"
                     android:text="Alasan pindah tempat kerja*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -1522,7 +1522,7 @@
                     android:paddingEnd="4dp"
                     android:text="Nama tempat bekerja pertama kali*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -1574,7 +1574,7 @@
                     android:paddingEnd="4dp"
                     android:text="Jabatan/Posisi terakhir dalam pekerjaan pertama*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -1643,7 +1643,7 @@
                             android:paddingEnd="4dp"
                             android:text="Bulan mulai kerja*"
                             android:textAlignment="viewStart"
-                            android:textColor="@color/colorLightGrey"
+                            android:textColor="@color/colorTextQuestion"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -1677,7 +1677,7 @@
                             android:paddingEnd="4dp"
                             android:text="Tahun mulai kerja*"
                             android:textAlignment="viewStart"
-                            android:textColor="@color/colorLightGrey"
+                            android:textColor="@color/colorTextQuestion"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -1726,7 +1726,7 @@
                             android:paddingEnd="4dp"
                             android:text="Bulan berhenti*"
                             android:textAlignment="viewStart"
-                            android:textColor="@color/colorLightGrey"
+                            android:textColor="@color/colorTextQuestion"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -1760,7 +1760,7 @@
                             android:paddingEnd="4dp"
                             android:text="Tahun berhenti*"
                             android:textAlignment="viewStart"
-                            android:textColor="@color/colorLightGrey"
+                            android:textColor="@color/colorTextQuestion"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -1795,7 +1795,7 @@
                     android:paddingEnd="4dp"
                     android:text="Bagaimana proses Saudara mendapatkan pekerjaan pertama?*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -1851,7 +1851,7 @@
                     android:paddingEnd="4dp"
                     android:text="Darimana Saudara mengetahui atau mendapatkan informasi mengenai adanya pekerjaan pertama?*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -1967,7 +1967,7 @@
                     android:paddingEnd="4dp"
                     android:text="Sejauh mana kesesuaian pekerjaan pertama Saudara dengan harapan ketika pertama kali belajar di Poltekbang Jayapura*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -2039,7 +2039,7 @@
                     android:paddingEnd="4dp"
                     android:text="Apakah Saudara puas dengan pekerjaan pertama Saudara?*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -2111,7 +2111,7 @@
                     android:paddingEnd="4dp"
                     android:text="Secara umum, apa pertimbangan utama Saudara dalam memilih pekerjaan pertama?*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -2224,7 +2224,7 @@
                     android:paddingEnd="4dp"
                     android:text="Berapa rata-rata pendapatan Saudara pada pekerjaan pertama? (Termasuk bonus, intensif, dsb)*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -2328,7 +2328,7 @@
                     android:paddingEnd="4dp"
                     android:text="Kapan Saudara mulai mencarai pekerjaan? (Pekerjaan sambilan/sampingan tidak termasuk)*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -2382,7 +2382,7 @@
                     android:paddingEnd="4dp"
                     android:text="Berapa perusahaan/instansi/institusi yang sudah Saudara lamar (lewat surat atau e-mail) sebelum Saudara memperoleh pekerjaan pertama?*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -2434,7 +2434,7 @@
                     android:paddingEnd="4dp"
                     android:text="Berapa lama Saudara mendapatkan pekerjaan pertama?*"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/colorTextQuestion"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 

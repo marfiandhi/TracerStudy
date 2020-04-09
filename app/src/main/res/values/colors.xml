@@ -31,10 +31,16 @@
     <color name="colorDarkBackground">#2D2D2D</color>
     <color name="colorDarkForeground">#1D1D1D</color>
     <color name="colorDarkAccent">#DCBF00</color>
-    <color name="colorAccentBlue">#2F6D80</color>
+    <color name="colorAccentBlue">#40859B</color>
     <color name="colorTransparent">#00ffffff</color>
+    <color name="colorTextQuestion">#BEBEBE</color>
     <color name="colorWhiteTransparent">#40FFFFFF</color>
     <color name="colorWhiteTransparentLighter">#B3FFFFFF</color>
     <color name="colorBlackTransparent">#BF000000</color>
     <color name="colorBlackTransparentLighter">#b3000000</color>
+    <color name="colorButtonOne">#3C2979FF</color>
+    <color name="colorButtonTwo">#3CFFD600</color>
+    <color name="colorButtonThree">#3CFC0000</color>
+    <color name="colorButtonFour">#3C64DD17</color>
+    <color name="colorButtonFive">#3C00BFA5</color>
 </resources>

@@ -11,6 +11,7 @@ import id.divascion.tracerstudy.data.model.*
 import id.divascion.tracerstudy.ui.quiz.fragment.*
 import id.divascion.tracerstudy.util.SharedPreferenceManager
 import id.divascion.tracerstudy.util.StringManipulation
+import org.jetbrains.anko.alert
 import org.jetbrains.anko.longToast
 
 class QuizActivity : AppCompatActivity(), AlumniOneFragment.OnFragmentInteractionListener,
@@ -48,9 +49,31 @@ class QuizActivity : AppCompatActivity(), AlumniOneFragment.OnFragmentInteractio
         supportActionBar?.title = extractTitle
     }
 
+    override fun onBackPressed() {
+        if (status.equals("done", true)) {
+            super.onBackPressed()
+        } else {
+            backAlert()
+        }
+    }
+
+    private fun backAlert() {
+        alert(
+            "Apakah Anda yakin ingin keluar sebelum menyimpan data kuesioner Anda?",
+            "Peringatan"
+        ) {
+            positiveButton("Keluar") {
+                finish()
+            }
+            negativeButton("Tidak") {
+                it.dismiss()
+            }
+        }.show()
+    }
+
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
-            android.R.id.home -> finish()
+            android.R.id.home -> backAlert()
         }
         return super.onOptionsItemSelected(item)
     }

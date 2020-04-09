@@ -12,7 +12,9 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import com.google.firebase.auth.*
+import com.google.firebase.database.*
 import id.divascion.tracerstudy.R
+import id.divascion.tracerstudy.data.model.User
 import id.divascion.tracerstudy.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.loading_screen.*
@@ -20,12 +22,14 @@ import org.jetbrains.anko.alert
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.longToast
 import org.jetbrains.anko.toast
+import java.util.*
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var email: String
     private lateinit var password: String
     private lateinit var auth: FirebaseAuth
+    private lateinit var mDatabase: DatabaseReference
     private var loading = false
 
     override fun onStart() {
@@ -150,34 +154,89 @@ class LoginActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { createTask ->
                 if (createTask.isSuccessful) {
-                    val user = auth.currentUser
-                    val profileUpdates =
-                        if (user?.email.equals("tracerpoltekbangjayapura@gmail.com", true)) {
-                            UserProfileChangeRequest.Builder()
-                                .setDisplayName("admin")
-                                .build()
-                        } else {
-                            UserProfileChangeRequest.Builder()
-                                .setDisplayName("none")
-                                .build()
-                        }
-                    user?.updateProfile(profileUpdates)
-                        ?.addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                hideLoading()
-                                updateUI(user)
-                            } else {
-                                Log.e("createUser:failure", task.exception.toString())
-                                toast(getString(R.string.sign_up_failed))
-                                updateUI(null)
-                            }
-                        }
+                    hideLoading()
+                    val user = auth.currentUser!!
+                    createDatabaseUser(user, user.uid, email)
                 } else {
+                    hideLoading()
                     Log.e("createUser:failure", createTask.exception.toString())
                     toast(getString(R.string.sign_up_failed))
                     updateUI(null)
                 }
             }
+    }
+
+    private fun createDatabaseUser(user: FirebaseUser, uid: String, email: String) {
+        showLoading()
+        val calendar = Calendar.getInstance()
+        val currentDay = Date()
+        calendar.time = currentDay
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val date = calendar.get(Calendar.DATE)
+        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+        val minute = calendar.get(Calendar.MINUTE)
+        val second = calendar.get(Calendar.SECOND)
+        val createAt = "$year-$month-$date-$hour:$minute:$second"
+        val role = if (email.equals("tracerpoltekbangjayapura@gmail.com", true)) {
+            "admin"
+        } else {
+            "none"
+        }
+        val newUser = User(email, role, createAt)
+        mDatabase = FirebaseDatabase.getInstance().reference
+        mDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                hideLoading()
+                toast(p0.message)
+                return
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.child("user").hasChild(uid)) {
+                    mDatabase.child("user").child(uid).setValue(null)
+                        .addOnSuccessListener {
+                            hideLoading()
+                            deleteUser(user, "Akun telah terdaftarkan sebelumnya")
+                        }
+                        .addOnFailureListener {
+                            hideLoading()
+                            updateUI(null)
+                            Log.e("createUser:failure", it.message.toString())
+                            toast("${it.message}")
+                        }
+                    return
+                } else {
+                    mDatabase.child("user").child(uid).setValue(newUser)
+                        .addOnSuccessListener {
+                            hideLoading()
+                            updateUI(user)
+                        }
+                        .addOnFailureListener {
+                            hideLoading()
+                            Log.e("createUser:failure", it.message.toString())
+                            deleteUser(user, getString(R.string.sign_up_failed))
+                        }
+                }
+            }
+        })
+    }
+
+    private fun deleteUser(user: FirebaseUser, message: String) {
+        showLoading()
+        val credential = EmailAuthProvider.getCredential(email, password)
+        user.reauthenticate(credential).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                user.delete().addOnCompleteListener {
+                    if (task.isSuccessful) {
+                        hideLoading()
+                        auth.signOut()
+                        updateUI(null)
+                        toast(message)
+                    }
+                }
+            }
+        }
     }
 
     private fun getFormInfo() {
